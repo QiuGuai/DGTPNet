@@ -326,9 +326,9 @@ def validate(base_model, test_dataloader, epoch, ChamferDisL1, ChamferDisL2, val
 
 def save_point_cloud(points, filename):
     """
-    将点云数据保存为 .ply 文件。
-    :param points: PyTorch Tensor 或 NumPy array, 形状为 (N, 3)。
-    :param filename: 保存的文件路径。
+    Save point cloud data to a .ply file.
+    :param points: PyTorch Tensor or NumPy array, shape (N, 3).
+    :param filename: The file path to save to.
     """
     if isinstance(points, torch.Tensor):
         points = points.detach().cpu().numpy()
@@ -336,7 +336,7 @@ def save_point_cloud(points, filename):
     pcd = o3d.geometry.PointCloud()
     pcd.points = o3d.utility.Vector3dVector(points)
     
-    # 确保输出目录存在
+    # Ensure the output directory exists.
     output_dir = os.path.dirname(filename)
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
@@ -346,48 +346,48 @@ def save_point_cloud(points, filename):
 
 def save_full_dgs_ply(dgs_params, filename):
     """
-    将PC3DGS392模型输出的完整3DGS数据保存到.ply文件。
+    Save the complete 3DGS data output from the PC3DGS392 model to a .ply file.
 
-    :param dgs_params: 从模型输出的元组 (means, scales, rotations, colors, opacities)。
-    :param filename: 输出的 .ply 文件名。
+    :param dgs_params: A tuple from the model output (means, scales, rotations, colors, opacities).
+    :param filename: The output .ply filename.
     """
-    # 1. 解包元组，获取各个属性张量
-    # 这些张量的形状都应该是 (1, num_gaussians, D)，因为测试时的批大小为1
+    # 1. Unpack the tuple to get the individual attribute tensors.
+    # The shape of these tensors should be (1, num_gaussians, D) because the batch size is 1 during testing.
     means, scales, rotations, colors, opacities = dgs_params
 
-    # 2. 移除批次维度 (B=1)，并转换到 NumPy
+    # 2. Remove the batch dimension (B=1) and convert to NumPy.
     means_np = means[0].detach().cpu().numpy()
     scales_np = scales[0].detach().cpu().numpy()
     rotations_np = rotations[0].detach().cpu().numpy()
     colors_np = colors[0].detach().cpu().numpy()
     opacities_np = opacities[0].detach().cpu().numpy()
 
-    # 3. 定义.ply文件的元素结构，这与3DGS查看器的标准格式匹配
+    # 3. Define the element structure for the .ply file, matching the standard format for 3DGS viewers.
     dtype = [('x', 'f4'), ('y', 'f4'), ('z', 'f4'),
              ('f_dc_0', 'f4'), ('f_dc_1', 'f4'), ('f_dc_2', 'f4'),
              ('opacity', 'f4'),
              ('scale_0', 'f4'), ('scale_1', 'f4'), ('scale_2', 'f4'),
              ('rot_0', 'f4'), ('rot_1', 'f4'), ('rot_2', 'f4'), ('rot_3', 'f4')]
     
-    # 4. 创建一个空的结构化数组
+    # 4. Create an empty structured array.
     num_points = means_np.shape[0]
     elements = np.empty(num_points, dtype=dtype)
     
-    # 5. 将所有属性数据合并并填充到结构化数组中
-    #    请注意，这里的顺序必须与上面的 dtype 定义严格对应
+    # 5. Merge all attribute data and fill it into the structured array.
+    #    Note that the order here must strictly correspond to the dtype definition above.
     attributes = (
         means_np[:, 0], means_np[:, 1], means_np[:, 2],
         colors_np[:, 0], colors_np[:, 1], colors_np[:, 2],
         opacities_np[:, 0],
         scales_np[:, 0], scales_np[:, 1], scales_np[:, 2],
-        rotations_np[:, 0], rotations_np[:, 1], rotations_np[:, 2], rotations_np[:, 3] # rot_0,1,2,3 对应 w,x,y,z
+        rotations_np[:, 0], rotations_np[:, 1], rotations_np[:, 2], rotations_np[:, 3] # rot_0,1,2,3 correspond to w,x,y,z
     )
     for i, name in enumerate(dtype):
         elements[name[0]] = attributes[i]
 
-    # 6. 创建PlyData对象并写入文件
+    # 6. Create a PlyData object and write to the file.
     vertex_element = PlyElement.describe(elements, 'vertex')
-    ply_data = PlyData([vertex_element], text=True) # text=True可以增加可读性
+    ply_data = PlyData([vertex_element], text=True) # text=True can improve readability.
     
     output_dir = os.path.dirname(filename)
     if not os.path.exists(output_dir):
@@ -403,66 +403,66 @@ fog_levels = {
 
 def load_and_preprocess_pcd(pcd_path, npoints):
     """
-    加载并预处理单个点云文件。
-    此版本经过修改，可以稳健地加载 .txt, .xyz, .ply 等格式。
+    Load and preprocess a single point cloud file.
+    This version is modified to robustly load formats like .txt, .xyz, .ply, etc.
     """
-    # 获取文件扩展名
+    # Get the file extension.
     file_extension = os.path.splitext(pcd_path)[1].lower()
 
     points = None
-    # 如果是.txt或.xyz等文本格式，使用NumPy加载
+    # If it's a text format like .txt or .xyz, load it using NumPy.
     if file_extension in ['.txt', '.xyz','csv']:
         try:
-            # np.loadtxt 是读取这类文本文件的标准方法
-            points = np.loadtxt(pcd_path, usecols=(0, 1, 2)) # 只读取前三列作为X,Y,Z
+            # np.loadtxt is the standard method for reading this type of text file.
+            points = np.loadtxt(pcd_path, usecols=(0, 1, 2)) # Only read the first three columns as X, Y, Z.
         except Exception as e:
-            raise IOError(f"使用 NumPy 加载 {pcd_path} 文件失败: {e}")
-    # 对于其他标准格式，继续使用open3d
+            raise IOError(f"Failed to load {pcd_path} using NumPy: {e}")
+    # For other standard formats, continue using open3d.
     else:
         try:
             pcd = o3d.io.read_point_cloud(pcd_path)
             if pcd.has_points():
                 points = np.asarray(pcd.points)
             else:
-                 raise IOError(f"Open3D 无法从 {pcd_path} 中读取任何点。")
+                    raise IOError(f"Open3D could not read any points from {pcd_path}.")
         except Exception as e:
-            raise IOError(f"使用 Open3D 加载 {pcd_path} 文件失败: {e}")
+            raise IOError(f"Failed to load {pcd_path} using Open3D: {e}")
 
 
-    # 确保成功加载了点
+    # Ensure that points were loaded successfully.
     if points is None or points.size == 0:
-        raise ValueError(f"无法从文件 {pcd_path} 加载任何点云数据，请检查文件是否有效或路径是否正确。")
+        raise ValueError(f"Could not load any point cloud data from file {pcd_path}, please check if the file is valid or the path is correct.")
 
-    # --- 后续的预处理代码保持不变 ---
+    # --- Subsequent preprocessing code remains unchanged ---
 
-    # 归一化
+    # Normalization.
     points = points - np.mean(points, axis=0)
-    # 增加一个小的epsilon值防止除以零
+    # Add a small epsilon value to prevent division by zero.
     dist = np.max(np.sqrt(np.sum(points ** 2, axis=1)))
     if dist < 1e-8:
-        dist = 1.0 # 如果点云已经接近原点，则不缩放
+        dist = 1.0 # If the point cloud is already close to the origin, do not scale.
     points = points / dist
 
-    # 随机采样
+    # Random sampling.
     if len(points) >= npoints:
         p_idx = np.random.choice(len(points), npoints, replace=False)
         points = points[p_idx]
-    else: # 如果点数不足，则重复采样
+    else: # If the number of points is insufficient, sample with replacement.
         p_idx = np.random.choice(len(points), npoints, replace=True)
         points = points[p_idx]
     
-    # 转换为Torch张量并添加批次维度
+    # Convert to a Torch tensor and add a batch dimension.
     points_tensor = torch.from_numpy(points).float().unsqueeze(0)
     return points_tensor
 
 def test_single(base_model, args, config, logger=None):
     """
-    专门用于测试单个外部点云文件的函数。
-    此版本已更新，允许通过命令行参数指定自定义的输出目录。
+    A function specifically for testing a single external point cloud file.
+    This version has been updated to allow specifying a custom output directory via command-line arguments.
     """
-    base_model.eval()  # 设置为评估模式
+    base_model.eval()  # Set to evaluation mode.
 
-    # 检查 'args' 中是否有新的 'output_dir' 参数。
+    # Check if there is a new 'output_dir' parameter in 'args'.
     if hasattr(args, 'output_dir') and args.output_dir is not None:
         vis_dir = args.output_dir
         print_log(f"Using custom output directory: {vis_dir}", logger=logger)
@@ -470,41 +470,41 @@ def test_single(base_model, args, config, logger=None):
         vis_dir = os.path.join(args.experiment_path, 'single_file_results')
         print_log(f"Using default output directory: {vis_dir}", logger=logger)
     
-    # 确保保存目录存在
+    # Ensure the save directory exists.
     if not os.path.exists(vis_dir):
         os.makedirs(vis_dir)
-    # ==================== 主要修改点 (结束) ====================
+    # ==================== End of Main Modifications ====================
     
-    # 获取文件名，用于保存结果
+    # Get the filename to use for saving the results.
     pcd_filename = os.path.splitext(os.path.basename(args.pcd_path))[0]
 
     with torch.no_grad():
-        # 加载并预处理点云
+        # Load and preprocess the point cloud.
         npoints = 2048
         partial = load_and_preprocess_pcd(args.pcd_path, npoints)
         
         if args.use_gpu:
             partial = partial.cuda()
 
-        # ==================== 计时功能 (开始) ====================
+        # ==================== Timing Functionality (Start) ====================
         print_log("Running model inference...", logger=logger)
         start_time = time.time()
         ret = base_model(partial)
         end_time = time.time()
         inference_time = end_time - start_time
         print_log(f"Inference time for single file: {inference_time:.4f} seconds", logger=logger)
-        # ==================== 计时功能 (结束) ====================
+        # ==================== Timing Functionality (End) ====================
         
-        # 安全地解包模型输出
+        # Safely unpack the model output.
         coarse_points = ret[0]
         dense_points = ret[1]
         
-        # --- 保存所有结果 ---
-        # 1. 保存预处理后的输入点云
+        # --- Save all results ---
+        # 1. Save the preprocessed input point cloud.
         processed_input_path = os.path.join(vis_dir, f'{pcd_filename}_input_processed.ply')
         save_point_cloud(partial[0], processed_input_path)
         
-        # 2. 保存模型生成的密集点云 (最终输出)
+        # 2. Save the dense point cloud generated by the model (final output).
         output_path = os.path.join(vis_dir, f'{pcd_filename}_output.ply')
         save_point_cloud(dense_points[0], output_path)
 
@@ -515,20 +515,20 @@ def test_net(args, config):
     logger = get_logger(args.log_name)
     print_log('Tester start ... ', logger = logger)
 
-    # 新增：检查是否是处理单个文件
+    # New: Check if processing a single file.
     if hasattr(args, 'pcd_path') and args.pcd_path is not None:
         print_log(f"Processing single point cloud file: {args.pcd_path}", logger=logger)
-        # 加载模型
+        # Load the model.
         base_model = builder.model_builder(config.model)
         builder.load_model(base_model, args.ckpts, logger=logger)
         if args.use_gpu:
             base_model.to(args.local_rank)
         
-        # 调用单个文件处理函数
+        # Call the single file processing function.
         test_single(base_model, args, config, logger)
 
     else:
-        # 原始逻辑：处理测试数据集
+        # Original logic: Process the test dataset.
         print_log("Processing test dataset...", logger=logger)
         _, test_dataloader = builder.dataset_builder(args, config.dataset.test)
         base_model = builder.model_builder(config.model)
@@ -556,12 +556,12 @@ def test(base_model, test_dataloader, ChamferDisL1, ChamferDisL2, args, config, 
     category_metrics = dict()
     n_samples = len(test_dataloader) # bs is 1
 
-    # ==================== 计时功能 (开始) ====================
-    # 为推理时间创建一个新的 AverageMeter
+    # ==================== Timing Functionality (Start) ====================
+    # Create a new AverageMeter for inference time.
     inference_time_meter = AverageMeter(['InferenceTime'])
-    # ==================== 计时功能 (结束) ====================
+    # ==================== Timing Functionality (End) ====================
 
-    # 创建一个用于存放所有可视化结果的文件夹
+    # Create a folder to store all visualization results.
     vis_dir = os.path.join(args.experiment_path, 'visualization_results')
     if not os.path.exists(vis_dir):
         os.makedirs(vis_dir)
@@ -577,14 +577,14 @@ def test(base_model, test_dataloader, ChamferDisL1, ChamferDisL2, args, config, 
                 partial = data[0].cuda()
                 gt = data[1].cuda()
 
-                # ==================== 计时功能 (开始) ====================
+                # ==================== Timing Functionality (Start) ====================
                 start_time = time.time()
                 ret = base_model(partial)
                 end_time = time.time()
                 inference_time_meter.update([end_time - start_time])
-                # ==================== 计时功能 (结束) ====================
+                # ==================== Timing Functionality (End) ====================
                 
-                # 安全地解包模型输出
+                # Safely unpack the model output.
                 coarse_points = ret[0]
                 dense_points = ret[1]
 
@@ -593,13 +593,13 @@ def test(base_model, test_dataloader, ChamferDisL1, ChamferDisL2, args, config, 
                     os.path.join(vis_dir, f'{idx:04d}_{model_id}_input.ply')
                 )
                 
-                # 保存模型生成的密集点云 (Output)
+                # Save the dense point cloud generated by the model (Output).
                 save_point_cloud(
                     dense_points[0],
                     os.path.join(vis_dir, f'{idx:04d}_{model_id}_output.ply')
                 )
                 
-                # 保存真实完整的点云 (Ground Truth)
+                # Save the ground truth complete point cloud.
                 save_point_cloud(
                     gt[0], 
                     os.path.join(vis_dir, f'{idx:04d}_{model_id}_gt.ply')
@@ -631,35 +631,35 @@ def test(base_model, test_dataloader, ChamferDisL1, ChamferDisL2, args, config, 
                     partial = misc.generate_viewpoint_fog_cloud(
                                     gt, 
                                     npoints,
-                                    fog_beta_range=(beta, beta),  # 将固定值转为范围
-                                    fog_noise_ratio_range=(noise_ratio, noise_ratio), # 将固定值转为范围
+                                    fog_beta_range=(beta, beta),  # Convert the fixed value to a range.
+                                    fog_noise_ratio_range=(noise_ratio, noise_ratio), # Convert the fixed value to a range.
                                     fixed_direction=item, 
                                     fixed_radius_scale=2.5
                                 )
                     partial = partial.to('cuda')
                     
-                    # ==================== 计时功能 (开始) ====================
+                    # ==================== Timing Functionality (Start) ====================
                     start_time = time.time()
                     ret = base_model(partial)
                     end_time = time.time()
                     inference_time_meter.update([end_time - start_time])
-                    # ==================== 计时功能 (结束) ====================
+                    # ==================== Timing Functionality (End) ====================
                     
                     coarse_points = ret[0]
                     dense_points = ret[1]
 
                     dir_suffix = "_".join(str(int(x)) for x in item.tolist())
-                    # 保存输入的部分点云
+                    # Save the partial input point cloud.
                     save_point_cloud(
                         partial[0],
                         os.path.join(vis_dir, f'{idx:04d}_{dir_suffix}_input.ply')
                     )
-                    # 保存模型生成的密集点云 (Output)
+                    # Save the dense point cloud generated by the model (Output).
                     save_point_cloud(
                         dense_points[0],
                         os.path.join(vis_dir, f'{idx:04d}_{dir_suffix}_output.ply')
                     )
-                    # 保存真实完整的点云 (Ground Truth)
+                    # Save the ground truth complete point cloud.
                     save_point_cloud(
                         gt[0],
                         os.path.join(vis_dir, f'{idx:04d}_{dir_suffix}_gt.ply')
@@ -702,10 +702,10 @@ def test(base_model, test_dataloader, ChamferDisL1, ChamferDisL2, args, config, 
             test_metrics.update(v.avg())
         print_log('[TEST] Metrics = %s' % (['%.4f' % m for m in test_metrics.avg()]), logger=logger)
     
-        # ==================== 计时功能 (开始) ====================
-        # 在最终结果中打印平均推理时间
+        # ==================== Timing Functionality (Start) ====================
+        # Print the average inference time in the final results.
         print_log(f'[TEST] Average Inference Time: {inference_time_meter.avg(0):.4f} seconds', logger=logger)
-        # ==================== 计时功能 (结束) ====================
+        # ==================== Timing Functionality (End) ====================
 
     # Print testing results
     shapenet_dict = json.load(open('./data/shapenet_synset_dict.json', 'r'))
