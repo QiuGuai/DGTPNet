@@ -1,0 +1,203 @@
+2025-07-26 22:34:41,099 - UpTrans - INFO - Copy the Config file from ./cfgs/ShapeNet55_models/UpTrans.yaml to ./experiments/UpTrans/ShapeNet55_models/test_fog_easy/config.yaml
+2025-07-26 22:34:41,099 - UpTrans - INFO - args.config : ./cfgs/ShapeNet55_models/UpTrans.yaml
+2025-07-26 22:34:41,100 - UpTrans - INFO - args.launcher : none
+2025-07-26 22:34:41,100 - UpTrans - INFO - args.local_rank : 0
+2025-07-26 22:34:41,100 - UpTrans - INFO - args.num_workers : 2
+2025-07-26 22:34:41,100 - UpTrans - INFO - args.seed : 2023
+2025-07-26 22:34:41,100 - UpTrans - INFO - args.deterministic : False
+2025-07-26 22:34:41,100 - UpTrans - INFO - args.sync_bn : False
+2025-07-26 22:34:41,100 - UpTrans - INFO - args.exp_name : test_fog_easy
+2025-07-26 22:34:41,100 - UpTrans - INFO - args.start_ckpts : None
+2025-07-26 22:34:41,100 - UpTrans - INFO - args.ckpts : ./pretrained/fog/UpTrans_fog.pth
+2025-07-26 22:34:41,100 - UpTrans - INFO - args.val_freq : 10
+2025-07-26 22:34:41,100 - UpTrans - INFO - args.val_interval : 50
+2025-07-26 22:34:41,100 - UpTrans - INFO - args.test_interval : 50
+2025-07-26 22:34:41,100 - UpTrans - INFO - args.resume : False
+2025-07-26 22:34:41,100 - UpTrans - INFO - args.test : True
+2025-07-26 22:34:41,100 - UpTrans - INFO - args.mode : easy
+2025-07-26 22:34:41,100 - UpTrans - INFO - args.pcd_path : None
+2025-07-26 22:34:41,100 - UpTrans - INFO - args.experiment_path : ./experiments/UpTrans/ShapeNet55_models/test_fog_easy
+2025-07-26 22:34:41,100 - UpTrans - INFO - args.tfboard_path : ./experiments/UpTrans/ShapeNet55_models/TFBoard/test_fog_easy
+2025-07-26 22:34:41,100 - UpTrans - INFO - args.log_name : UpTrans
+2025-07-26 22:34:41,100 - UpTrans - INFO - args.use_gpu : True
+2025-07-26 22:34:41,100 - UpTrans - INFO - args.distributed : False
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.optimizer = edict()
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.optimizer.type : AdamW
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.optimizer.kwargs = edict()
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.optimizer.kwargs.lr : 0.0004
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.optimizer.kwargs.weight_decay : 0.0005
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.scheduler = edict()
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.scheduler.type : LambdaLR
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.scheduler.kwargs = edict()
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.scheduler.kwargs.decay_step : 50
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.scheduler.kwargs.lr_decay : 0.5
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.scheduler.kwargs.lowest_decay : 0.01
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.bnmscheduler = edict()
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.bnmscheduler.type : Lambda
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.bnmscheduler.kwargs = edict()
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.bnmscheduler.kwargs.decay_step : 50
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.bnmscheduler.kwargs.bn_decay : 0.5
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.bnmscheduler.kwargs.bn_momentum : 0.9
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.bnmscheduler.kwargs.lowest_decay : 0.01
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.dataset = edict()
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.dataset.train = edict()
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.dataset.train._base_ = edict()
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.dataset.train._base_.NAME : ShapeNet
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.dataset.train._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.dataset.train._base_.N_POINTS : 8192
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.dataset.train._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.dataset.train.others = edict()
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.dataset.train.others.subset : train
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.dataset.train.others.bs : 8
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.dataset.val = edict()
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.dataset.val._base_ = edict()
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.dataset.val._base_.NAME : ShapeNet
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.dataset.val._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.dataset.val._base_.N_POINTS : 8192
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.dataset.val._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.dataset.val.others = edict()
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.dataset.val.others.subset : test
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.dataset.test = edict()
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.dataset.test._base_ = edict()
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.dataset.test._base_.NAME : ShapeNet
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.dataset.test._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.dataset.test._base_.N_POINTS : 8192
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.dataset.test._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.dataset.test.others = edict()
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.dataset.test.others.subset : test
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.model = edict()
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.model.NAME : UpTrans
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.model.num_pred : 8192
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.model.num_seeds : 1024
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.model.seed_fea : 128
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.model.dim_feat : 512
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.model.num_dicts : 512
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.model.upscales : [1, 2, 4]
+2025-07-26 22:34:41,100 - UpTrans - INFO - config.model.l2_loss : 1
+2025-07-26 22:34:41,101 - UpTrans - INFO - config.loss = edict()
+2025-07-26 22:34:41,101 - UpTrans - INFO - config.loss.sparse_loss_weight : 1.0
+2025-07-26 22:34:41,101 - UpTrans - INFO - config.loss.dense_loss_weight : 1.0
+2025-07-26 22:34:41,101 - UpTrans - INFO - config.loss.dz_weight : 1.0
+2025-07-26 22:34:41,101 - UpTrans - INFO - config.loss.orth_weight : 1.0
+2025-07-26 22:34:41,101 - UpTrans - INFO - config.total_bs : 8
+2025-07-26 22:34:41,101 - UpTrans - INFO - config.step_per_update : 2
+2025-07-26 22:34:41,101 - UpTrans - INFO - config.max_epoch : 400
+2025-07-26 22:34:41,101 - UpTrans - INFO - config.consider_metric : CDL1
+2025-07-26 22:34:41,101 - UpTrans - INFO - Distributed training: False
+2025-07-26 22:34:41,101 - UpTrans - INFO - Set random seed to 2023, deterministic: False
+2025-07-26 22:34:41,101 - UpTrans - INFO - Tester start ... 
+2025-07-26 22:34:41,101 - UpTrans - INFO - Processing test dataset...
+2025-07-26 22:34:41,153 - UpTrans - INFO - Loading weights from ./pretrained/fog/UpTrans_fog.pth...
+2025-07-26 22:34:41,333 - UpTrans - INFO - ckpts @ 370 epoch( performance = {'F-Score': 0.3193577612115164, 'CDL1': 26.857607181240542, 'CDL2': 32.37263142900976})
+2025-07-26 22:38:30,550 - UpTrans - INFO - Test[200/10518] Taxonomy = 04530566 Sample = 3bb6a5deec68ef77fee64ca302793912 Losses = ['48.8246', '177.9860', '12.7028', '0.5761'] Metrics = ['0.4002', '12.7028', '0.5761'] InferenceTime = 0.0563
+2025-07-26 22:42:02,647 - UpTrans - INFO - Test[400/10518] Taxonomy = 03636649 Sample = 90651b3febfc3afe15226aa76eb7c3e Losses = ['68.4022', '288.4243', '14.3361', '0.8526'] Metrics = ['0.3341', '14.3361', '0.8526'] InferenceTime = 0.0369
+2025-07-26 22:45:19,916 - UpTrans - INFO - Test[600/10518] Taxonomy = 03001627 Sample = fae27953e0f0404ca99df2794ec76201 Losses = ['36.6333', '65.3831', '13.2217', '0.5827'] Metrics = ['0.3585', '13.2217', '0.5827'] InferenceTime = 0.0371
+2025-07-26 22:48:41,669 - UpTrans - INFO - Test[800/10518] Taxonomy = 03593526 Sample = 324c9045843b9470d29670d38a4c9e7e Losses = ['52.6027', '143.1993', '14.5346', '0.9344'] Metrics = ['0.3995', '14.5346', '0.9344'] InferenceTime = 0.0525
+2025-07-26 22:52:05,607 - UpTrans - INFO - Test[1000/10518] Taxonomy = 02958343 Sample = 39e10c5d24fee4a6311f5d9a1681aa3b Losses = ['57.3207', '182.9240', '15.4861', '0.8358'] Metrics = ['0.2802', '15.4861', '0.8358'] InferenceTime = 0.0170
+2025-07-26 22:55:18,302 - UpTrans - INFO - Test[1200/10518] Taxonomy = 03001627 Sample = e50f1b2d0835bb392764cfba57a5de73 Losses = ['57.4111', '157.6783', '18.5060', '1.2858'] Metrics = ['0.2588', '18.5060', '1.2858'] InferenceTime = 0.0364
+2025-07-26 22:58:32,153 - UpTrans - INFO - Test[1400/10518] Taxonomy = 04379243 Sample = 647692d3858790a1f1783a44a88d6274 Losses = ['38.7911', '99.0268', '13.0800', '0.5973'] Metrics = ['0.3441', '13.0800', '0.5973'] InferenceTime = 0.0169
+2025-07-26 23:01:56,362 - UpTrans - INFO - Test[1600/10518] Taxonomy = 02691156 Sample = d8d9de967255b4c562b600da24e0965 Losses = ['38.5135', '167.5278', '9.1125', '0.4064'] Metrics = ['0.5662', '9.1125', '0.4064'] InferenceTime = 0.0604
+2025-07-26 23:05:17,363 - UpTrans - INFO - Test[1800/10518] Taxonomy = 03001627 Sample = 24c0e6a8b10abb77df2b21995cbbbc4f Losses = ['68.2082', '159.6221', '23.9788', '2.2192'] Metrics = ['0.1901', '23.9788', '2.2192'] InferenceTime = 0.0378
+2025-07-26 23:08:42,691 - UpTrans - INFO - Test[2000/10518] Taxonomy = 04379243 Sample = 5d77e8f6ad3741a0c30ab36bf7b0552 Losses = ['43.8385', '111.3623', '12.7528', '0.4871'] Metrics = ['0.3489', '12.7528', '0.4871'] InferenceTime = 0.0370
+2025-07-26 23:12:02,136 - UpTrans - INFO - Test[2200/10518] Taxonomy = 03636649 Sample = b64e98c991d4103170365ad078f710ff Losses = ['61.8147', '127.1358', '23.3954', '2.5700'] Metrics = ['0.2463', '23.3954', '2.5700'] InferenceTime = 0.0567
+2025-07-26 23:15:22,722 - UpTrans - INFO - Test[2400/10518] Taxonomy = 03211117 Sample = b4386438057e85988bfba3df1f776207 Losses = ['54.8490', '171.6637', '16.0894', '0.8713'] Metrics = ['0.3171', '16.0894', '0.8713'] InferenceTime = 0.0368
+2025-07-26 23:18:46,100 - UpTrans - INFO - Test[2600/10518] Taxonomy = 04468005 Sample = 3b8c505fd1127ed88f134472f61cf6bb Losses = ['43.0214', '149.5805', '14.6899', '0.6631'] Metrics = ['0.2721', '14.6899', '0.6631'] InferenceTime = 0.0169
+2025-07-26 23:22:06,185 - UpTrans - INFO - Test[2800/10518] Taxonomy = 03001627 Sample = e3e76d624f1f855bcc8a9c365968620 Losses = ['37.8900', '77.0802', '14.1191', '0.6640'] Metrics = ['0.2962', '14.1191', '0.6640'] InferenceTime = 0.0167
+2025-07-26 23:25:23,536 - UpTrans - INFO - Test[3000/10518] Taxonomy = 03001627 Sample = 40020a5e90c75d94a93412f1b60e6fba Losses = ['28.5849', '32.5006', '12.2743', '0.7176'] Metrics = ['0.4367', '12.2743', '0.7176'] InferenceTime = 0.0311
+2025-07-26 23:28:23,179 - UpTrans - INFO - Test[3200/10518] Taxonomy = 02691156 Sample = a96c1589731b06a1efbd0f357ff7c40a Losses = ['49.8753', '201.0970', '9.0077', '0.3074'] Metrics = ['0.6025', '9.0077', '0.3074'] InferenceTime = 0.0261
+2025-07-26 23:31:30,240 - UpTrans - INFO - Test[3400/10518] Taxonomy = 03046257 Sample = b2b40e80c9d3f530d5f1db12f95f0fe4 Losses = ['153.4699', '1036.3368', '19.0652', '8.5480'] Metrics = ['0.2873', '19.0652', '8.5480'] InferenceTime = 0.0435
+2025-07-26 23:34:32,246 - UpTrans - INFO - Test[3600/10518] Taxonomy = 02933112 Sample = c18a4772bcfbb98e85bc264270ae0601 Losses = ['42.2957', '50.1809', '21.1605', '1.5710'] Metrics = ['0.1785', '21.1605', '1.5710'] InferenceTime = 0.0241
+2025-07-26 23:37:41,421 - UpTrans - INFO - Test[3800/10518] Taxonomy = 04530566 Sample = 215861c4bebeb328d9a75de54b023ae1 Losses = ['37.6302', '97.1965', '13.0785', '0.5815'] Metrics = ['0.3525', '13.0785', '0.5815'] InferenceTime = 0.0370
+2025-07-26 23:41:08,911 - UpTrans - INFO - Test[4000/10518] Taxonomy = 02828884 Sample = 5f9d3dae06acf0e4e93e1127627b834 Losses = ['48.0836', '139.1809', '12.9973', '0.5631'] Metrics = ['0.3312', '12.9973', '0.5631'] InferenceTime = 0.0252
+2025-07-26 23:44:33,033 - UpTrans - INFO - Test[4200/10518] Taxonomy = 04401088 Sample = a3c1c9fc390b1bbbb099170e6f5a4af9 Losses = ['95.0970', '425.8133', '12.7103', '0.4354'] Metrics = ['0.3394', '12.7103', '0.4354'] InferenceTime = 0.0369
+2025-07-26 23:47:58,361 - UpTrans - INFO - Test[4400/10518] Taxonomy = 04256520 Sample = 54506969a60017ac8f0a57a8b9390a Losses = ['53.7584', '113.5421', '14.0446', '0.7459'] Metrics = ['0.3676', '14.0446', '0.7459'] InferenceTime = 0.0397
+2025-07-26 23:51:18,067 - UpTrans - INFO - Test[4600/10518] Taxonomy = 04074963 Sample = d9ca2dcaf1d9d850dc605801df3f66ec Losses = ['59.6356', '165.0746', '19.7659', '1.3299'] Metrics = ['0.2551', '19.7659', '1.3299'] InferenceTime = 0.0447
+2025-07-26 23:54:46,083 - UpTrans - INFO - Test[4800/10518] Taxonomy = 04379243 Sample = ead93856b735ec90f0aeabfdcb4e1dd9 Losses = ['51.3111', '157.1356', '9.4414', '0.2582'] Metrics = ['0.5177', '9.4414', '0.2582'] InferenceTime = 0.0187
+2025-07-26 23:58:11,384 - UpTrans - INFO - Test[5000/10518] Taxonomy = 03790512 Sample = 242d8c07fabbdabc78fe949fc1419876 Losses = ['35.0969', '31.8329', '18.4371', '1.1477'] Metrics = ['0.1597', '18.4371', '1.1477'] InferenceTime = 0.0385
+2025-07-27 00:01:43,181 - UpTrans - INFO - Test[5200/10518] Taxonomy = 02691156 Sample = 7b6f528acc10d3fbcf5b9c6e0c7ce895 Losses = ['45.9727', '188.4105', '12.2705', '0.7202'] Metrics = ['0.4387', '12.2705', '0.7202'] InferenceTime = 0.0391
+2025-07-27 00:05:19,988 - UpTrans - INFO - Test[5400/10518] Taxonomy = 04379243 Sample = 6765d83445c2338555f46d55537192b6 Losses = ['45.3106', '119.2716', '15.5582', '1.1081'] Metrics = ['0.2860', '15.5582', '1.1081'] InferenceTime = 0.0336
+2025-07-27 00:08:58,965 - UpTrans - INFO - Test[5600/10518] Taxonomy = 03001627 Sample = 33dc06a8e0933b1efc385a284336f217 Losses = ['37.6021', '53.8210', '18.0288', '1.0851'] Metrics = ['0.2277', '18.0288', '1.0851'] InferenceTime = 0.0421
+2025-07-27 00:12:45,241 - UpTrans - INFO - Test[5800/10518] Taxonomy = 02992529 Sample = 4a81237a7fc743763992b1138bb05b3c Losses = ['90.2339', '394.8409', '10.1213', '0.2840'] Metrics = ['0.5127', '10.1213', '0.2840'] InferenceTime = 0.0228
+2025-07-27 00:16:28,128 - UpTrans - INFO - Test[6000/10518] Taxonomy = 02958343 Sample = 37249c6f16b203de2e877e82c90c24d Losses = ['59.0700', '191.2373', '17.9824', '1.3113'] Metrics = ['0.2423', '17.9824', '1.3113'] InferenceTime = 0.0438
+2025-07-27 00:20:05,125 - UpTrans - INFO - Test[6200/10518] Taxonomy = 02933112 Sample = 956c437be87a2be5f51f77a6d7299806 Losses = ['52.0672', '125.7754', '13.1032', '0.5683'] Metrics = ['0.3556', '13.1032', '0.5683'] InferenceTime = 0.0615
+2025-07-27 00:23:39,525 - UpTrans - INFO - Test[6400/10518] Taxonomy = 03691459 Sample = 9d62c46fc3fd343d1f9f3ce366e030fb Losses = ['112.4213', '411.6981', '21.4002', '2.7400'] Metrics = ['0.2576', '21.4002', '2.7400'] InferenceTime = 0.0584
+2025-07-27 00:27:20,554 - UpTrans - INFO - Test[6600/10518] Taxonomy = 04379243 Sample = 7a8399fc51d83969a8b1d0fdee586dc9 Losses = ['28.6217', '22.6193', '9.5319', '0.2679'] Metrics = ['0.4488', '9.5319', '0.2679'] InferenceTime = 0.0475
+2025-07-27 00:30:54,220 - UpTrans - INFO - Test[6800/10518] Taxonomy = 03001627 Sample = 78abbfe9ab73729f56d13e757b0dc374 Losses = ['46.7626', '157.9210', '11.7338', '0.6149'] Metrics = ['0.4934', '11.7338', '0.6149'] InferenceTime = 0.0210
+2025-07-27 00:34:29,423 - UpTrans - INFO - Test[7000/10518] Taxonomy = 04379243 Sample = 264a075e293394a843638dabe1eb5336 Losses = ['32.8188', '49.1346', '13.7193', '0.5690'] Metrics = ['0.2802', '13.7193', '0.5690'] InferenceTime = 0.0454
+2025-07-27 00:38:02,481 - UpTrans - INFO - Test[7200/10518] Taxonomy = 03211117 Sample = 96f01698d0446641ea6e0950aa8ac31b Losses = ['62.2181', '182.2418', '19.1633', '1.3914'] Metrics = ['0.2699', '19.1633', '1.3914'] InferenceTime = 0.0169
+2025-07-27 00:41:38,766 - UpTrans - INFO - Test[7400/10518] Taxonomy = 03001627 Sample = b2239339005b14c8d675cc466d0d6fbc Losses = ['40.4205', '80.5195', '13.1979', '0.6200'] Metrics = ['0.3675', '13.1979', '0.6200'] InferenceTime = 0.0422
+2025-07-27 00:45:16,649 - UpTrans - INFO - Test[7600/10518] Taxonomy = 04074963 Sample = 57759e351ec76d86d3c1501c166e6b2a Losses = ['49.7954', '148.7892', '15.6089', '0.7658'] Metrics = ['0.3152', '15.6089', '0.7658'] InferenceTime = 0.0565
+2025-07-27 00:48:59,747 - UpTrans - INFO - Test[7800/10518] Taxonomy = 04090263 Sample = 41a9912bfe0dc96239169e4b52d9f093 Losses = ['35.3599', '88.1910', '9.7491', '0.4598'] Metrics = ['0.5701', '9.7491', '0.4598'] InferenceTime = 0.0396
+2025-07-27 00:52:36,737 - UpTrans - INFO - Test[8000/10518] Taxonomy = 04379243 Sample = bcbc5e30e12a58f07ea323bc74055b8 Losses = ['36.3576', '94.0886', '11.0337', '0.3506'] Metrics = ['0.3878', '11.0337', '0.3506'] InferenceTime = 0.0171
+2025-07-27 00:56:16,374 - UpTrans - INFO - Test[8200/10518] Taxonomy = 04379243 Sample = aabcb5d610e76ff19ca02c396af0c503 Losses = ['58.7348', '93.7959', '14.1359', '0.8916'] Metrics = ['0.3610', '14.1359', '0.8916'] InferenceTime = 0.0168
+2025-07-27 00:59:57,379 - UpTrans - INFO - Test[8400/10518] Taxonomy = 04379243 Sample = dd2c3ff28a34556a47839bae1bc65257 Losses = ['28.3929', '47.1627', '10.7978', '0.3816'] Metrics = ['0.4079', '10.7978', '0.3816'] InferenceTime = 0.0428
+2025-07-27 01:03:34,790 - UpTrans - INFO - Test[8600/10518] Taxonomy = 03337140 Sample = 149a105979cad722c1467c54b9e09ce5 Losses = ['64.6679', '115.1788', '18.4038', '1.1605'] Metrics = ['0.2287', '18.4038', '1.1605'] InferenceTime = 0.0616
+2025-07-27 01:07:07,266 - UpTrans - INFO - Test[8800/10518] Taxonomy = 02691156 Sample = 4044d5954ef85af8279326882e8430cb Losses = ['71.7588', '328.2347', '12.4527', '0.6982'] Metrics = ['0.4999', '12.4527', '0.6982'] InferenceTime = 0.0596
+2025-07-27 01:10:41,865 - UpTrans - INFO - Test[9000/10518] Taxonomy = 02828884 Sample = 4e512ab638542762d4d8765e3910f617 Losses = ['33.6923', '85.8405', '10.4327', '0.3239'] Metrics = ['0.4089', '10.4327', '0.3239'] InferenceTime = 0.0169
+2025-07-27 01:14:21,753 - UpTrans - INFO - Test[9200/10518] Taxonomy = 04379243 Sample = 5247e4e978399f1b486040c0d9e85846 Losses = ['37.5604', '83.3257', '11.0269', '0.4660'] Metrics = ['0.4256', '11.0269', '0.4660'] InferenceTime = 0.0363
+2025-07-27 01:18:03,510 - UpTrans - INFO - Test[9400/10518] Taxonomy = 03636649 Sample = 7ec821d5d8bd9f17d4aea4231844b26b Losses = ['18.8268', '16.5484', '7.9513', '0.2237'] Metrics = ['0.6302', '7.9513', '0.2237'] InferenceTime = 0.0372
+2025-07-27 01:21:37,829 - UpTrans - INFO - Test[9600/10518] Taxonomy = 04090263 Sample = 3cb82befc3290e36b58435942a1b4dac Losses = ['23.2748', '69.7587', '5.5182', '0.0884'] Metrics = ['0.8951', '5.5182', '0.0884'] InferenceTime = 0.0568
+2025-07-27 01:25:09,294 - UpTrans - INFO - Test[9800/10518] Taxonomy = 04379243 Sample = 6358336cbeedb9232d9fe390e23fd20f Losses = ['36.2900', '76.2593', '10.3195', '0.3205'] Metrics = ['0.4773', '10.3195', '0.3205'] InferenceTime = 0.0182
+2025-07-27 01:28:54,821 - UpTrans - INFO - Test[10000/10518] Taxonomy = 04401088 Sample = f73493b7c8a78000b594bbf2c494ab81 Losses = ['51.6947', '94.2134', '16.4531', '1.0703'] Metrics = ['0.2928', '16.4531', '1.0703'] InferenceTime = 0.0597
+2025-07-27 01:32:25,734 - UpTrans - INFO - Test[10200/10518] Taxonomy = 03001627 Sample = 3ffd794e5100258483bc207d8a5912e3 Losses = ['44.2523', '148.4807', '9.8119', '0.2848'] Metrics = ['0.4770', '9.8119', '0.2848'] InferenceTime = 0.0613
+2025-07-27 01:36:05,174 - UpTrans - INFO - Test[10400/10518] Taxonomy = 04090263 Sample = 26744766d59c28fb6b2c8bb96250e4a0 Losses = ['34.4165', '132.5794', '6.2024', '0.1117'] Metrics = ['0.8390', '6.2024', '0.1117'] InferenceTime = 0.0699
+2025-07-27 01:38:17,133 - UpTrans - INFO - [TEST] Metrics = ['0.3542', '16.2584', '1.3740']
+2025-07-27 01:38:17,136 - UpTrans - INFO - [TEST] Average Inference Time: 0.0400 seconds
+2025-07-27 01:38:17,137 - UpTrans - INFO - ============================ TEST RESULTS ============================
+2025-07-27 01:38:17,137 - UpTrans - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	#ModelName	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 03759954	112	0.563 	12.484 	1.068 	microphone	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 04330267	352	0.280 	18.433 	1.567 	stove	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 03261776	120	0.312 	17.507 	1.484 	earphone	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 03513137	264	0.223 	25.259 	3.871 	helmet	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 04460130	216	0.404 	15.707 	1.223 	tower	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 04468005	624	0.355 	14.442 	0.817 	train	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 03761084	248	0.248 	18.831 	1.494 	microwaves	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 04004475	272	0.253 	20.273 	1.845 	printer	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 03938244	160	0.286 	18.685 	1.804 	pillow	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 02992529	1336	0.402 	12.595 	0.536 	cellphone	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 02808440	1376	0.275 	18.269 	1.546 	bathtub	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 04530566	3104	0.436 	12.940 	0.718 	watercraft	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 02871439	728	0.261 	17.721 	1.302 	bookshelf	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 03593526	960	0.270 	20.345 	2.457 	jar	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 04554684	272	0.248 	20.765 	2.018 	washer	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 03467517	1280	0.830 	6.360 	0.134 	guitar	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 04401088	1744	0.407 	12.406 	0.526 	telephone	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 02954340	96	0.314 	16.299 	1.462 	cap	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 02933112	2520	0.251 	17.616 	1.171 	cabinet	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 03642806	736	0.355 	12.362 	0.478 	laptop	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 02924116	1504	0.360 	14.238 	0.799 	bus	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 02946921	176	0.259 	19.048 	1.775 	can	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 02818832	376	0.250 	19.670 	1.663 	bed	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 04256520	5080	0.261 	17.615 	1.161 	sofa	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 04379243	13496	0.345 	15.010 	1.157 	table	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 02747177	552	0.207 	21.289 	1.870 	trash bin	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 03046257	1048	0.297 	19.226 	3.360 	clock	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 04225987	248	0.489 	10.815 	0.451 	skateboard	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 03797390	344	0.196 	22.253 	2.150 	mug	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 03001627	10848	0.329 	15.657 	1.044 	chair	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 03691459	2560	0.262 	19.877 	1.828 	loudspeaker	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 02942699	184	0.234 	22.749 	2.415 	camera	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 03636649	3712	0.500 	13.851 	1.386 	lamp	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 02691156	6472	0.496 	11.343 	1.167 	airplane	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 02773838	136	0.319 	17.196 	1.338 	bag	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 02958343	5624	0.228 	17.976 	1.148 	car	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 02880940	304	0.222 	22.906 	4.501 	bowl	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 04099429	136	0.652 	9.060 	0.392 	rocket	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 02828884	2904	0.372 	13.435 	0.900 	bench	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 04090263	3800	0.711 	7.777 	0.229 	rifle	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 03211117	1752	0.318 	15.676 	0.974 	display	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 02876657	800	0.438 	13.100 	0.865 	bottle	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 03710193	152	0.504 	12.574 	0.859 	mailbox	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 03790512	544	0.220 	17.068 	1.051 	motorbike	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 03325088	1192	0.428 	13.950 	1.118 	faucet	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 02801938	184	0.230 	19.909 	1.864 	basket	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 03337140	480	0.255 	18.089 	1.293 	file cabinet	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 02843684	120	0.233 	22.648 	2.233 	birdhouse	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 03624134	680	0.810 	6.571 	0.156 	knife	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 03991062	968	0.214 	23.236 	2.735 	flowerpot	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 03948459	496	0.491 	11.231 	0.471 	pistol	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 03928116	384	0.263 	18.859 	1.493 	piano	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 03207941	152	0.261 	17.395 	1.245 	dishwasher	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 04074963	112	0.436 	12.334 	0.544 	remote	
+2025-07-27 01:38:17,137 - UpTrans - INFO - 03085013	104	0.417 	11.278 	0.409 	keyboard	
+2025-07-27 01:38:17,137 - UpTrans - INFO - Overall 		0.354 	16.258 	1.374 	

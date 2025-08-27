@@ -1,0 +1,150 @@
+2025-07-03 10:46:26,772 - UpTrans - INFO - Copy the Config file from ./cfgs/ShapeNet55_models/UpTrans.yaml to ./experiments/UpTrans/ShapeNet55_models/test_fog_hard/config.yaml
+2025-07-03 10:46:26,772 - UpTrans - INFO - args.config : ./cfgs/ShapeNet55_models/UpTrans.yaml
+2025-07-03 10:46:26,772 - UpTrans - INFO - args.launcher : none
+2025-07-03 10:46:26,772 - UpTrans - INFO - args.local_rank : 0
+2025-07-03 10:46:26,772 - UpTrans - INFO - args.num_workers : 2
+2025-07-03 10:46:26,772 - UpTrans - INFO - args.seed : 2023
+2025-07-03 10:46:26,772 - UpTrans - INFO - args.deterministic : False
+2025-07-03 10:46:26,772 - UpTrans - INFO - args.sync_bn : False
+2025-07-03 10:46:26,772 - UpTrans - INFO - args.exp_name : test_fog_hard
+2025-07-03 10:46:26,772 - UpTrans - INFO - args.start_ckpts : None
+2025-07-03 10:46:26,772 - UpTrans - INFO - args.ckpts : ./pretrained/fog/UpTrans_fog.pth
+2025-07-03 10:46:26,772 - UpTrans - INFO - args.val_freq : 10
+2025-07-03 10:46:26,772 - UpTrans - INFO - args.val_interval : 50
+2025-07-03 10:46:26,772 - UpTrans - INFO - args.test_interval : 50
+2025-07-03 10:46:26,772 - UpTrans - INFO - args.resume : False
+2025-07-03 10:46:26,773 - UpTrans - INFO - args.test : True
+2025-07-03 10:46:26,773 - UpTrans - INFO - args.mode : hard
+2025-07-03 10:46:26,773 - UpTrans - INFO - args.pcd_path : None
+2025-07-03 10:46:26,773 - UpTrans - INFO - args.experiment_path : ./experiments/UpTrans/ShapeNet55_models/test_fog_hard
+2025-07-03 10:46:26,773 - UpTrans - INFO - args.tfboard_path : ./experiments/UpTrans/ShapeNet55_models/TFBoard/test_fog_hard
+2025-07-03 10:46:26,773 - UpTrans - INFO - args.log_name : UpTrans
+2025-07-03 10:46:26,773 - UpTrans - INFO - args.use_gpu : True
+2025-07-03 10:46:26,773 - UpTrans - INFO - args.distributed : False
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.optimizer = edict()
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.optimizer.type : AdamW
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.optimizer.kwargs = edict()
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.optimizer.kwargs.lr : 0.0004
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.optimizer.kwargs.weight_decay : 0.0005
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.scheduler = edict()
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.scheduler.type : LambdaLR
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.scheduler.kwargs = edict()
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.scheduler.kwargs.decay_step : 50
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.scheduler.kwargs.lr_decay : 0.5
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.scheduler.kwargs.lowest_decay : 0.01
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.bnmscheduler = edict()
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.bnmscheduler.type : Lambda
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.bnmscheduler.kwargs = edict()
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.bnmscheduler.kwargs.decay_step : 50
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.bnmscheduler.kwargs.bn_decay : 0.5
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.bnmscheduler.kwargs.bn_momentum : 0.9
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.bnmscheduler.kwargs.lowest_decay : 0.01
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.dataset = edict()
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.dataset.train = edict()
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.dataset.train._base_ = edict()
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.dataset.train._base_.NAME : ShapeNet
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.dataset.train._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.dataset.train._base_.N_POINTS : 8192
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.dataset.train._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.dataset.train.others = edict()
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.dataset.train.others.subset : train
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.dataset.train.others.bs : 8
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.dataset.val = edict()
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.dataset.val._base_ = edict()
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.dataset.val._base_.NAME : ShapeNet
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.dataset.val._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.dataset.val._base_.N_POINTS : 8192
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.dataset.val._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.dataset.val.others = edict()
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.dataset.val.others.subset : test
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.dataset.test = edict()
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.dataset.test._base_ = edict()
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.dataset.test._base_.NAME : ShapeNet
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.dataset.test._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.dataset.test._base_.N_POINTS : 8192
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.dataset.test._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.dataset.test.others = edict()
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.dataset.test.others.subset : test
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.model = edict()
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.model.NAME : UpTrans
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.model.num_pred : 8192
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.model.num_seeds : 1024
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.model.seed_fea : 128
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.model.dim_feat : 512
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.model.num_dicts : 512
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.model.upscales : [1, 2, 4]
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.model.l2_loss : 1
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.loss = edict()
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.loss.sparse_loss_weight : 1.0
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.loss.dense_loss_weight : 1.0
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.loss.dz_weight : 1.0
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.loss.orth_weight : 1.0
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.total_bs : 8
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.step_per_update : 2
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.max_epoch : 400
+2025-07-03 10:46:26,773 - UpTrans - INFO - config.consider_metric : CDL1
+2025-07-03 10:46:26,773 - UpTrans - INFO - Distributed training: False
+2025-07-03 10:46:26,773 - UpTrans - INFO - Set random seed to 2023, deterministic: False
+2025-07-03 10:46:26,774 - UpTrans - INFO - Tester start ... 
+2025-07-03 10:46:26,774 - UpTrans - INFO - Processing test dataset...
+2025-07-03 10:46:26,826 - UpTrans - INFO - Loading weights from ./pretrained/fog/UpTrans_fog.pth...
+2025-07-03 10:46:27,042 - UpTrans - INFO - ckpts @ 370 epoch( performance = {'F-Score': 0.3193577612115164, 'CDL1': 26.857607181240542, 'CDL2': 32.37263142900976})
+2025-07-03 12:14:37,474 - UpTrans - INFO - [TEST] Metrics = ['0.2857', '19.8280', '2.2951']
+2025-07-03 12:14:37,477 - UpTrans - INFO - ============================ TEST RESULTS ============================
+2025-07-03 12:14:37,477 - UpTrans - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	#ModelName	
+2025-07-03 12:14:37,477 - UpTrans - INFO - 03759954	112	0.484 	16.804 	2.292 	microphone	
+2025-07-03 12:14:37,477 - UpTrans - INFO - 04330267	352	0.222 	21.044 	1.901 	stove	
+2025-07-03 12:14:37,477 - UpTrans - INFO - 03261776	120	0.251 	23.758 	3.661 	earphone	
+2025-07-03 12:14:37,477 - UpTrans - INFO - 03513137	264	0.149 	32.027 	5.957 	helmet	
+2025-07-03 12:14:37,477 - UpTrans - INFO - 04460130	216	0.332 	18.560 	1.630 	tower	
+2025-07-03 12:14:37,477 - UpTrans - INFO - 04468005	624	0.297 	16.709 	1.206 	train	
+2025-07-03 12:14:37,477 - UpTrans - INFO - 03761084	248	0.179 	22.087 	1.822 	microwaves	
+2025-07-03 12:14:37,477 - UpTrans - INFO - 04004475	272	0.195 	23.931 	2.403 	printer	
+2025-07-03 12:14:37,477 - UpTrans - INFO - 03938244	160	0.210 	23.660 	2.698 	pillow	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 02992529	1336	0.306 	15.101 	0.726 	cellphone	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 02808440	1376	0.214 	21.954 	2.276 	bathtub	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 04530566	3104	0.370 	15.265 	1.041 	watercraft	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 02871439	728	0.209 	20.880 	2.406 	bookshelf	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 03593526	960	0.195 	26.163 	4.882 	jar	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 04554684	272	0.183 	23.374 	2.263 	washer	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 03467517	1280	0.752 	7.773 	0.210 	guitar	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 04401088	1744	0.304 	14.979 	0.731 	telephone	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 02954340	96	0.217 	23.396 	2.935 	cap	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 02933112	2520	0.200 	19.651 	1.368 	cabinet	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 03642806	736	0.290 	14.782 	0.727 	laptop	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 02924116	1504	0.299 	16.263 	0.979 	bus	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 02946921	176	0.174 	22.908 	2.315 	can	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 02818832	376	0.200 	22.717 	2.182 	bed	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 04256520	5080	0.210 	20.145 	1.428 	sofa	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 04379243	13496	0.288 	17.923 	2.029 	table	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 02747177	552	0.148 	24.723 	2.372 	trash bin	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 03046257	1048	0.216 	25.126 	6.301 	clock	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 04225987	248	0.409 	13.447 	0.754 	skateboard	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 03797390	344	0.140 	25.933 	2.702 	mug	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 03001627	10848	0.268 	18.493 	1.455 	chair	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 03691459	2560	0.199 	23.715 	3.233 	loudspeaker	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 02942699	184	0.179 	26.820 	3.141 	camera	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 03636649	3712	0.426 	19.108 	3.653 	lamp	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 02691156	6472	0.416 	19.407 	8.065 	airplane	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 02773838	136	0.257 	20.847 	1.886 	bag	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 02958343	5624	0.184 	20.304 	1.391 	car	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 02880940	304	0.135 	33.330 	9.394 	bowl	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 04099429	136	0.576 	11.007 	0.564 	rocket	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 02828884	2904	0.316 	16.074 	1.240 	bench	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 04090263	3800	0.638 	9.240 	0.333 	rifle	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 03211117	1752	0.253 	18.541 	1.299 	display	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 02876657	800	0.322 	16.453 	1.296 	bottle	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 03710193	152	0.438 	14.719 	1.059 	mailbox	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 03790512	544	0.176 	20.181 	1.564 	motorbike	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 03325088	1192	0.359 	19.279 	2.786 	faucet	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 02801938	184	0.165 	24.766 	3.207 	basket	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 03337140	480	0.199 	20.116 	1.470 	file cabinet	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 02843684	120	0.182 	26.152 	2.809 	birdhouse	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 03624134	680	0.700 	8.580 	0.288 	knife	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 03991062	968	0.160 	29.524 	6.511 	flowerpot	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 03948459	496	0.420 	12.965 	0.656 	pistol	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 03928116	384	0.211 	22.028 	1.984 	piano	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 03207941	152	0.190 	20.011 	1.463 	dishwasher	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 04074963	112	0.338 	14.942 	0.755 	remote	
+2025-07-03 12:14:37,478 - UpTrans - INFO - 03085013	104	0.362 	12.858 	0.532 	keyboard	
+2025-07-03 12:14:37,478 - UpTrans - INFO - Overall 		0.286 	19.828 	2.295 	
