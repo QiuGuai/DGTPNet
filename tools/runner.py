@@ -338,7 +338,7 @@ def save_point_cloud(points, filename):
 
 def save_full_dgs_ply(dgs_params, filename):
     """
-    Saves the complete 3DGS data output from the PC3DGSA model to a .ply file.
+    Saves the complete 3DGS data output from the ODGNet model to a .ply file.
 
     :param dgs_params: A tuple from the model output (means, scales, rotations, colors, opacities).
     :param filename: The output .ply filename.
@@ -489,13 +489,13 @@ def test_single(base_model, args, config, logger=None):
         coarse_points = ret[0]
         dense_points = ret[-1]
         
-        # Only treat ret[1] as 3DGS parameters if the model is PC3DGSA
+        # Only treat ret[1] as 3DGS parameters if the model is ODGNet
         dgs_params = None
-        if config.model.NAME == 'PC3DGSA':
+        if config.model.NAME == 'ODGNet':
             if len(ret) > 2:
                 dgs_params = ret[1]
             else:
-                print_log(f"Warning: Model is PC3DGSA but did not return 3+ elements for file {pcd_filename}.", logger=logger)
+                print_log(f"Warning: Model is ODGNet but did not return 3+ elements for file {pcd_filename}.", logger=logger)
         
         # --- Save all results ---
         # 1. Save the preprocessed input point cloud
@@ -592,9 +592,9 @@ def test(base_model, test_dataloader, ChamferDisL1, ChamferDisL2, args, config, 
                 coarse_points = ret[0]
                 dense_points = ret[-1]
                 
-                # Only treat ret[1] as 3DGS parameters if the model is PC3DGSA
+                # Only treat ret[1] as 3DGS parameters if the model is ODGNet
                 dgs_params = None
-                if config.model.NAME == 'PC3DGSA':
+                if config.model.NAME == 'ODGNet':
                     if len(ret) > 2:
                         dgs_params = ret[1]
                     else:
