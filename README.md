@@ -47,6 +47,14 @@ Note: If you still get `ModuleNotFoundError: No module named 'gridding'` or some
 
 That will fix the `ModuleNotFoundError`.
 
+# Dataset and Pretrained Models
+
+You can download the dataset and the pretrained model from the links below:
+
+ShapeNet-55 Dataset: [Google Drive Link](https://drive.google.com/file/d/1jUB5yD7DP97-EqqU2A9mmr61JpNwZBVK/view?usp=sharing)
+
+Trained ODGNet Model Weights: [Google Drive Link](https://drive.google.com/drive/folders/1Azz3rQSzax7dh14vXBbQXjEbuMQBIbui?usp=drive_link)
+
 # Usage
 
 ### Training
@@ -141,4 +149,4 @@ bash ./scripts/test.sh \
 The ODGNet trained on the Occlusion + Fog Dataset.
 
 # Acknowledgement
-Some codes are borrowed from PoinTr[https://github.com/yuxumin/pointr] and ODGNet [https://github.com/corecai163/ODGNet]
+Some codes are borrowed from [PoinTr](https://github.com/yuxumin/pointr) and [ODGNet](https://github.com/corecai163/ODGNet)
