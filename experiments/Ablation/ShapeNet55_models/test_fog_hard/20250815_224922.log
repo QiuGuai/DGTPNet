@@ -1,0 +1,201 @@
+2025-08-15 22:49:22,951 - Ablation - INFO - Copy the Config file from ./cfgs/ShapeNet55_models/Ablation.yaml to ./experiments/Ablation/ShapeNet55_models/test_fog_hard/config.yaml
+2025-08-15 22:49:22,951 - Ablation - INFO - args.config : ./cfgs/ShapeNet55_models/Ablation.yaml
+2025-08-15 22:49:22,951 - Ablation - INFO - args.launcher : none
+2025-08-15 22:49:22,951 - Ablation - INFO - args.local_rank : 0
+2025-08-15 22:49:22,951 - Ablation - INFO - args.num_workers : 4
+2025-08-15 22:49:22,951 - Ablation - INFO - args.seed : 0
+2025-08-15 22:49:22,951 - Ablation - INFO - args.deterministic : False
+2025-08-15 22:49:22,951 - Ablation - INFO - args.sync_bn : False
+2025-08-15 22:49:22,951 - Ablation - INFO - args.exp_name : test_fog_hard
+2025-08-15 22:49:22,951 - Ablation - INFO - args.start_ckpts : None
+2025-08-15 22:49:22,951 - Ablation - INFO - args.ckpts : ./pretrained/fog/Ablation_fog.pth
+2025-08-15 22:49:22,951 - Ablation - INFO - args.val_freq : 1
+2025-08-15 22:49:22,951 - Ablation - INFO - args.resume : False
+2025-08-15 22:49:22,951 - Ablation - INFO - args.test : True
+2025-08-15 22:49:22,951 - Ablation - INFO - args.mode : hard
+2025-08-15 22:49:22,951 - Ablation - INFO - args.pcd_path : None
+2025-08-15 22:49:22,951 - Ablation - INFO - args.output_dir : None
+2025-08-15 22:49:22,951 - Ablation - INFO - args.experiment_path : ./experiments/Ablation/ShapeNet55_models/test_fog_hard
+2025-08-15 22:49:22,951 - Ablation - INFO - args.tfboard_path : ./experiments/Ablation/ShapeNet55_models/TFBoard/test_fog_hard
+2025-08-15 22:49:22,951 - Ablation - INFO - args.log_name : Ablation
+2025-08-15 22:49:22,951 - Ablation - INFO - args.use_gpu : True
+2025-08-15 22:49:22,951 - Ablation - INFO - args.distributed : False
+2025-08-15 22:49:22,951 - Ablation - INFO - config.optimizer = edict()
+2025-08-15 22:49:22,951 - Ablation - INFO - config.optimizer.type : AdamW
+2025-08-15 22:49:22,951 - Ablation - INFO - config.optimizer.kwargs = edict()
+2025-08-15 22:49:22,951 - Ablation - INFO - config.optimizer.kwargs.lr : 0.0001
+2025-08-15 22:49:22,951 - Ablation - INFO - config.optimizer.kwargs.weight_decay : 0.0005
+2025-08-15 22:49:22,951 - Ablation - INFO - config.scheduler = edict()
+2025-08-15 22:49:22,952 - Ablation - INFO - config.scheduler.type : LambdaLR
+2025-08-15 22:49:22,952 - Ablation - INFO - config.scheduler.kwargs = edict()
+2025-08-15 22:49:22,952 - Ablation - INFO - config.scheduler.kwargs.decay_step : 21
+2025-08-15 22:49:22,952 - Ablation - INFO - config.scheduler.kwargs.lr_decay : 0.63096
+2025-08-15 22:49:22,952 - Ablation - INFO - config.scheduler.kwargs.lowest_decay : 0.001
+2025-08-15 22:49:22,952 - Ablation - INFO - config.bnmscheduler = edict()
+2025-08-15 22:49:22,952 - Ablation - INFO - config.bnmscheduler.type : Lambda
+2025-08-15 22:49:22,952 - Ablation - INFO - config.bnmscheduler.kwargs = edict()
+2025-08-15 22:49:22,952 - Ablation - INFO - config.bnmscheduler.kwargs.decay_step : 21
+2025-08-15 22:49:22,952 - Ablation - INFO - config.bnmscheduler.kwargs.bn_decay : 0.5
+2025-08-15 22:49:22,952 - Ablation - INFO - config.bnmscheduler.kwargs.bn_momentum : 0.9
+2025-08-15 22:49:22,952 - Ablation - INFO - config.bnmscheduler.kwargs.lowest_decay : 0.01
+2025-08-15 22:49:22,952 - Ablation - INFO - config.dataset = edict()
+2025-08-15 22:49:22,952 - Ablation - INFO - config.dataset.train = edict()
+2025-08-15 22:49:22,952 - Ablation - INFO - config.dataset.train._base_ = edict()
+2025-08-15 22:49:22,952 - Ablation - INFO - config.dataset.train._base_.NAME : ShapeNet
+2025-08-15 22:49:22,952 - Ablation - INFO - config.dataset.train._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2025-08-15 22:49:22,952 - Ablation - INFO - config.dataset.train._base_.N_POINTS : 8192
+2025-08-15 22:49:22,952 - Ablation - INFO - config.dataset.train._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2025-08-15 22:49:22,952 - Ablation - INFO - config.dataset.train.others = edict()
+2025-08-15 22:49:22,952 - Ablation - INFO - config.dataset.train.others.subset : train
+2025-08-15 22:49:22,952 - Ablation - INFO - config.dataset.train.others.bs : 8
+2025-08-15 22:49:22,952 - Ablation - INFO - config.dataset.val = edict()
+2025-08-15 22:49:22,952 - Ablation - INFO - config.dataset.val._base_ = edict()
+2025-08-15 22:49:22,952 - Ablation - INFO - config.dataset.val._base_.NAME : ShapeNet
+2025-08-15 22:49:22,952 - Ablation - INFO - config.dataset.val._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2025-08-15 22:49:22,952 - Ablation - INFO - config.dataset.val._base_.N_POINTS : 8192
+2025-08-15 22:49:22,952 - Ablation - INFO - config.dataset.val._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2025-08-15 22:49:22,952 - Ablation - INFO - config.dataset.val.others = edict()
+2025-08-15 22:49:22,952 - Ablation - INFO - config.dataset.val.others.subset : test
+2025-08-15 22:49:22,952 - Ablation - INFO - config.dataset.test = edict()
+2025-08-15 22:49:22,952 - Ablation - INFO - config.dataset.test._base_ = edict()
+2025-08-15 22:49:22,952 - Ablation - INFO - config.dataset.test._base_.NAME : ShapeNet
+2025-08-15 22:49:22,952 - Ablation - INFO - config.dataset.test._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2025-08-15 22:49:22,952 - Ablation - INFO - config.dataset.test._base_.N_POINTS : 8192
+2025-08-15 22:49:22,952 - Ablation - INFO - config.dataset.test._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2025-08-15 22:49:22,952 - Ablation - INFO - config.dataset.test.others = edict()
+2025-08-15 22:49:22,952 - Ablation - INFO - config.dataset.test.others.subset : test
+2025-08-15 22:49:22,952 - Ablation - INFO - config.model = edict()
+2025-08-15 22:49:22,952 - Ablation - INFO - config.model.NAME : Ablation
+2025-08-15 22:49:22,952 - Ablation - INFO - config.model.input_dim : 3
+2025-08-15 22:49:22,952 - Ablation - INFO - config.model.d_model : 512
+2025-08-15 22:49:22,952 - Ablation - INFO - config.model.nhead : 4
+2025-08-15 22:49:22,952 - Ablation - INFO - config.model.dim_feedforward : 1024
+2025-08-15 22:49:22,952 - Ablation - INFO - config.model.dropout : 0.1
+2025-08-15 22:49:22,952 - Ablation - INFO - config.model.num_encoder_layers : 2
+2025-08-15 22:49:22,952 - Ablation - INFO - config.model.k_neighbors : 20
+2025-08-15 22:49:22,952 - Ablation - INFO - config.model.num_decoder_layers : 2
+2025-08-15 22:49:22,952 - Ablation - INFO - config.model.num_coarse_points : 2048
+2025-08-15 22:49:22,952 - Ablation - INFO - config.model.num_fine_points : 8192
+2025-08-15 22:49:22,952 - Ablation - INFO - config.model.l2_loss : 1
+2025-08-15 22:49:22,952 - Ablation - INFO - config.consider_metric : CDL2
+2025-08-15 22:49:22,952 - Ablation - INFO - config.total_bs : 8
+2025-08-15 22:49:22,952 - Ablation - INFO - config.step_per_update : 2
+2025-08-15 22:49:22,952 - Ablation - INFO - config.max_epoch : 200
+2025-08-15 22:49:22,952 - Ablation - INFO - Distributed training: False
+2025-08-15 22:49:22,952 - Ablation - INFO - Set random seed to 0, deterministic: False
+2025-08-15 22:49:22,953 - Ablation - INFO - Tester start ... 
+2025-08-15 22:49:22,953 - Ablation - INFO - Processing test dataset...
+2025-08-15 22:49:23,025 - Ablation - INFO - Loading weights from ./pretrained/fog/Ablation_fog.pth...
+2025-08-15 22:49:23,136 - Ablation - INFO - ckpts @ 165 epoch( performance = {'F-Score': 0.11843401283811951, 'CDL1': 28.199742127697796, 'CDL2': 2.8126868606238697, 'EMDistance': 0.0})
+2025-08-15 22:54:13,386 - Ablation - INFO - Test[200/10518] Taxonomy = 04530566 Sample = 3bb6a5deec68ef77fee64ca302793912 Losses = ['17.0524', '0.8678', '20.0655', '1.2285'] Metrics = ['0.1587', '20.0655', '1.2285', '0.0000'] InferenceTime = 0.0023
+2025-08-15 22:58:57,964 - Ablation - INFO - Test[400/10518] Taxonomy = 03636649 Sample = 90651b3febfc3afe15226aa76eb7c3e Losses = ['26.8357', '2.5209', '27.5340', '2.3469'] Metrics = ['0.0843', '27.5340', '2.3469', '0.0000'] InferenceTime = 0.0024
+2025-08-15 23:03:42,531 - Ablation - INFO - Test[600/10518] Taxonomy = 03001627 Sample = fae27953e0f0404ca99df2794ec76201 Losses = ['19.8467', '1.0614', '21.8223', '1.2803'] Metrics = ['0.1129', '21.8223', '1.2803', '0.0000'] InferenceTime = 0.0025
+2025-08-15 23:08:29,825 - Ablation - INFO - Test[800/10518] Taxonomy = 03593526 Sample = 324c9045843b9470d29670d38a4c9e7e Losses = ['23.1493', '1.6389', '24.6178', '1.8630'] Metrics = ['0.0983', '24.6178', '1.8630', '0.0000'] InferenceTime = 0.0024
+2025-08-15 23:13:13,884 - Ablation - INFO - Test[1000/10518] Taxonomy = 02958343 Sample = 39e10c5d24fee4a6311f5d9a1681aa3b Losses = ['19.7115', '1.1164', '24.3432', '1.6789'] Metrics = ['0.0754', '24.3432', '1.6789', '0.0000'] InferenceTime = 0.0026
+2025-08-15 23:18:01,707 - Ablation - INFO - Test[1200/10518] Taxonomy = 03001627 Sample = e50f1b2d0835bb392764cfba57a5de73 Losses = ['25.6265', '2.1153', '31.4197', '3.0412'] Metrics = ['0.0696', '31.4197', '3.0412', '0.0000'] InferenceTime = 0.0025
+2025-08-15 23:22:47,429 - Ablation - INFO - Test[1400/10518] Taxonomy = 04379243 Sample = 647692d3858790a1f1783a44a88d6274 Losses = ['17.5611', '0.9187', '22.1009', '1.4409'] Metrics = ['0.0808', '22.1009', '1.4409', '0.0000'] InferenceTime = 0.0024
+2025-08-15 23:27:35,848 - Ablation - INFO - Test[1600/10518] Taxonomy = 02691156 Sample = d8d9de967255b4c562b600da24e0965 Losses = ['12.3071', '0.4278', '15.3912', '0.6340'] Metrics = ['0.2274', '15.3912', '0.6340', '0.0000'] InferenceTime = 0.0024
+2025-08-15 23:32:20,489 - Ablation - INFO - Test[1800/10518] Taxonomy = 03001627 Sample = 24c0e6a8b10abb77df2b21995cbbbc4f Losses = ['36.3260', '4.0894', '40.2821', '5.0814'] Metrics = ['0.0240', '40.2821', '5.0814', '0.0000'] InferenceTime = 0.0024
+2025-08-15 23:37:08,450 - Ablation - INFO - Test[2000/10518] Taxonomy = 04379243 Sample = 5d77e8f6ad3741a0c30ab36bf7b0552 Losses = ['17.2400', '0.7822', '20.0789', '1.0875'] Metrics = ['0.1245', '20.0789', '1.0875', '0.0000'] InferenceTime = 0.0024
+2025-08-15 23:41:55,705 - Ablation - INFO - Test[2200/10518] Taxonomy = 03636649 Sample = b64e98c991d4103170365ad078f710ff Losses = ['32.8754', '3.8480', '37.8586', '5.0012'] Metrics = ['0.0557', '37.8586', '5.0012', '0.0000'] InferenceTime = 0.0024
+2025-08-15 23:46:45,817 - Ablation - INFO - Test[2400/10518] Taxonomy = 03211117 Sample = b4386438057e85988bfba3df1f776207 Losses = ['24.2855', '2.1364', '28.7149', '2.5868'] Metrics = ['0.0758', '28.7149', '2.5868', '0.0000'] InferenceTime = 0.0027
+2025-08-15 23:51:30,998 - Ablation - INFO - Test[2600/10518] Taxonomy = 04468005 Sample = 3b8c505fd1127ed88f134472f61cf6bb Losses = ['19.3843', '0.9756', '23.0036', '1.3379'] Metrics = ['0.0809', '23.0036', '1.3379', '0.0000'] InferenceTime = 0.0024
+2025-08-15 23:56:19,158 - Ablation - INFO - Test[2800/10518] Taxonomy = 03001627 Sample = e3e76d624f1f855bcc8a9c365968620 Losses = ['22.2967', '1.3875', '24.5646', '1.6587'] Metrics = ['0.0971', '24.5646', '1.6587', '0.0000'] InferenceTime = 0.0024
+2025-08-16 00:01:06,183 - Ablation - INFO - Test[3000/10518] Taxonomy = 03001627 Sample = 40020a5e90c75d94a93412f1b60e6fba Losses = ['20.1218', '1.6102', '22.0155', '1.9483'] Metrics = ['0.1750', '22.0155', '1.9483', '0.0000'] InferenceTime = 0.0024
+2025-08-16 00:05:52,961 - Ablation - INFO - Test[3200/10518] Taxonomy = 02691156 Sample = a96c1589731b06a1efbd0f357ff7c40a Losses = ['13.5061', '0.8324', '15.9587', '0.8445'] Metrics = ['0.2939', '15.9587', '0.8445', '0.0000'] InferenceTime = 0.0024
+2025-08-16 00:10:40,182 - Ablation - INFO - Test[3400/10518] Taxonomy = 03046257 Sample = b2b40e80c9d3f530d5f1db12f95f0fe4 Losses = ['17.2133', '0.7236', '20.9546', '1.0633'] Metrics = ['0.0623', '20.9546', '1.0633', '0.0000'] InferenceTime = 0.0024
+2025-08-16 00:15:28,132 - Ablation - INFO - Test[3600/10518] Taxonomy = 02933112 Sample = c18a4772bcfbb98e85bc264270ae0601 Losses = ['28.1082', '2.2498', '33.5297', '3.2564'] Metrics = ['0.0344', '33.5297', '3.2564', '0.0000'] InferenceTime = 0.0024
+2025-08-16 00:20:12,248 - Ablation - INFO - Test[3800/10518] Taxonomy = 04530566 Sample = 215861c4bebeb328d9a75de54b023ae1 Losses = ['17.1129', '0.8528', '20.0029', '1.0882'] Metrics = ['0.1483', '20.0029', '1.0882', '0.0000'] InferenceTime = 0.0025
+2025-08-16 00:25:01,422 - Ablation - INFO - Test[4000/10518] Taxonomy = 02828884 Sample = 5f9d3dae06acf0e4e93e1127627b834 Losses = ['19.3047', '1.0784', '21.9322', '1.4024'] Metrics = ['0.1058', '21.9322', '1.4024', '0.0000'] InferenceTime = 0.0024
+2025-08-16 00:29:50,059 - Ablation - INFO - Test[4200/10518] Taxonomy = 04401088 Sample = a3c1c9fc390b1bbbb099170e6f5a4af9 Losses = ['15.2866', '0.5781', '19.4894', '0.9577'] Metrics = ['0.1174', '19.4894', '0.9577', '0.0000'] InferenceTime = 0.0024
+2025-08-16 00:34:40,621 - Ablation - INFO - Test[4400/10518] Taxonomy = 04256520 Sample = 54506969a60017ac8f0a57a8b9390a Losses = ['27.0015', '2.1352', '31.4993', '2.8323'] Metrics = ['0.0437', '31.4993', '2.8323', '0.0000'] InferenceTime = 0.0024
+2025-08-16 00:39:27,057 - Ablation - INFO - Test[4600/10518] Taxonomy = 04074963 Sample = d9ca2dcaf1d9d850dc605801df3f66ec Losses = ['25.4511', '1.8980', '30.0192', '2.6141'] Metrics = ['0.0683', '30.0192', '2.6141', '0.0000'] InferenceTime = 0.0024
+2025-08-16 00:44:14,610 - Ablation - INFO - Test[4800/10518] Taxonomy = 04379243 Sample = ead93856b735ec90f0aeabfdcb4e1dd9 Losses = ['15.0475', '0.6534', '17.3289', '0.8566'] Metrics = ['0.2104', '17.3289', '0.8566', '0.0000'] InferenceTime = 0.0026
+2025-08-16 00:48:58,424 - Ablation - INFO - Test[5000/10518] Taxonomy = 03790512 Sample = 242d8c07fabbdabc78fe949fc1419876 Losses = ['30.4759', '4.6084', '34.5848', '5.2805'] Metrics = ['0.0495', '34.5848', '5.2805', '0.0000'] InferenceTime = 0.0025
+2025-08-16 00:53:40,425 - Ablation - INFO - Test[5200/10518] Taxonomy = 02691156 Sample = 7b6f528acc10d3fbcf5b9c6e0c7ce895 Losses = ['17.1037', '1.0072', '19.7944', '1.1387'] Metrics = ['0.1765', '19.7944', '1.1387', '0.0000'] InferenceTime = 0.0024
+2025-08-16 00:58:27,082 - Ablation - INFO - Test[5400/10518] Taxonomy = 04379243 Sample = 6765d83445c2338555f46d55537192b6 Losses = ['22.5135', '1.9116', '26.7726', '2.4674'] Metrics = ['0.0694', '26.7726', '2.4674', '0.0000'] InferenceTime = 0.0026
+2025-08-16 01:03:17,339 - Ablation - INFO - Test[5600/10518] Taxonomy = 03001627 Sample = 33dc06a8e0933b1efc385a284336f217 Losses = ['25.3197', '1.7005', '30.4490', '2.4696'] Metrics = ['0.0524', '30.4490', '2.4696', '0.0000'] InferenceTime = 0.0024
+2025-08-16 01:08:07,182 - Ablation - INFO - Test[5800/10518] Taxonomy = 02992529 Sample = 4a81237a7fc743763992b1138bb05b3c Losses = ['13.3458', '0.4597', '17.4335', '0.7786'] Metrics = ['0.1615', '17.4335', '0.7786', '0.0000'] InferenceTime = 0.0025
+2025-08-16 01:12:55,764 - Ablation - INFO - Test[6000/10518] Taxonomy = 02958343 Sample = 37249c6f16b203de2e877e82c90c24d Losses = ['22.3230', '1.4239', '26.5594', '1.9540'] Metrics = ['0.0664', '26.5594', '1.9540', '0.0000'] InferenceTime = 0.0024
+2025-08-16 01:17:42,446 - Ablation - INFO - Test[6200/10518] Taxonomy = 02933112 Sample = 956c437be87a2be5f51f77a6d7299806 Losses = ['20.7247', '1.1801', '22.6867', '1.3831'] Metrics = ['0.0870', '22.6867', '1.3831', '0.0000'] InferenceTime = 0.0025
+2025-08-16 01:22:26,488 - Ablation - INFO - Test[6400/10518] Taxonomy = 03691459 Sample = 9d62c46fc3fd343d1f9f3ce366e030fb Losses = ['29.9886', '3.7913', '33.2767', '3.8603'] Metrics = ['0.0300', '33.2767', '3.8603', '0.0000'] InferenceTime = 0.0024
+2025-08-16 01:27:18,063 - Ablation - INFO - Test[6600/10518] Taxonomy = 04379243 Sample = 7a8399fc51d83969a8b1d0fdee586dc9 Losses = ['15.6870', '0.7934', '18.4614', '1.0442'] Metrics = ['0.1682', '18.4614', '1.0442', '0.0000'] InferenceTime = 0.0024
+2025-08-16 01:32:03,752 - Ablation - INFO - Test[6800/10518] Taxonomy = 03001627 Sample = 78abbfe9ab73729f56d13e757b0dc374 Losses = ['22.0375', '1.6524', '24.1127', '2.1322'] Metrics = ['0.1335', '24.1127', '2.1322', '0.0000'] InferenceTime = 0.0024
+2025-08-16 01:36:49,162 - Ablation - INFO - Test[7000/10518] Taxonomy = 04379243 Sample = 264a075e293394a843638dabe1eb5336 Losses = ['20.7196', '1.6568', '24.9152', '2.3500'] Metrics = ['0.0804', '24.9152', '2.3500', '0.0000'] InferenceTime = 0.0024
+2025-08-16 01:41:35,158 - Ablation - INFO - Test[7200/10518] Taxonomy = 03211117 Sample = 96f01698d0446641ea6e0950aa8ac31b Losses = ['25.6686', '2.0719', '30.2438', '2.9152'] Metrics = ['0.0946', '30.2438', '2.9152', '0.0000'] InferenceTime = 0.0025
+2025-08-16 01:46:21,557 - Ablation - INFO - Test[7400/10518] Taxonomy = 03001627 Sample = b2239339005b14c8d675cc466d0d6fbc Losses = ['19.2916', '1.0534', '23.0393', '1.5392'] Metrics = ['0.1138', '23.0393', '1.5392', '0.0000'] InferenceTime = 0.0025
+2025-08-16 01:51:09,959 - Ablation - INFO - Test[7600/10518] Taxonomy = 04074963 Sample = 57759e351ec76d86d3c1501c166e6b2a Losses = ['17.1632', '0.8586', '20.0257', '1.1136'] Metrics = ['0.1451', '20.0257', '1.1136', '0.0000'] InferenceTime = 0.0024
+2025-08-16 01:56:01,536 - Ablation - INFO - Test[7800/10518] Taxonomy = 04090263 Sample = 41a9912bfe0dc96239169e4b52d9f093 Losses = ['14.7526', '0.7355', '16.9790', '0.9653'] Metrics = ['0.2968', '16.9790', '0.9653', '0.0000'] InferenceTime = 0.0024
+2025-08-16 02:00:49,832 - Ablation - INFO - Test[8000/10518] Taxonomy = 04379243 Sample = bcbc5e30e12a58f07ea323bc74055b8 Losses = ['14.5632', '0.5853', '18.2132', '0.8700'] Metrics = ['0.1457', '18.2132', '0.8700', '0.0000'] InferenceTime = 0.0024
+2025-08-16 02:05:38,969 - Ablation - INFO - Test[8200/10518] Taxonomy = 04379243 Sample = aabcb5d610e76ff19ca02c396af0c503 Losses = ['21.7152', '1.6356', '24.8573', '2.2954'] Metrics = ['0.1182', '24.8573', '2.2954', '0.0000'] InferenceTime = 0.0025
+2025-08-16 02:10:24,826 - Ablation - INFO - Test[8400/10518] Taxonomy = 04379243 Sample = dd2c3ff28a34556a47839bae1bc65257 Losses = ['14.9555', '0.7433', '17.7643', '1.0207'] Metrics = ['0.1826', '17.7643', '1.0207', '0.0000'] InferenceTime = 0.0024
+2025-08-16 02:15:09,393 - Ablation - INFO - Test[8600/10518] Taxonomy = 03337140 Sample = 149a105979cad722c1467c54b9e09ce5 Losses = ['27.5446', '2.3814', '33.7188', '3.5212'] Metrics = ['0.0462', '33.7188', '3.5212', '0.0000'] InferenceTime = 0.0024
+2025-08-16 02:19:52,497 - Ablation - INFO - Test[8800/10518] Taxonomy = 02691156 Sample = 4044d5954ef85af8279326882e8430cb Losses = ['17.1260', '0.9941', '21.4752', '1.5907'] Metrics = ['0.1957', '21.4752', '1.5907', '0.0000'] InferenceTime = 0.0024
+2025-08-16 02:24:37,653 - Ablation - INFO - Test[9000/10518] Taxonomy = 02828884 Sample = 4e512ab638542762d4d8765e3910f617 Losses = ['17.4178', '0.8496', '19.4054', '1.0323'] Metrics = ['0.1322', '19.4054', '1.0323', '0.0000'] InferenceTime = 0.0024
+2025-08-16 02:29:26,344 - Ablation - INFO - Test[9200/10518] Taxonomy = 04379243 Sample = 5247e4e978399f1b486040c0d9e85846 Losses = ['16.7705', '1.2225', '20.1742', '1.6721'] Metrics = ['0.1794', '20.1742', '1.6721', '0.0000'] InferenceTime = 0.0024
+2025-08-16 02:34:16,616 - Ablation - INFO - Test[9400/10518] Taxonomy = 03636649 Sample = 7ec821d5d8bd9f17d4aea4231844b26b Losses = ['11.6481', '0.4066', '14.4046', '0.5780'] Metrics = ['0.3071', '14.4046', '0.5780', '0.0000'] InferenceTime = 0.0024
+2025-08-16 02:39:02,882 - Ablation - INFO - Test[9600/10518] Taxonomy = 04090263 Sample = 3cb82befc3290e36b58435942a1b4dac Losses = ['7.7273', '0.1687', '9.1289', '0.2226'] Metrics = ['0.6225', '9.1289', '0.2226', '0.0000'] InferenceTime = 0.0024
+2025-08-16 02:43:49,337 - Ablation - INFO - Test[9800/10518] Taxonomy = 04379243 Sample = 6358336cbeedb9232d9fe390e23fd20f Losses = ['13.3215', '0.4891', '16.7190', '0.7363'] Metrics = ['0.1970', '16.7190', '0.7363', '0.0000'] InferenceTime = 0.0024
+2025-08-16 02:48:37,949 - Ablation - INFO - Test[10000/10518] Taxonomy = 04401088 Sample = f73493b7c8a78000b594bbf2c494ab81 Losses = ['24.6526', '1.9667', '28.2577', '2.5845'] Metrics = ['0.0892', '28.2577', '2.5845', '0.0000'] InferenceTime = 0.0024
+2025-08-16 02:53:26,184 - Ablation - INFO - Test[10200/10518] Taxonomy = 03001627 Sample = 3ffd794e5100258483bc207d8a5912e3 Losses = ['16.7281', '0.7299', '19.5339', '1.0083'] Metrics = ['0.1237', '19.5339', '1.0083', '0.0000'] InferenceTime = 0.0025
+2025-08-16 02:58:14,792 - Ablation - INFO - Test[10400/10518] Taxonomy = 04090263 Sample = 26744766d59c28fb6b2c8bb96250e4a0 Losses = ['9.0064', '0.2513', '10.8006', '0.3409'] Metrics = ['0.5142', '10.8006', '0.3409', '0.0000'] InferenceTime = 0.0024
+2025-08-16 03:01:04,523 - Ablation - INFO - [TEST] Metrics = ['0.1214', '28.0015', '2.8033', '0.0000']
+2025-08-16 03:01:04,524 - Ablation - INFO - [TEST] Average Inference Time: 0.0025 seconds
+2025-08-16 03:01:04,524 - Ablation - INFO - ============================ TEST RESULTS ============================
+2025-08-16 03:01:04,524 - Ablation - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	EMDistance	#ModelName	
+2025-08-16 03:01:04,528 - Ablation - INFO - 03759954	112	0.277 	22.684 	2.730 	0.000 	microphone	
+2025-08-16 03:01:04,532 - Ablation - INFO - 04330267	352	0.065 	31.849 	3.433 	0.000 	stove	
+2025-08-16 03:01:04,536 - Ablation - INFO - 03261776	120	0.081 	32.791 	3.695 	0.000 	earphone	
+2025-08-16 03:01:04,538 - Ablation - INFO - 03513137	264	0.028 	42.268 	6.579 	0.000 	helmet	
+2025-08-16 03:01:04,542 - Ablation - INFO - 04460130	216	0.167 	25.754 	2.332 	0.000 	tower	
+2025-08-16 03:01:04,544 - Ablation - INFO - 04468005	624	0.129 	24.046 	1.840 	0.000 	train	
+2025-08-16 03:01:04,546 - Ablation - INFO - 03761084	248	0.029 	33.970 	3.583 	0.000 	microwaves	
+2025-08-16 03:01:04,549 - Ablation - INFO - 04004475	272	0.053 	35.234 	4.348 	0.000 	printer	
+2025-08-16 03:01:04,551 - Ablation - INFO - 03938244	160	0.054 	32.442 	3.450 	0.000 	pillow	
+2025-08-16 03:01:04,553 - Ablation - INFO - 02992529	1336	0.134 	21.287 	1.296 	0.000 	cellphone	
+2025-08-16 03:01:04,556 - Ablation - INFO - 02808440	1376	0.058 	32.373 	3.474 	0.000 	bathtub	
+2025-08-16 03:01:04,558 - Ablation - INFO - 04530566	3104	0.195 	21.432 	1.614 	0.000 	watercraft	
+2025-08-16 03:01:04,561 - Ablation - INFO - 02871439	728	0.055 	32.278 	3.291 	0.000 	bookshelf	
+2025-08-16 03:01:04,563 - Ablation - INFO - 03593526	960	0.060 	34.694 	4.233 	0.000 	jar	
+2025-08-16 03:01:04,565 - Ablation - INFO - 04554684	272	0.030 	35.957 	4.478 	0.000 	washer	
+2025-08-16 03:01:04,570 - Ablation - INFO - 03467517	1280	0.513 	10.735 	0.341 	0.000 	guitar	
+2025-08-16 03:01:04,577 - Ablation - INFO - 04401088	1744	0.135 	21.085 	1.302 	0.000 	telephone	
+2025-08-16 03:01:04,583 - Ablation - INFO - 02954340	96	0.049 	31.858 	3.433 	0.000 	cap	
+2025-08-16 03:01:04,590 - Ablation - INFO - 02933112	2520	0.053 	30.333 	2.784 	0.000 	cabinet	
+2025-08-16 03:01:04,597 - Ablation - INFO - 03642806	736	0.106 	21.036 	1.231 	0.000 	laptop	
+2025-08-16 03:01:04,603 - Ablation - INFO - 02924116	1504	0.113 	24.534 	1.849 	0.000 	bus	
+2025-08-16 03:01:04,610 - Ablation - INFO - 02946921	176	0.028 	33.974 	3.771 	0.000 	can	
+2025-08-16 03:01:04,617 - Ablation - INFO - 02818832	376	0.063 	33.999 	3.851 	0.000 	bed	
+2025-08-16 03:01:04,623 - Ablation - INFO - 04256520	5080	0.056 	30.707 	2.751 	0.000 	sofa	
+2025-08-16 03:01:04,630 - Ablation - INFO - 04379243	13496	0.114 	25.618 	2.462 	0.000 	table	
+2025-08-16 03:01:04,637 - Ablation - INFO - 02747177	552	0.031 	35.240 	3.955 	0.000 	trash bin	
+2025-08-16 03:01:04,643 - Ablation - INFO - 03046257	1048	0.080 	30.001 	2.928 	0.000 	clock	
+2025-08-16 03:01:04,650 - Ablation - INFO - 04225987	248	0.207 	18.455 	1.133 	0.000 	skateboard	
+2025-08-16 03:01:04,657 - Ablation - INFO - 03797390	344	0.030 	37.333 	4.669 	0.000 	mug	
+2025-08-16 03:01:04,663 - Ablation - INFO - 03001627	10848	0.095 	27.315 	2.485 	0.000 	chair	
+2025-08-16 03:01:04,670 - Ablation - INFO - 03691459	2560	0.053 	33.927 	3.834 	0.000 	loudspeaker	
+2025-08-16 03:01:04,677 - Ablation - INFO - 02942699	184	0.047 	38.861 	5.189 	0.000 	camera	
+2025-08-16 03:01:04,683 - Ablation - INFO - 03636649	3712	0.215 	24.929 	2.638 	0.000 	lamp	
+2025-08-16 03:01:04,688 - Ablation - INFO - 02691156	6472	0.223 	18.330 	1.142 	0.000 	airplane	
+2025-08-16 03:01:04,690 - Ablation - INFO - 02773838	136	0.084 	29.240 	2.938 	0.000 	bag	
+2025-08-16 03:01:04,694 - Ablation - INFO - 02958343	5624	0.052 	29.911 	2.543 	0.000 	car	
+2025-08-16 03:01:04,696 - Ablation - INFO - 02880940	304	0.028 	37.603 	4.484 	0.000 	bowl	
+2025-08-16 03:01:04,699 - Ablation - INFO - 04099429	136	0.410 	14.540 	0.792 	0.000 	rocket	
+2025-08-16 03:01:04,701 - Ablation - INFO - 02828884	2904	0.125 	23.262 	1.872 	0.000 	bench	
+2025-08-16 03:01:04,704 - Ablation - INFO - 04090263	3800	0.413 	13.146 	0.563 	0.000 	rifle	
+2025-08-16 03:01:04,706 - Ablation - INFO - 03211117	1752	0.089 	26.257 	2.234 	0.000 	display	
+2025-08-16 03:01:04,709 - Ablation - INFO - 02876657	800	0.136 	22.542 	1.764 	0.000 	bottle	
+2025-08-16 03:01:04,711 - Ablation - INFO - 03710193	152	0.198 	22.242 	1.835 	0.000 	mailbox	
+2025-08-16 03:01:04,714 - Ablation - INFO - 03790512	544	0.062 	28.912 	2.433 	0.000 	motorbike	
+2025-08-16 03:01:04,716 - Ablation - INFO - 03325088	1192	0.148 	26.645 	2.791 	0.000 	faucet	
+2025-08-16 03:01:04,719 - Ablation - INFO - 02801938	184	0.038 	33.993 	3.582 	0.000 	basket	
+2025-08-16 03:01:04,721 - Ablation - INFO - 03337140	480	0.050 	31.171 	2.977 	0.000 	file cabinet	
+2025-08-16 03:01:04,725 - Ablation - INFO - 02843684	120	0.053 	38.796 	5.138 	0.000 	birdhouse	
+2025-08-16 03:01:04,732 - Ablation - INFO - 03624134	680	0.511 	10.849 	0.355 	0.000 	knife	
+2025-08-16 03:01:04,739 - Ablation - INFO - 03991062	968	0.049 	39.275 	5.308 	0.000 	flowerpot	
+2025-08-16 03:01:04,745 - Ablation - INFO - 03948459	496	0.199 	18.921 	1.128 	0.000 	pistol	
+2025-08-16 03:01:04,752 - Ablation - INFO - 03928116	384	0.064 	33.613 	3.895 	0.000 	piano	
+2025-08-16 03:01:04,759 - Ablation - INFO - 03207941	152	0.032 	31.787 	3.043 	0.000 	dishwasher	
+2025-08-16 03:01:04,765 - Ablation - INFO - 04074963	112	0.162 	20.611 	1.242 	0.000 	remote	
+2025-08-16 03:01:04,772 - Ablation - INFO - 03085013	104	0.149 	19.441 	1.140 	0.000 	keyboard	
+2025-08-16 03:01:04,779 - Ablation - INFO - Overall 		0.121 	28.002 	2.803 	0.000 	

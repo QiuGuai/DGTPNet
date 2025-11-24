@@ -1,0 +1,187 @@
+2025-10-30 09:53:49,460 - TopNet - INFO - Copy the Config file from ./cfgs/ShapeNet55_models/TopNet.yaml to ./experiments/TopNet/ShapeNet55_models/test_fog_easy/config.yaml
+2025-10-30 09:53:49,460 - TopNet - INFO - args.config : ./cfgs/ShapeNet55_models/TopNet.yaml
+2025-10-30 09:53:49,460 - TopNet - INFO - args.launcher : none
+2025-10-30 09:53:49,460 - TopNet - INFO - args.local_rank : 0
+2025-10-30 09:53:49,460 - TopNet - INFO - args.num_workers : 4
+2025-10-30 09:53:49,460 - TopNet - INFO - args.seed : 0
+2025-10-30 09:53:49,460 - TopNet - INFO - args.deterministic : False
+2025-10-30 09:53:49,460 - TopNet - INFO - args.sync_bn : False
+2025-10-30 09:53:49,460 - TopNet - INFO - args.exp_name : test_fog_easy
+2025-10-30 09:53:49,460 - TopNet - INFO - args.start_ckpts : None
+2025-10-30 09:53:49,460 - TopNet - INFO - args.ckpts : ./pretrained/fog/TopNet1.pth
+2025-10-30 09:53:49,460 - TopNet - INFO - args.val_freq : 1
+2025-10-30 09:53:49,460 - TopNet - INFO - args.resume : False
+2025-10-30 09:53:49,460 - TopNet - INFO - args.test : True
+2025-10-30 09:53:49,460 - TopNet - INFO - args.mode : easy
+2025-10-30 09:53:49,460 - TopNet - INFO - args.pcd_path : None
+2025-10-30 09:53:49,460 - TopNet - INFO - args.output_dir : None
+2025-10-30 09:53:49,460 - TopNet - INFO - args.experiment_path : ./experiments/TopNet/ShapeNet55_models/test_fog_easy
+2025-10-30 09:53:49,460 - TopNet - INFO - args.tfboard_path : ./experiments/TopNet/ShapeNet55_models/TFBoard/test_fog_easy
+2025-10-30 09:53:49,460 - TopNet - INFO - args.log_name : TopNet
+2025-10-30 09:53:49,460 - TopNet - INFO - args.use_gpu : True
+2025-10-30 09:53:49,460 - TopNet - INFO - args.distributed : False
+2025-10-30 09:53:49,460 - TopNet - INFO - config.optimizer = edict()
+2025-10-30 09:53:49,460 - TopNet - INFO - config.optimizer.type : Adam
+2025-10-30 09:53:49,460 - TopNet - INFO - config.optimizer.kwargs = edict()
+2025-10-30 09:53:49,460 - TopNet - INFO - config.optimizer.kwargs.lr : 0.001
+2025-10-30 09:53:49,460 - TopNet - INFO - config.optimizer.kwargs.weight_decay : 0
+2025-10-30 09:53:49,460 - TopNet - INFO - config.scheduler = edict()
+2025-10-30 09:53:49,460 - TopNet - INFO - config.scheduler.type : StepLR
+2025-10-30 09:53:49,460 - TopNet - INFO - config.scheduler.kwargs = edict()
+2025-10-30 09:53:49,460 - TopNet - INFO - config.scheduler.kwargs.step_size : 50
+2025-10-30 09:53:49,460 - TopNet - INFO - config.scheduler.kwargs.gamma : 0.5
+2025-10-30 09:53:49,460 - TopNet - INFO - config.dataset = edict()
+2025-10-30 09:53:49,460 - TopNet - INFO - config.dataset.train = edict()
+2025-10-30 09:53:49,460 - TopNet - INFO - config.dataset.train._base_ = edict()
+2025-10-30 09:53:49,460 - TopNet - INFO - config.dataset.train._base_.NAME : ShapeNet
+2025-10-30 09:53:49,460 - TopNet - INFO - config.dataset.train._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2025-10-30 09:53:49,460 - TopNet - INFO - config.dataset.train._base_.N_POINTS : 8192
+2025-10-30 09:53:49,460 - TopNet - INFO - config.dataset.train._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2025-10-30 09:53:49,460 - TopNet - INFO - config.dataset.train.others = edict()
+2025-10-30 09:53:49,460 - TopNet - INFO - config.dataset.train.others.subset : train
+2025-10-30 09:53:49,460 - TopNet - INFO - config.dataset.train.others.bs : 16
+2025-10-30 09:53:49,460 - TopNet - INFO - config.dataset.val = edict()
+2025-10-30 09:53:49,460 - TopNet - INFO - config.dataset.val._base_ = edict()
+2025-10-30 09:53:49,460 - TopNet - INFO - config.dataset.val._base_.NAME : ShapeNet
+2025-10-30 09:53:49,460 - TopNet - INFO - config.dataset.val._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2025-10-30 09:53:49,460 - TopNet - INFO - config.dataset.val._base_.N_POINTS : 8192
+2025-10-30 09:53:49,460 - TopNet - INFO - config.dataset.val._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2025-10-30 09:53:49,460 - TopNet - INFO - config.dataset.val.others = edict()
+2025-10-30 09:53:49,460 - TopNet - INFO - config.dataset.val.others.subset : test
+2025-10-30 09:53:49,460 - TopNet - INFO - config.dataset.test = edict()
+2025-10-30 09:53:49,461 - TopNet - INFO - config.dataset.test._base_ = edict()
+2025-10-30 09:53:49,461 - TopNet - INFO - config.dataset.test._base_.NAME : ShapeNet
+2025-10-30 09:53:49,461 - TopNet - INFO - config.dataset.test._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2025-10-30 09:53:49,461 - TopNet - INFO - config.dataset.test._base_.N_POINTS : 8192
+2025-10-30 09:53:49,461 - TopNet - INFO - config.dataset.test._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2025-10-30 09:53:49,461 - TopNet - INFO - config.dataset.test.others = edict()
+2025-10-30 09:53:49,461 - TopNet - INFO - config.dataset.test.others.subset : test
+2025-10-30 09:53:49,461 - TopNet - INFO - config.model = edict()
+2025-10-30 09:53:49,461 - TopNet - INFO - config.model.NAME : TopNet
+2025-10-30 09:53:49,461 - TopNet - INFO - config.model.encoder_feature : 1024
+2025-10-30 09:53:49,461 - TopNet - INFO - config.model.node_feature : 8
+2025-10-30 09:53:49,461 - TopNet - INFO - config.model.num_pred : 8192
+2025-10-30 09:53:49,461 - TopNet - INFO - config.model.encoder_channel : 1024
+2025-10-30 09:53:49,461 - TopNet - INFO - config.model.nlevels : 8
+2025-10-30 09:53:49,461 - TopNet - INFO - config.total_bs : 16
+2025-10-30 09:53:49,461 - TopNet - INFO - config.step_per_update : 2
+2025-10-30 09:53:49,461 - TopNet - INFO - config.max_epoch : 150
+2025-10-30 09:53:49,461 - TopNet - INFO - config.consider_metric : CDL1
+2025-10-30 09:53:49,461 - TopNet - INFO - Distributed training: False
+2025-10-30 09:53:49,461 - TopNet - INFO - Set random seed to 0, deterministic: False
+2025-10-30 09:53:49,461 - TopNet - INFO - Tester start ... 
+2025-10-30 09:53:49,461 - TopNet - INFO - Processing test dataset...
+2025-10-30 09:53:49,491 - TopNet - INFO - Loading weights from ./pretrained/fog/TopNet1.pth...
+2025-10-30 09:53:49,544 - TopNet - INFO - ckpts @ 150 epoch( performance = {'F-Score': 0.07770974917530546, 'CDL1': 31.527244771377738, 'CDL2': 3.328354587462214, 'EMDistance': 0.0})
+2025-10-30 09:55:39,358 - TopNet - INFO - Test[200/10518] Taxonomy = 04530566 Sample = 3bb6a5deec68ef77fee64ca302793912 Losses = ['18.6499', '0.9737', '18.6499', '0.9737'] Metrics = ['0.1190', '18.6499', '0.9737', '0.0000'] InferenceTime = 0.0019
+2025-10-30 09:57:38,454 - TopNet - INFO - Test[400/10518] Taxonomy = 03636649 Sample = 90651b3febfc3afe15226aa76eb7c3e Losses = ['25.2525', '2.3240', '25.2525', '2.3240'] Metrics = ['0.0585', '25.2525', '2.3240', '0.0000'] InferenceTime = 0.0020
+2025-10-30 09:59:44,134 - TopNet - INFO - Test[600/10518] Taxonomy = 03001627 Sample = fae27953e0f0404ca99df2794ec76201 Losses = ['23.8667', '1.4322', '23.8667', '1.4322'] Metrics = ['0.0620', '23.8667', '1.4322', '0.0000'] InferenceTime = 0.0022
+2025-10-30 10:01:58,769 - TopNet - INFO - Test[800/10518] Taxonomy = 03593526 Sample = 324c9045843b9470d29670d38a4c9e7e Losses = ['41.3075', '4.1934', '41.3075', '4.1934'] Metrics = ['0.0237', '41.3075', '4.1934', '0.0000'] InferenceTime = 0.0046
+2025-10-30 10:04:12,290 - TopNet - INFO - Test[1000/10518] Taxonomy = 02958343 Sample = 39e10c5d24fee4a6311f5d9a1681aa3b Losses = ['24.7727', '1.8814', '24.7727', '1.8814'] Metrics = ['0.0795', '24.7727', '1.8814', '0.0000'] InferenceTime = 0.0018
+2025-10-30 10:06:18,506 - TopNet - INFO - Test[1200/10518] Taxonomy = 03001627 Sample = e50f1b2d0835bb392764cfba57a5de73 Losses = ['33.7413', '3.0152', '33.7413', '3.0152'] Metrics = ['0.0244', '33.7413', '3.0152', '0.0000'] InferenceTime = 0.0019
+2025-10-30 10:08:24,532 - TopNet - INFO - Test[1400/10518] Taxonomy = 04379243 Sample = 647692d3858790a1f1783a44a88d6274 Losses = ['23.3448', '1.9465', '23.3448', '1.9465'] Metrics = ['0.1349', '23.3448', '1.9465', '0.0000'] InferenceTime = 0.0019
+2025-10-30 10:10:38,007 - TopNet - INFO - Test[1600/10518] Taxonomy = 02691156 Sample = d8d9de967255b4c562b600da24e0965 Losses = ['15.9509', '0.8145', '15.9509', '0.8145'] Metrics = ['0.2596', '15.9509', '0.8145', '0.0000'] InferenceTime = 0.0019
+2025-10-30 10:12:49,642 - TopNet - INFO - Test[1800/10518] Taxonomy = 03001627 Sample = 24c0e6a8b10abb77df2b21995cbbbc4f Losses = ['46.3896', '5.0968', '46.3896', '5.0968'] Metrics = ['0.0098', '46.3896', '5.0968', '0.0000'] InferenceTime = 0.0020
+2025-10-30 10:15:06,263 - TopNet - INFO - Test[2000/10518] Taxonomy = 04379243 Sample = 5d77e8f6ad3741a0c30ab36bf7b0552 Losses = ['22.9437', '1.5803', '22.9437', '1.5803'] Metrics = ['0.1130', '22.9437', '1.5803', '0.0000'] InferenceTime = 0.0029
+2025-10-30 10:17:15,729 - TopNet - INFO - Test[2200/10518] Taxonomy = 03636649 Sample = b64e98c991d4103170365ad078f710ff Losses = ['53.1922', '9.4829', '53.1922', '9.4829'] Metrics = ['0.0236', '53.1922', '9.4829', '0.0000'] InferenceTime = 0.0039
+2025-10-30 10:19:24,399 - TopNet - INFO - Test[2400/10518] Taxonomy = 03211117 Sample = b4386438057e85988bfba3df1f776207 Losses = ['25.4646', '2.0330', '25.4646', '2.0330'] Metrics = ['0.0896', '25.4646', '2.0330', '0.0000'] InferenceTime = 0.0019
+2025-10-30 10:21:39,525 - TopNet - INFO - Test[2600/10518] Taxonomy = 04468005 Sample = 3b8c505fd1127ed88f134472f61cf6bb Losses = ['19.9764', '1.1219', '19.9764', '1.1219'] Metrics = ['0.1281', '19.9764', '1.1219', '0.0000'] InferenceTime = 0.0021
+2025-10-30 10:23:51,875 - TopNet - INFO - Test[2800/10518] Taxonomy = 03001627 Sample = e3e76d624f1f855bcc8a9c365968620 Losses = ['23.9432', '1.7062', '23.9432', '1.7062'] Metrics = ['0.0716', '23.9432', '1.7062', '0.0000'] InferenceTime = 0.0018
+2025-10-30 10:26:01,198 - TopNet - INFO - Test[3000/10518] Taxonomy = 03001627 Sample = 40020a5e90c75d94a93412f1b60e6fba Losses = ['25.6833', '2.2290', '25.6833', '2.2290'] Metrics = ['0.1091', '25.6833', '2.2290', '0.0000'] InferenceTime = 0.0018
+2025-10-30 10:28:07,904 - TopNet - INFO - Test[3200/10518] Taxonomy = 02691156 Sample = a96c1589731b06a1efbd0f357ff7c40a Losses = ['19.1543', '1.1027', '19.1543', '1.1027'] Metrics = ['0.1540', '19.1543', '1.1027', '0.0000'] InferenceTime = 0.0109
+2025-10-30 10:30:22,097 - TopNet - INFO - Test[3400/10518] Taxonomy = 03046257 Sample = b2b40e80c9d3f530d5f1db12f95f0fe4 Losses = ['20.1137', '0.9919', '20.1137', '0.9919'] Metrics = ['0.1115', '20.1137', '0.9919', '0.0000'] InferenceTime = 0.0024
+2025-10-30 10:32:29,193 - TopNet - INFO - Test[3600/10518] Taxonomy = 02933112 Sample = c18a4772bcfbb98e85bc264270ae0601 Losses = ['31.0288', '2.4115', '31.0288', '2.4115'] Metrics = ['0.0257', '31.0288', '2.4115', '0.0000'] InferenceTime = 0.0016
+2025-10-30 10:34:39,945 - TopNet - INFO - Test[3800/10518] Taxonomy = 04530566 Sample = 215861c4bebeb328d9a75de54b023ae1 Losses = ['19.1735', '0.9092', '19.1735', '0.9092'] Metrics = ['0.1348', '19.1735', '0.9092', '0.0000'] InferenceTime = 0.0020
+2025-10-30 10:36:55,441 - TopNet - INFO - Test[4000/10518] Taxonomy = 02828884 Sample = 5f9d3dae06acf0e4e93e1127627b834 Losses = ['25.1385', '1.9092', '25.1385', '1.9092'] Metrics = ['0.0951', '25.1385', '1.9092', '0.0000'] InferenceTime = 0.0024
+2025-10-30 10:39:11,670 - TopNet - INFO - Test[4200/10518] Taxonomy = 04401088 Sample = a3c1c9fc390b1bbbb099170e6f5a4af9 Losses = ['22.4362', '1.2106', '22.4362', '1.2106'] Metrics = ['0.0953', '22.4362', '1.2106', '0.0000'] InferenceTime = 0.0021
+2025-10-30 10:41:26,826 - TopNet - INFO - Test[4400/10518] Taxonomy = 04256520 Sample = 54506969a60017ac8f0a57a8b9390a Losses = ['31.8832', '2.7960', '31.8832', '2.7960'] Metrics = ['0.0525', '31.8832', '2.7960', '0.0000'] InferenceTime = 0.0018
+2025-10-30 10:43:37,242 - TopNet - INFO - Test[4600/10518] Taxonomy = 04074963 Sample = d9ca2dcaf1d9d850dc605801df3f66ec Losses = ['30.5851', '2.1972', '30.5851', '2.1972'] Metrics = ['0.0236', '30.5851', '2.1972', '0.0000'] InferenceTime = 0.0019
+2025-10-30 10:45:55,368 - TopNet - INFO - Test[4800/10518] Taxonomy = 04379243 Sample = ead93856b735ec90f0aeabfdcb4e1dd9 Losses = ['29.8246', '2.1853', '29.8246', '2.1853'] Metrics = ['0.0457', '29.8246', '2.1853', '0.0000'] InferenceTime = 0.0018
+2025-10-30 10:48:06,202 - TopNet - INFO - Test[5000/10518] Taxonomy = 03790512 Sample = 242d8c07fabbdabc78fe949fc1419876 Losses = ['27.5775', '2.8076', '27.5775', '2.8076'] Metrics = ['0.0806', '27.5775', '2.8076', '0.0000'] InferenceTime = 0.0018
+2025-10-30 10:50:09,505 - TopNet - INFO - Test[5200/10518] Taxonomy = 02691156 Sample = 7b6f528acc10d3fbcf5b9c6e0c7ce895 Losses = ['19.5556', '1.1358', '19.5556', '1.1358'] Metrics = ['0.1692', '19.5556', '1.1358', '0.0000'] InferenceTime = 0.0018
+2025-10-30 10:52:17,196 - TopNet - INFO - Test[5400/10518] Taxonomy = 04379243 Sample = 6765d83445c2338555f46d55537192b6 Losses = ['28.7065', '3.4089', '28.7065', '3.4089'] Metrics = ['0.1004', '28.7065', '3.4089', '0.0000'] InferenceTime = 0.0024
+2025-10-30 10:54:29,393 - TopNet - INFO - Test[5600/10518] Taxonomy = 03001627 Sample = 33dc06a8e0933b1efc385a284336f217 Losses = ['31.0065', '2.5257', '31.0065', '2.5257'] Metrics = ['0.0380', '31.0065', '2.5257', '0.0000'] InferenceTime = 0.0018
+2025-10-30 10:56:49,570 - TopNet - INFO - Test[5800/10518] Taxonomy = 02992529 Sample = 4a81237a7fc743763992b1138bb05b3c Losses = ['17.2076', '0.6866', '17.2076', '0.6866'] Metrics = ['0.1409', '17.2076', '0.6866', '0.0000'] InferenceTime = 0.0025
+2025-10-30 10:59:05,299 - TopNet - INFO - Test[6000/10518] Taxonomy = 02958343 Sample = 37249c6f16b203de2e877e82c90c24d Losses = ['28.0829', '2.3424', '28.0829', '2.3424'] Metrics = ['0.0568', '28.0829', '2.3424', '0.0000'] InferenceTime = 0.0016
+2025-10-30 11:01:15,735 - TopNet - INFO - Test[6200/10518] Taxonomy = 02933112 Sample = 956c437be87a2be5f51f77a6d7299806 Losses = ['34.2868', '3.3477', '34.2868', '3.3477'] Metrics = ['0.0235', '34.2868', '3.3477', '0.0000'] InferenceTime = 0.0026
+2025-10-30 11:03:22,151 - TopNet - INFO - Test[6400/10518] Taxonomy = 03691459 Sample = 9d62c46fc3fd343d1f9f3ce366e030fb Losses = ['40.2140', '4.3903', '40.2140', '4.3903'] Metrics = ['0.0111', '40.2140', '4.3903', '0.0000'] InferenceTime = 0.0026
+2025-10-30 11:05:37,975 - TopNet - INFO - Test[6600/10518] Taxonomy = 04379243 Sample = 7a8399fc51d83969a8b1d0fdee586dc9 Losses = ['20.8907', '1.7160', '20.8907', '1.7160'] Metrics = ['0.1657', '20.8907', '1.7160', '0.0000'] InferenceTime = 0.0019
+2025-10-30 11:07:45,956 - TopNet - INFO - Test[6800/10518] Taxonomy = 03001627 Sample = 78abbfe9ab73729f56d13e757b0dc374 Losses = ['37.0218', '4.8986', '37.0218', '4.8986'] Metrics = ['0.0232', '37.0218', '4.8986', '0.0000'] InferenceTime = 0.0048
+2025-10-30 11:09:52,838 - TopNet - INFO - Test[7000/10518] Taxonomy = 04379243 Sample = 264a075e293394a843638dabe1eb5336 Losses = ['22.1864', '1.4489', '22.1864', '1.4489'] Metrics = ['0.0971', '22.1864', '1.4489', '0.0000'] InferenceTime = 0.0024
+2025-10-30 11:11:56,296 - TopNet - INFO - Test[7200/10518] Taxonomy = 03211117 Sample = 96f01698d0446641ea6e0950aa8ac31b Losses = ['32.2465', '2.9482', '32.2465', '2.9482'] Metrics = ['0.0392', '32.2465', '2.9482', '0.0000'] InferenceTime = 0.0024
+2025-10-30 11:14:04,422 - TopNet - INFO - Test[7400/10518] Taxonomy = 03001627 Sample = b2239339005b14c8d675cc466d0d6fbc Losses = ['26.3466', '1.7721', '26.3466', '1.7721'] Metrics = ['0.0553', '26.3466', '1.7721', '0.0000'] InferenceTime = 0.0018
+2025-10-30 11:16:16,477 - TopNet - INFO - Test[7600/10518] Taxonomy = 04074963 Sample = 57759e351ec76d86d3c1501c166e6b2a Losses = ['18.8935', '0.9136', '18.8935', '0.9136'] Metrics = ['0.0984', '18.8935', '0.9136', '0.0000'] InferenceTime = 0.0018
+2025-10-30 11:18:14,246 - TopNet - INFO - Test[7800/10518] Taxonomy = 04090263 Sample = 41a9912bfe0dc96239169e4b52d9f093 Losses = ['22.8322', '3.3715', '22.8322', '3.3715'] Metrics = ['0.2092', '22.8322', '3.3715', '0.0000'] InferenceTime = 0.0018
+2025-10-30 11:20:06,658 - TopNet - INFO - Test[8000/10518] Taxonomy = 04379243 Sample = bcbc5e30e12a58f07ea323bc74055b8 Losses = ['18.0242', '0.9587', '18.0242', '0.9587'] Metrics = ['0.1796', '18.0242', '0.9587', '0.0000'] InferenceTime = 0.0019
+2025-10-30 11:21:59,162 - TopNet - INFO - Test[8200/10518] Taxonomy = 04379243 Sample = aabcb5d610e76ff19ca02c396af0c503 Losses = ['34.0870', '5.1849', '34.0870', '5.1849'] Metrics = ['0.1032', '34.0870', '5.1849', '0.0000'] InferenceTime = 0.0016
+2025-10-30 11:23:35,208 - TopNet - INFO - Test[8400/10518] Taxonomy = 04379243 Sample = dd2c3ff28a34556a47839bae1bc65257 Losses = ['21.9439', '2.2893', '21.9439', '2.2893'] Metrics = ['0.2045', '21.9439', '2.2893', '0.0000'] InferenceTime = 0.0018
+2025-10-30 11:25:01,071 - TopNet - INFO - Test[8600/10518] Taxonomy = 03337140 Sample = 149a105979cad722c1467c54b9e09ce5 Losses = ['39.7409', '4.9307', '39.7409', '4.9307'] Metrics = ['0.0164', '39.7409', '4.9307', '0.0000'] InferenceTime = 0.0017
+2025-10-30 11:26:20,582 - TopNet - INFO - Test[8800/10518] Taxonomy = 02691156 Sample = 4044d5954ef85af8279326882e8430cb Losses = ['30.6134', '2.9461', '30.6134', '2.9461'] Metrics = ['0.1067', '30.6134', '2.9461', '0.0000'] InferenceTime = 0.0016
+2025-10-30 11:27:40,085 - TopNet - INFO - Test[9000/10518] Taxonomy = 02828884 Sample = 4e512ab638542762d4d8765e3910f617 Losses = ['20.6886', '1.1325', '20.6886', '1.1325'] Metrics = ['0.1213', '20.6886', '1.1325', '0.0000'] InferenceTime = 0.0016
+2025-10-30 11:29:02,396 - TopNet - INFO - Test[9200/10518] Taxonomy = 04379243 Sample = 5247e4e978399f1b486040c0d9e85846 Losses = ['25.0418', '2.9006', '25.0418', '2.9006'] Metrics = ['0.1377', '25.0418', '2.9006', '0.0000'] InferenceTime = 0.0019
+2025-10-30 11:30:25,356 - TopNet - INFO - Test[9400/10518] Taxonomy = 03636649 Sample = 7ec821d5d8bd9f17d4aea4231844b26b Losses = ['18.9447', '1.0359', '18.9447', '1.0359'] Metrics = ['0.1344', '18.9447', '1.0359', '0.0000'] InferenceTime = 0.0015
+2025-10-30 11:31:40,225 - TopNet - INFO - Test[9600/10518] Taxonomy = 04090263 Sample = 3cb82befc3290e36b58435942a1b4dac Losses = ['9.6006', '0.2746', '9.6006', '0.2746'] Metrics = ['0.6636', '9.6006', '0.2746', '0.0000'] InferenceTime = 0.0016
+2025-10-30 11:32:47,887 - TopNet - INFO - Test[9800/10518] Taxonomy = 04379243 Sample = 6358336cbeedb9232d9fe390e23fd20f Losses = ['22.4285', '1.2702', '22.4285', '1.2702'] Metrics = ['0.1211', '22.4285', '1.2702', '0.0000'] InferenceTime = 0.0015
+2025-10-30 11:34:05,602 - TopNet - INFO - Test[10000/10518] Taxonomy = 04401088 Sample = f73493b7c8a78000b594bbf2c494ab81 Losses = ['29.8671', '2.8473', '29.8671', '2.8473'] Metrics = ['0.0406', '29.8671', '2.8473', '0.0000'] InferenceTime = 0.0015
+2025-10-30 11:35:11,344 - TopNet - INFO - Test[10200/10518] Taxonomy = 03001627 Sample = 3ffd794e5100258483bc207d8a5912e3 Losses = ['24.9546', '1.4503', '24.9546', '1.4503'] Metrics = ['0.0520', '24.9546', '1.4503', '0.0000'] InferenceTime = 0.0017
+2025-10-30 11:36:25,102 - TopNet - INFO - Test[10400/10518] Taxonomy = 04090263 Sample = 26744766d59c28fb6b2c8bb96250e4a0 Losses = ['10.7948', '0.3560', '10.7948', '0.3560'] Metrics = ['0.5259', '10.7948', '0.3560', '0.0000'] InferenceTime = 0.0015
+2025-10-30 11:37:11,172 - TopNet - INFO - [TEST] Metrics = ['0.0837', '30.4475', '3.1063', '0.0000']
+2025-10-30 11:37:11,172 - TopNet - INFO - [TEST] Average Inference Time: 0.0021 seconds
+2025-10-30 11:37:11,173 - TopNet - INFO - ============================ TEST RESULTS ============================
+2025-10-30 11:37:11,173 - TopNet - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	EMDistance	#ModelName	
+2025-10-30 11:37:11,173 - TopNet - INFO - 03759954	112	0.085 	32.810 	4.517 	0.000 	microphone	
+2025-10-30 11:37:11,173 - TopNet - INFO - 04330267	352	0.036 	33.970 	3.477 	0.000 	stove	
+2025-10-30 11:37:11,173 - TopNet - INFO - 03261776	120	0.043 	43.731 	8.028 	0.000 	earphone	
+2025-10-30 11:37:11,173 - TopNet - INFO - 03513137	264	0.014 	47.022 	6.941 	0.000 	helmet	
+2025-10-30 11:37:11,173 - TopNet - INFO - 04460130	216	0.082 	29.194 	2.684 	0.000 	tower	
+2025-10-30 11:37:11,173 - TopNet - INFO - 04468005	624	0.111 	24.135 	1.759 	0.000 	train	
+2025-10-30 11:37:11,173 - TopNet - INFO - 03761084	248	0.023 	35.999 	3.785 	0.000 	microwaves	
+2025-10-30 11:37:11,173 - TopNet - INFO - 04004475	272	0.029 	38.395 	4.540 	0.000 	printer	
+2025-10-30 11:37:11,173 - TopNet - INFO - 03938244	160	0.030 	40.763 	5.060 	0.000 	pillow	
+2025-10-30 11:37:11,174 - TopNet - INFO - 02992529	1336	0.105 	21.599 	1.278 	0.000 	cellphone	
+2025-10-30 11:37:11,174 - TopNet - INFO - 02808440	1376	0.044 	32.973 	3.438 	0.000 	bathtub	
+2025-10-30 11:37:11,174 - TopNet - INFO - 04530566	3104	0.130 	23.493 	1.739 	0.000 	watercraft	
+2025-10-30 11:37:11,174 - TopNet - INFO - 02871439	728	0.047 	32.672 	3.356 	0.000 	bookshelf	
+2025-10-30 11:37:11,174 - TopNet - INFO - 03593526	960	0.037 	37.395 	4.496 	0.000 	jar	
+2025-10-30 11:37:11,174 - TopNet - INFO - 04554684	272	0.019 	37.632 	4.039 	0.000 	washer	
+2025-10-30 11:37:11,174 - TopNet - INFO - 03467517	1280	0.366 	13.833 	0.593 	0.000 	guitar	
+2025-10-30 11:37:11,174 - TopNet - INFO - 04401088	1744	0.108 	21.339 	1.282 	0.000 	telephone	
+2025-10-30 11:37:11,174 - TopNet - INFO - 02954340	96	0.026 	38.119 	4.740 	0.000 	cap	
+2025-10-30 11:37:11,174 - TopNet - INFO - 02933112	2520	0.047 	29.346 	2.478 	0.000 	cabinet	
+2025-10-30 11:37:11,174 - TopNet - INFO - 03642806	736	0.094 	22.810 	1.424 	0.000 	laptop	
+2025-10-30 11:37:11,174 - TopNet - INFO - 02924116	1504	0.085 	24.915 	1.784 	0.000 	bus	
+2025-10-30 11:37:11,174 - TopNet - INFO - 02946921	176	0.023 	36.195 	4.042 	0.000 	can	
+2025-10-30 11:37:11,175 - TopNet - INFO - 02818832	376	0.037 	37.053 	4.262 	0.000 	bed	
+2025-10-30 11:37:11,175 - TopNet - INFO - 04256520	5080	0.047 	30.775 	2.703 	0.000 	sofa	
+2025-10-30 11:37:11,175 - TopNet - INFO - 04379243	13496	0.102 	26.926 	2.559 	0.000 	table	
+2025-10-30 11:37:11,175 - TopNet - INFO - 02747177	552	0.026 	34.102 	3.419 	0.000 	trash bin	
+2025-10-30 11:37:11,175 - TopNet - INFO - 03046257	1048	0.058 	31.244 	3.092 	0.000 	clock	
+2025-10-30 11:37:11,175 - TopNet - INFO - 04225987	248	0.156 	21.815 	1.566 	0.000 	skateboard	
+2025-10-30 11:37:11,175 - TopNet - INFO - 03797390	344	0.020 	37.294 	4.066 	0.000 	mug	
+2025-10-30 11:37:11,175 - TopNet - INFO - 03001627	10848	0.066 	29.549 	2.752 	0.000 	chair	
+2025-10-30 11:37:11,175 - TopNet - INFO - 03691459	2560	0.035 	35.452 	3.851 	0.000 	loudspeaker	
+2025-10-30 11:37:11,175 - TopNet - INFO - 02942699	184	0.027 	42.318 	5.731 	0.000 	camera	
+2025-10-30 11:37:11,175 - TopNet - INFO - 03636649	3712	0.095 	31.872 	3.784 	0.000 	lamp	
+2025-10-30 11:37:11,175 - TopNet - INFO - 02691156	6472	0.207 	19.762 	1.315 	0.000 	airplane	
+2025-10-30 11:37:11,175 - TopNet - INFO - 02773838	136	0.051 	33.738 	3.723 	0.000 	bag	
+2025-10-30 11:37:11,175 - TopNet - INFO - 02958343	5624	0.058 	27.167 	2.050 	0.000 	car	
+2025-10-30 11:37:11,175 - TopNet - INFO - 02880940	304	0.028 	35.290 	3.721 	0.000 	bowl	
+2025-10-30 11:37:11,176 - TopNet - INFO - 04099429	136	0.245 	20.253 	1.448 	0.000 	rocket	
+2025-10-30 11:37:11,176 - TopNet - INFO - 02828884	2904	0.126 	24.938 	2.113 	0.000 	bench	
+2025-10-30 11:37:11,176 - TopNet - INFO - 04090263	3800	0.345 	15.884 	0.918 	0.000 	rifle	
+2025-10-30 11:37:11,176 - TopNet - INFO - 03211117	1752	0.070 	28.516 	2.474 	0.000 	display	
+2025-10-30 11:37:11,176 - TopNet - INFO - 02876657	800	0.077 	25.659 	2.062 	0.000 	bottle	
+2025-10-30 11:37:11,176 - TopNet - INFO - 03710193	152	0.084 	28.880 	2.615 	0.000 	mailbox	
+2025-10-30 11:37:11,176 - TopNet - INFO - 03790512	544	0.067 	28.522 	2.407 	0.000 	motorbike	
+2025-10-30 11:37:11,176 - TopNet - INFO - 03325088	1192	0.059 	34.111 	4.127 	0.000 	faucet	
+2025-10-30 11:37:11,176 - TopNet - INFO - 02801938	184	0.027 	36.172 	3.957 	0.000 	basket	
+2025-10-30 11:37:11,176 - TopNet - INFO - 03337140	480	0.043 	31.343 	2.926 	0.000 	file cabinet	
+2025-10-30 11:37:11,176 - TopNet - INFO - 02843684	120	0.028 	38.086 	4.420 	0.000 	birdhouse	
+2025-10-30 11:37:11,176 - TopNet - INFO - 03624134	680	0.322 	14.869 	0.712 	0.000 	knife	
+2025-10-30 11:37:11,176 - TopNet - INFO - 03991062	968	0.030 	39.623 	4.833 	0.000 	flowerpot	
+2025-10-30 11:37:11,176 - TopNet - INFO - 03948459	496	0.150 	21.175 	1.337 	0.000 	pistol	
+2025-10-30 11:37:11,176 - TopNet - INFO - 03928116	384	0.042 	36.424 	4.140 	0.000 	piano	
+2025-10-30 11:37:11,176 - TopNet - INFO - 03207941	152	0.025 	35.083 	3.614 	0.000 	dishwasher	
+2025-10-30 11:37:11,176 - TopNet - INFO - 04074963	112	0.102 	22.562 	1.472 	0.000 	remote	
+2025-10-30 11:37:11,176 - TopNet - INFO - 03085013	104	0.167 	19.815 	1.198 	0.000 	keyboard	
+2025-10-30 11:37:11,176 - TopNet - INFO - Overall 		0.084 	30.448 	3.106 	0.000 	

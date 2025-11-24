@@ -1,0 +1,201 @@
+2025-07-23 13:31:57,114 - DGTPNet - INFO - Copy the Config file from ./cfgs/ShapeNet55_models/DGTPNet.yaml to ./experiments/DGTPNet/ShapeNet55_models/test_crop_median/config.yaml
+2025-07-23 13:31:57,114 - DGTPNet - INFO - args.config : ./cfgs/ShapeNet55_models/DGTPNet.yaml
+2025-07-23 13:31:57,114 - DGTPNet - INFO - args.launcher : none
+2025-07-23 13:31:57,114 - DGTPNet - INFO - args.local_rank : 0
+2025-07-23 13:31:57,114 - DGTPNet - INFO - args.num_workers : 4
+2025-07-23 13:31:57,114 - DGTPNet - INFO - args.seed : 0
+2025-07-23 13:31:57,115 - DGTPNet - INFO - args.deterministic : False
+2025-07-23 13:31:57,115 - DGTPNet - INFO - args.sync_bn : False
+2025-07-23 13:31:57,115 - DGTPNet - INFO - args.exp_name : test_crop_median
+2025-07-23 13:31:57,115 - DGTPNet - INFO - args.start_ckpts : None
+2025-07-23 13:31:57,115 - DGTPNet - INFO - args.ckpts : ./pretrained/DGTPNet.pth
+2025-07-23 13:31:57,115 - DGTPNet - INFO - args.val_freq : 1
+2025-07-23 13:31:57,115 - DGTPNet - INFO - args.resume : False
+2025-07-23 13:31:57,115 - DGTPNet - INFO - args.test : True
+2025-07-23 13:31:57,115 - DGTPNet - INFO - args.mode : median
+2025-07-23 13:31:57,115 - DGTPNet - INFO - args.pcd_path : None
+2025-07-23 13:31:57,115 - DGTPNet - INFO - args.output_dir : None
+2025-07-23 13:31:57,115 - DGTPNet - INFO - args.experiment_path : ./experiments/DGTPNet/ShapeNet55_models/test_crop_median
+2025-07-23 13:31:57,115 - DGTPNet - INFO - args.tfboard_path : ./experiments/DGTPNet/ShapeNet55_models/TFBoard/test_crop_median
+2025-07-23 13:31:57,115 - DGTPNet - INFO - args.log_name : DGTPNet
+2025-07-23 13:31:57,115 - DGTPNet - INFO - args.use_gpu : True
+2025-07-23 13:31:57,115 - DGTPNet - INFO - args.distributed : False
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.optimizer = edict()
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.optimizer.type : AdamW
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.optimizer.kwargs = edict()
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.optimizer.kwargs.lr : 0.0001
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.optimizer.kwargs.weight_decay : 0.0005
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.scheduler = edict()
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.scheduler.type : LambdaLR
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.scheduler.kwargs = edict()
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.scheduler.kwargs.decay_step : 21
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.scheduler.kwargs.lr_decay : 0.63096
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.scheduler.kwargs.lowest_decay : 0.001
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.bnmscheduler = edict()
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.bnmscheduler.type : Lambda
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.bnmscheduler.kwargs = edict()
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.bnmscheduler.kwargs.decay_step : 21
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.bnmscheduler.kwargs.bn_decay : 0.5
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.bnmscheduler.kwargs.bn_momentum : 0.9
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.bnmscheduler.kwargs.lowest_decay : 0.01
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.dataset = edict()
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.dataset.train = edict()
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.dataset.train._base_ = edict()
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.dataset.train._base_.NAME : ShapeNet
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.dataset.train._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.dataset.train._base_.N_POINTS : 8192
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.dataset.train._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.dataset.train.others = edict()
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.dataset.train.others.subset : train
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.dataset.train.others.bs : 8
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.dataset.val = edict()
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.dataset.val._base_ = edict()
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.dataset.val._base_.NAME : ShapeNet
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.dataset.val._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.dataset.val._base_.N_POINTS : 8192
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.dataset.val._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.dataset.val.others = edict()
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.dataset.val.others.subset : test
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.dataset.test = edict()
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.dataset.test._base_ = edict()
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.dataset.test._base_.NAME : ShapeNet
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.dataset.test._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.dataset.test._base_.N_POINTS : 8192
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.dataset.test._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.dataset.test.others = edict()
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.dataset.test.others.subset : test
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.model = edict()
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.model.NAME : DGTPNet
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.model.input_dim : 3
+2025-07-23 13:31:57,115 - DGTPNet - INFO - config.model.num_gaussians : 512
+2025-07-23 13:31:57,116 - DGTPNet - INFO - config.model.d_model : 512
+2025-07-23 13:31:57,116 - DGTPNet - INFO - config.model.nhead : 4
+2025-07-23 13:31:57,116 - DGTPNet - INFO - config.model.num_encoder_layers : 4
+2025-07-23 13:31:57,116 - DGTPNet - INFO - config.model.dim_feedforward : 1024
+2025-07-23 13:31:57,116 - DGTPNet - INFO - config.model.dropout : 0.1
+2025-07-23 13:31:57,116 - DGTPNet - INFO - config.model.num_refinement_layers : 2
+2025-07-23 13:31:57,116 - DGTPNet - INFO - config.model.k_neighbors : 20
+2025-07-23 13:31:57,116 - DGTPNet - INFO - config.model.num_coarse_points : 2048
+2025-07-23 13:31:57,116 - DGTPNet - INFO - config.model.num_fine_points : 8192
+2025-07-23 13:31:57,116 - DGTPNet - INFO - config.model.use_opacity_weighted_sampling : True
+2025-07-23 13:31:57,116 - DGTPNet - INFO - config.model.l2_loss : 1
+2025-07-23 13:31:57,116 - DGTPNet - INFO - config.consider_metric : CDL2
+2025-07-23 13:31:57,116 - DGTPNet - INFO - config.total_bs : 8
+2025-07-23 13:31:57,116 - DGTPNet - INFO - config.step_per_update : 2
+2025-07-23 13:31:57,116 - DGTPNet - INFO - config.max_epoch : 200
+2025-07-23 13:31:57,116 - DGTPNet - INFO - Distributed training: False
+2025-07-23 13:31:57,116 - DGTPNet - INFO - Set random seed to 0, deterministic: False
+2025-07-23 13:31:57,116 - DGTPNet - INFO - Tester start ... 
+2025-07-23 13:31:57,152 - DGTPNet - INFO - Loading weights from ./pretrained/DGTPNet.pth...
+2025-07-23 13:31:57,217 - DGTPNet - INFO - ckpts @ 180 epoch( performance = {'F-Score': 0.30989719306896457, 'CDL1': 17.409367483501374, 'CDL2': 1.109094126743799, 'EMDistance': 0.0})
+2025-07-23 13:32:39,175 - DGTPNet - INFO - Test[200/10518] Taxonomy = 04530566 Sample = 3bb6a5deec68ef77fee64ca302793912 Losses = ['17.1374', '0.8281', '12.8896', '0.4637'] Metrics = ['0.3941', '12.8896', '0.4637', '0.0000']
+2025-07-23 13:33:20,465 - DGTPNet - INFO - Test[400/10518] Taxonomy = 03636649 Sample = 90651b3febfc3afe15226aa76eb7c3e Losses = ['21.2881', '1.3931', '16.4644', '0.8100'] Metrics = ['0.2862', '16.4644', '0.8100', '0.0000']
+2025-07-23 13:34:01,804 - DGTPNet - INFO - Test[600/10518] Taxonomy = 03001627 Sample = fae27953e0f0404ca99df2794ec76201 Losses = ['21.6641', '1.4095', '16.9608', '0.8731'] Metrics = ['0.3219', '16.9608', '0.8731', '0.0000']
+2025-07-23 13:34:43,165 - DGTPNet - INFO - Test[800/10518] Taxonomy = 03593526 Sample = 324c9045843b9470d29670d38a4c9e7e Losses = ['20.6008', '1.3645', '15.8998', '0.7922'] Metrics = ['0.3046', '15.8998', '0.7922', '0.0000']
+2025-07-23 13:35:24,728 - DGTPNet - INFO - Test[1000/10518] Taxonomy = 02958343 Sample = 39e10c5d24fee4a6311f5d9a1681aa3b Losses = ['21.3170', '1.2342', '15.7732', '0.6399'] Metrics = ['0.2540', '15.7732', '0.6399', '0.0000']
+2025-07-23 13:36:06,127 - DGTPNet - INFO - Test[1200/10518] Taxonomy = 03001627 Sample = e50f1b2d0835bb392764cfba57a5de73 Losses = ['26.3579', '2.7251', '20.0230', '1.6318'] Metrics = ['0.2426', '20.0230', '1.6318', '0.0000']
+2025-07-23 13:36:47,516 - DGTPNet - INFO - Test[1400/10518] Taxonomy = 04379243 Sample = 647692d3858790a1f1783a44a88d6274 Losses = ['20.3131', '1.3383', '15.0786', '0.7899'] Metrics = ['0.3152', '15.0786', '0.7899', '0.0000']
+2025-07-23 13:37:28,768 - DGTPNet - INFO - Test[1600/10518] Taxonomy = 02691156 Sample = d8d9de967255b4c562b600da24e0965 Losses = ['13.2111', '0.4946', '9.7578', '0.2562'] Metrics = ['0.6101', '9.7578', '0.2562', '0.0000']
+2025-07-23 13:38:09,993 - DGTPNet - INFO - Test[1800/10518] Taxonomy = 03001627 Sample = 24c0e6a8b10abb77df2b21995cbbbc4f Losses = ['29.7308', '2.5355', '21.7616', '1.2782'] Metrics = ['0.1266', '21.7616', '1.2782', '0.0000']
+2025-07-23 13:38:51,214 - DGTPNet - INFO - Test[2000/10518] Taxonomy = 04379243 Sample = 5d77e8f6ad3741a0c30ab36bf7b0552 Losses = ['18.6175', '0.9443', '13.2750', '0.4373'] Metrics = ['0.3473', '13.2750', '0.4373', '0.0000']
+2025-07-23 13:39:32,392 - DGTPNet - INFO - Test[2200/10518] Taxonomy = 03636649 Sample = b64e98c991d4103170365ad078f710ff Losses = ['33.1218', '5.5793', '26.0766', '3.5022'] Metrics = ['0.2750', '26.0766', '3.5022', '0.0000']
+2025-07-23 13:40:13,715 - DGTPNet - INFO - Test[2400/10518] Taxonomy = 03211117 Sample = b4386438057e85988bfba3df1f776207 Losses = ['24.2295', '2.1442', '18.3068', '1.1349'] Metrics = ['0.2232', '18.3068', '1.1349', '0.0000']
+2025-07-23 13:40:55,293 - DGTPNet - INFO - Test[2600/10518] Taxonomy = 04468005 Sample = 3b8c505fd1127ed88f134472f61cf6bb Losses = ['20.5769', '1.1633', '16.1728', '0.7104'] Metrics = ['0.2486', '16.1728', '0.7104', '0.0000']
+2025-07-23 13:41:36,760 - DGTPNet - INFO - Test[2800/10518] Taxonomy = 03001627 Sample = e3e76d624f1f855bcc8a9c365968620 Losses = ['19.7216', '1.1918', '15.1662', '0.7070'] Metrics = ['0.3447', '15.1662', '0.7070', '0.0000']
+2025-07-23 13:42:18,301 - DGTPNet - INFO - Test[3000/10518] Taxonomy = 03001627 Sample = 40020a5e90c75d94a93412f1b60e6fba Losses = ['17.4091', '1.4653', '12.9062', '0.8001'] Metrics = ['0.5568', '12.9062', '0.8001', '0.0000']
+2025-07-23 13:42:59,922 - DGTPNet - INFO - Test[3200/10518] Taxonomy = 02691156 Sample = a96c1589731b06a1efbd0f357ff7c40a Losses = ['12.9860', '0.4710', '9.9614', '0.2698'] Metrics = ['0.5951', '9.9614', '0.2698', '0.0000']
+2025-07-23 13:43:41,446 - DGTPNet - INFO - Test[3400/10518] Taxonomy = 03046257 Sample = b2b40e80c9d3f530d5f1db12f95f0fe4 Losses = ['20.1680', '1.0224', '15.1891', '0.5377'] Metrics = ['0.2138', '15.1891', '0.5377', '0.0000']
+2025-07-23 13:44:23,148 - DGTPNet - INFO - Test[3600/10518] Taxonomy = 02933112 Sample = c18a4772bcfbb98e85bc264270ae0601 Losses = ['27.6545', '2.0590', '20.6867', '1.0666'] Metrics = ['0.1133', '20.6867', '1.0666', '0.0000']
+2025-07-23 13:45:04,601 - DGTPNet - INFO - Test[3800/10518] Taxonomy = 04530566 Sample = 215861c4bebeb328d9a75de54b023ae1 Losses = ['17.3547', '0.8488', '13.6159', '0.5149'] Metrics = ['0.3629', '13.6159', '0.5149', '0.0000']
+2025-07-23 13:45:46,257 - DGTPNet - INFO - Test[4000/10518] Taxonomy = 02828884 Sample = 5f9d3dae06acf0e4e93e1127627b834 Losses = ['19.0966', '1.0028', '14.4146', '0.5334'] Metrics = ['0.2928', '14.4146', '0.5334', '0.0000']
+2025-07-23 13:46:27,891 - DGTPNet - INFO - Test[4200/10518] Taxonomy = 04401088 Sample = a3c1c9fc390b1bbbb099170e6f5a4af9 Losses = ['18.6938', '0.9542', '13.0940', '0.4202'] Metrics = ['0.3475', '13.0940', '0.4202', '0.0000']
+2025-07-23 13:47:09,369 - DGTPNet - INFO - Test[4400/10518] Taxonomy = 04256520 Sample = 54506969a60017ac8f0a57a8b9390a Losses = ['24.4495', '2.7868', '18.6493', '1.7446'] Metrics = ['0.3864', '18.6493', '1.7446', '0.0000']
+2025-07-23 13:47:50,951 - DGTPNet - INFO - Test[4600/10518] Taxonomy = 04074963 Sample = d9ca2dcaf1d9d850dc605801df3f66ec Losses = ['22.6715', '1.4854', '16.3586', '0.8009'] Metrics = ['0.2892', '16.3586', '0.8009', '0.0000']
+2025-07-23 13:48:32,655 - DGTPNet - INFO - Test[4800/10518] Taxonomy = 04379243 Sample = ead93856b735ec90f0aeabfdcb4e1dd9 Losses = ['16.0018', '0.7381', '10.9678', '0.3170'] Metrics = ['0.5000', '10.9678', '0.3170', '0.0000']
+2025-07-23 13:49:14,121 - DGTPNet - INFO - Test[5000/10518] Taxonomy = 03790512 Sample = 242d8c07fabbdabc78fe949fc1419876 Losses = ['26.8958', '2.0992', '21.1689', '1.2713'] Metrics = ['0.1476', '21.1689', '1.2713', '0.0000']
+2025-07-23 13:49:55,532 - DGTPNet - INFO - Test[5200/10518] Taxonomy = 02691156 Sample = 7b6f528acc10d3fbcf5b9c6e0c7ce895 Losses = ['15.8843', '0.7944', '12.1820', '0.4826'] Metrics = ['0.4962', '12.1820', '0.4826', '0.0000']
+2025-07-23 13:50:36,892 - DGTPNet - INFO - Test[5400/10518] Taxonomy = 04379243 Sample = 6765d83445c2338555f46d55537192b6 Losses = ['28.3743', '3.9015', '22.2909', '2.7223'] Metrics = ['0.2747', '22.2909', '2.7223', '0.0000']
+2025-07-23 13:51:18,354 - DGTPNet - INFO - Test[5600/10518] Taxonomy = 03001627 Sample = 33dc06a8e0933b1efc385a284336f217 Losses = ['22.0861', '1.3151', '16.6763', '0.7143'] Metrics = ['0.2312', '16.6763', '0.7143', '0.0000']
+2025-07-23 13:51:59,631 - DGTPNet - INFO - Test[5800/10518] Taxonomy = 02992529 Sample = 4a81237a7fc743763992b1138bb05b3c Losses = ['16.6949', '0.7825', '11.7125', '0.3422'] Metrics = ['0.4372', '11.7125', '0.3422', '0.0000']
+2025-07-23 13:52:40,908 - DGTPNet - INFO - Test[6000/10518] Taxonomy = 02958343 Sample = 37249c6f16b203de2e877e82c90c24d Losses = ['23.1549', '1.4498', '17.7572', '0.8270'] Metrics = ['0.2073', '17.7572', '0.8270', '0.0000']
+2025-07-23 13:53:22,420 - DGTPNet - INFO - Test[6200/10518] Taxonomy = 02933112 Sample = 956c437be87a2be5f51f77a6d7299806 Losses = ['21.8854', '1.3786', '16.4363', '0.7614'] Metrics = ['0.2794', '16.4363', '0.7614', '0.0000']
+2025-07-23 13:54:03,891 - DGTPNet - INFO - Test[6400/10518] Taxonomy = 03691459 Sample = 9d62c46fc3fd343d1f9f3ce366e030fb Losses = ['26.7289', '2.0191', '18.1219', '0.8305'] Metrics = ['0.1886', '18.1219', '0.8305', '0.0000']
+2025-07-23 13:54:45,359 - DGTPNet - INFO - Test[6600/10518] Taxonomy = 04379243 Sample = 7a8399fc51d83969a8b1d0fdee586dc9 Losses = ['13.4236', '0.5791', '9.5151', '0.2433'] Metrics = ['0.6315', '9.5151', '0.2433', '0.0000']
+2025-07-23 13:55:26,894 - DGTPNet - INFO - Test[6800/10518] Taxonomy = 03001627 Sample = 78abbfe9ab73729f56d13e757b0dc374 Losses = ['22.3293', '2.1308', '17.7172', '1.4867'] Metrics = ['0.4083', '17.7172', '1.4867', '0.0000']
+2025-07-23 13:56:08,503 - DGTPNet - INFO - Test[7000/10518] Taxonomy = 04379243 Sample = 264a075e293394a843638dabe1eb5336 Losses = ['20.2977', '1.0532', '15.5666', '0.5854'] Metrics = ['0.2309', '15.5666', '0.5854', '0.0000']
+2025-07-23 13:56:49,964 - DGTPNet - INFO - Test[7200/10518] Taxonomy = 03211117 Sample = 96f01698d0446641ea6e0950aa8ac31b Losses = ['22.3959', '1.4230', '16.4254', '0.7268'] Metrics = ['0.2586', '16.4254', '0.7268', '0.0000']
+2025-07-23 13:57:31,477 - DGTPNet - INFO - Test[7400/10518] Taxonomy = 03001627 Sample = b2239339005b14c8d675cc466d0d6fbc Losses = ['19.9529', '1.1697', '15.4101', '0.6974'] Metrics = ['0.3126', '15.4101', '0.6974', '0.0000']
+2025-07-23 13:58:13,160 - DGTPNet - INFO - Test[7600/10518] Taxonomy = 04074963 Sample = 57759e351ec76d86d3c1501c166e6b2a Losses = ['19.1448', '1.0194', '14.1956', '0.5690'] Metrics = ['0.3684', '14.1956', '0.5690', '0.0000']
+2025-07-23 13:58:54,497 - DGTPNet - INFO - Test[7800/10518] Taxonomy = 04090263 Sample = 41a9912bfe0dc96239169e4b52d9f093 Losses = ['23.1630', '4.8697', '19.7905', '4.7518'] Metrics = ['0.5667', '19.7905', '4.7518', '0.0000']
+2025-07-23 13:59:36,052 - DGTPNet - INFO - Test[8000/10518] Taxonomy = 04379243 Sample = bcbc5e30e12a58f07ea323bc74055b8 Losses = ['16.7881', '0.7338', '12.5886', '0.3858'] Metrics = ['0.3728', '12.5886', '0.3858', '0.0000']
+2025-07-23 14:00:17,564 - DGTPNet - INFO - Test[8200/10518] Taxonomy = 04379243 Sample = aabcb5d610e76ff19ca02c396af0c503 Losses = ['26.3024', '3.6682', '20.4035', '2.7854'] Metrics = ['0.3122', '20.4035', '2.7854', '0.0000']
+2025-07-23 14:00:59,072 - DGTPNet - INFO - Test[8400/10518] Taxonomy = 04379243 Sample = dd2c3ff28a34556a47839bae1bc65257 Losses = ['15.3341', '0.6773', '11.4367', '0.3558'] Metrics = ['0.4843', '11.4367', '0.3558', '0.0000']
+2025-07-23 14:01:40,535 - DGTPNet - INFO - Test[8600/10518] Taxonomy = 03337140 Sample = 149a105979cad722c1467c54b9e09ce5 Losses = ['28.2406', '2.5394', '20.7230', '1.4468'] Metrics = ['0.1865', '20.7230', '1.4468', '0.0000']
+2025-07-23 14:02:22,050 - DGTPNet - INFO - Test[8800/10518] Taxonomy = 02691156 Sample = 4044d5954ef85af8279326882e8430cb Losses = ['15.9790', '0.9100', '12.4115', '0.6156'] Metrics = ['0.5443', '12.4115', '0.6156', '0.0000']
+2025-07-23 14:03:03,476 - DGTPNet - INFO - Test[9000/10518] Taxonomy = 02828884 Sample = 4e512ab638542762d4d8765e3910f617 Losses = ['15.6046', '0.6382', '11.5782', '0.3280'] Metrics = ['0.4254', '11.5782', '0.3280', '0.0000']
+2025-07-23 14:03:45,151 - DGTPNet - INFO - Test[9200/10518] Taxonomy = 04379243 Sample = 5247e4e978399f1b486040c0d9e85846 Losses = ['19.5599', '1.7819', '14.4663', '1.0018'] Metrics = ['0.4720', '14.4663', '1.0018', '0.0000']
+2025-07-23 14:04:26,514 - DGTPNet - INFO - Test[9400/10518] Taxonomy = 03636649 Sample = 7ec821d5d8bd9f17d4aea4231844b26b Losses = ['9.6106', '0.2415', '7.7468', '0.1531'] Metrics = ['0.7903', '7.7468', '0.1531', '0.0000']
+2025-07-23 14:05:07,941 - DGTPNet - INFO - Test[9600/10518] Taxonomy = 04090263 Sample = 3cb82befc3290e36b58435942a1b4dac Losses = ['9.0097', '0.2485', '7.1061', '0.1512'] Metrics = ['0.8269', '7.1061', '0.1512', '0.0000']
+2025-07-23 14:05:49,725 - DGTPNet - INFO - Test[9800/10518] Taxonomy = 04379243 Sample = 6358336cbeedb9232d9fe390e23fd20f Losses = ['14.8962', '0.6199', '10.8081', '0.2944'] Metrics = ['0.5054', '10.8081', '0.2944', '0.0000']
+2025-07-23 14:06:31,257 - DGTPNet - INFO - Test[10000/10518] Taxonomy = 04401088 Sample = f73493b7c8a78000b594bbf2c494ab81 Losses = ['22.5471', '1.7508', '17.5289', '1.1040'] Metrics = ['0.2887', '17.5289', '1.1040', '0.0000']
+2025-07-23 14:07:12,718 - DGTPNet - INFO - Test[10200/10518] Taxonomy = 03001627 Sample = 3ffd794e5100258483bc207d8a5912e3 Losses = ['18.0737', '0.9769', '12.9191', '0.4661'] Metrics = ['0.4139', '12.9191', '0.4661', '0.0000']
+2025-07-23 14:07:54,106 - DGTPNet - INFO - Test[10400/10518] Taxonomy = 04090263 Sample = 26744766d59c28fb6b2c8bb96250e4a0 Losses = ['12.1698', '0.6393', '9.3556', '0.3878'] Metrics = ['0.7045', '9.3556', '0.3878', '0.0000']
+2025-07-23 14:08:18,645 - DGTPNet - INFO - [TEST] Metrics = ['0.3128', '17.1084', '1.0357', '0.0000']
+2025-07-23 14:08:18,645 - DGTPNet - INFO - ============================ TEST RESULTS ============================
+2025-07-23 14:08:18,645 - DGTPNet - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	EMDistance	#ModelName	
+2025-07-23 14:08:18,646 - DGTPNet - INFO - 03759954	112	0.505 	16.047 	1.686 	0.000 	microphone	
+2025-07-23 14:08:18,646 - DGTPNet - INFO - 04330267	352	0.235 	18.616 	1.127 	0.000 	stove	
+2025-07-23 14:08:18,646 - DGTPNet - INFO - 03261776	120	0.254 	20.266 	1.492 	0.000 	earphone	
+2025-07-23 14:08:18,646 - DGTPNet - INFO - 03513137	264	0.139 	24.386 	2.065 	0.000 	helmet	
+2025-07-23 14:08:18,646 - DGTPNet - INFO - 04460130	216	0.367 	17.006 	1.081 	0.000 	tower	
+2025-07-23 14:08:18,646 - DGTPNet - INFO - 04468005	624	0.345 	15.481 	0.816 	0.000 	train	
+2025-07-23 14:08:18,646 - DGTPNet - INFO - 03761084	248	0.193 	19.434 	1.102 	0.000 	microwaves	
+2025-07-23 14:08:18,646 - DGTPNet - INFO - 04004475	272	0.225 	19.383 	1.368 	0.000 	printer	
+2025-07-23 14:08:18,646 - DGTPNet - INFO - 03938244	160	0.217 	18.575 	1.024 	0.000 	pillow	
+2025-07-23 14:08:18,646 - DGTPNet - INFO - 02992529	1336	0.370 	13.590 	0.526 	0.000 	cellphone	
+2025-07-23 14:08:18,646 - DGTPNet - INFO - 02808440	1376	0.236 	18.434 	1.127 	0.000 	bathtub	
+2025-07-23 14:08:18,646 - DGTPNet - INFO - 04530566	3104	0.453 	13.789 	0.725 	0.000 	watercraft	
+2025-07-23 14:08:18,646 - DGTPNet - INFO - 02871439	728	0.191 	19.277 	1.197 	0.000 	bookshelf	
+2025-07-23 14:08:18,646 - DGTPNet - INFO - 03593526	960	0.193 	21.384 	1.543 	0.000 	jar	
+2025-07-23 14:08:18,646 - DGTPNet - INFO - 04554684	272	0.173 	20.516 	1.249 	0.000 	washer	
+2025-07-23 14:08:18,646 - DGTPNet - INFO - 03467517	1280	0.761 	8.514 	0.283 	0.000 	guitar	
+2025-07-23 14:08:18,647 - DGTPNet - INFO - 04401088	1744	0.374 	13.472 	0.522 	0.000 	telephone	
+2025-07-23 14:08:18,647 - DGTPNet - INFO - 02954340	96	0.228 	17.272 	0.840 	0.000 	cap	
+2025-07-23 14:08:18,647 - DGTPNet - INFO - 02933112	2520	0.188 	18.266 	0.908 	0.000 	cabinet	
+2025-07-23 14:08:18,647 - DGTPNet - INFO - 03642806	736	0.344 	13.599 	0.500 	0.000 	laptop	
+2025-07-23 14:08:18,647 - DGTPNet - INFO - 02924116	1504	0.309 	15.665 	0.745 	0.000 	bus	
+2025-07-23 14:08:18,647 - DGTPNet - INFO - 02946921	176	0.182 	20.117 	1.318 	0.000 	can	
+2025-07-23 14:08:18,647 - DGTPNet - INFO - 02818832	376	0.234 	19.066 	1.255 	0.000 	bed	
+2025-07-23 14:08:18,647 - DGTPNet - INFO - 04256520	5080	0.249 	17.234 	0.873 	0.000 	sofa	
+2025-07-23 14:08:18,647 - DGTPNet - INFO - 04379243	13496	0.329 	15.233 	0.792 	0.000 	table	
+2025-07-23 14:08:18,647 - DGTPNet - INFO - 02747177	552	0.131 	21.767 	1.412 	0.000 	trash bin	
+2025-07-23 14:08:18,647 - DGTPNet - INFO - 03046257	1048	0.254 	17.942 	1.044 	0.000 	clock	
+2025-07-23 14:08:18,647 - DGTPNet - INFO - 04225987	248	0.497 	12.106 	0.486 	0.000 	skateboard	
+2025-07-23 14:08:18,647 - DGTPNet - INFO - 03797390	344	0.121 	22.439 	1.485 	0.000 	mug	
+2025-07-23 14:08:18,647 - DGTPNet - INFO - 03001627	10848	0.309 	16.472 	0.924 	0.000 	chair	
+2025-07-23 14:08:18,647 - DGTPNet - INFO - 03691459	2560	0.198 	20.446 	1.382 	0.000 	loudspeaker	
+2025-07-23 14:08:18,647 - DGTPNet - INFO - 02942699	184	0.193 	23.558 	2.231 	0.000 	camera	
+2025-07-23 14:08:18,647 - DGTPNet - INFO - 03636649	3712	0.475 	15.675 	1.355 	0.000 	lamp	
+2025-07-23 14:08:18,647 - DGTPNet - INFO - 02691156	6472	0.521 	11.850 	0.500 	0.000 	airplane	
+2025-07-23 14:08:18,648 - DGTPNet - INFO - 02773838	136	0.291 	16.586 	0.911 	0.000 	bag	
+2025-07-23 14:08:18,648 - DGTPNet - INFO - 02958343	5624	0.163 	20.334 	1.160 	0.000 	car	
+2025-07-23 14:08:18,648 - DGTPNet - INFO - 02880940	304	0.150 	20.035 	1.042 	0.000 	bowl	
+2025-07-23 14:08:18,648 - DGTPNet - INFO - 04099429	136	0.662 	11.021 	0.567 	0.000 	rocket	
+2025-07-23 14:08:18,648 - DGTPNet - INFO - 02828884	2904	0.390 	13.386 	0.579 	0.000 	bench	
+2025-07-23 14:08:18,648 - DGTPNet - INFO - 04090263	3800	0.655 	10.632 	0.538 	0.000 	rifle	
+2025-07-23 14:08:18,648 - DGTPNet - INFO - 03211117	1752	0.301 	15.756 	0.788 	0.000 	display	
+2025-07-23 14:08:18,648 - DGTPNet - INFO - 02876657	800	0.349 	15.655 	0.856 	0.000 	bottle	
+2025-07-23 14:08:18,648 - DGTPNet - INFO - 03710193	152	0.482 	14.253 	0.883 	0.000 	mailbox	
+2025-07-23 14:08:18,648 - DGTPNet - INFO - 03790512	544	0.217 	19.832 	1.298 	0.000 	motorbike	
+2025-07-23 14:08:18,648 - DGTPNet - INFO - 03325088	1192	0.409 	16.846 	1.425 	0.000 	faucet	
+2025-07-23 14:08:18,648 - DGTPNet - INFO - 02801938	184	0.169 	19.599 	1.102 	0.000 	basket	
+2025-07-23 14:08:18,648 - DGTPNet - INFO - 03337140	480	0.191 	19.114 	1.087 	0.000 	file cabinet	
+2025-07-23 14:08:18,648 - DGTPNet - INFO - 02843684	120	0.180 	22.330 	1.708 	0.000 	birdhouse	
+2025-07-23 14:08:18,648 - DGTPNet - INFO - 03624134	680	0.741 	8.898 	0.347 	0.000 	knife	
+2025-07-23 14:08:18,648 - DGTPNet - INFO - 03991062	968	0.176 	22.423 	1.683 	0.000 	flowerpot	
+2025-07-23 14:08:18,648 - DGTPNet - INFO - 03948459	496	0.429 	14.277 	0.787 	0.000 	pistol	
+2025-07-23 14:08:18,648 - DGTPNet - INFO - 03928116	384	0.239 	18.616 	1.227 	0.000 	piano	
+2025-07-23 14:08:18,649 - DGTPNet - INFO - 03207941	152	0.190 	18.524 	0.921 	0.000 	dishwasher	
+2025-07-23 14:08:18,649 - DGTPNet - INFO - 04074963	112	0.407 	13.722 	0.608 	0.000 	remote	
+2025-07-23 14:08:18,649 - DGTPNet - INFO - 03085013	104	0.419 	12.247 	0.469 	0.000 	keyboard	
+2025-07-23 14:08:18,649 - DGTPNet - INFO - Overall 		0.313 	17.108 	1.036 	0.000 	

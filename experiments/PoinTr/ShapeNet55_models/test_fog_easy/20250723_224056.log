@@ -1,0 +1,194 @@
+2025-07-23 22:40:56,440 - PoinTr - INFO - Copy the Config file from ./cfgs/ShapeNet55_models/PoinTr.yaml to ./experiments/PoinTr/ShapeNet55_models/test_fog_easy/config.yaml
+2025-07-23 22:40:56,440 - PoinTr - INFO - args.config : ./cfgs/ShapeNet55_models/PoinTr.yaml
+2025-07-23 22:40:56,440 - PoinTr - INFO - args.launcher : none
+2025-07-23 22:40:56,440 - PoinTr - INFO - args.local_rank : 0
+2025-07-23 22:40:56,440 - PoinTr - INFO - args.num_workers : 4
+2025-07-23 22:40:56,440 - PoinTr - INFO - args.seed : 0
+2025-07-23 22:40:56,440 - PoinTr - INFO - args.deterministic : False
+2025-07-23 22:40:56,440 - PoinTr - INFO - args.sync_bn : False
+2025-07-23 22:40:56,440 - PoinTr - INFO - args.exp_name : test_fog_easy
+2025-07-23 22:40:56,440 - PoinTr - INFO - args.start_ckpts : None
+2025-07-23 22:40:56,440 - PoinTr - INFO - args.ckpts : ./pretrained/fog/PoinTr_fog.pth
+2025-07-23 22:40:56,440 - PoinTr - INFO - args.val_freq : 1
+2025-07-23 22:40:56,440 - PoinTr - INFO - args.resume : False
+2025-07-23 22:40:56,440 - PoinTr - INFO - args.test : True
+2025-07-23 22:40:56,440 - PoinTr - INFO - args.mode : easy
+2025-07-23 22:40:56,440 - PoinTr - INFO - args.pcd_path : None
+2025-07-23 22:40:56,440 - PoinTr - INFO - args.output_dir : None
+2025-07-23 22:40:56,440 - PoinTr - INFO - args.experiment_path : ./experiments/PoinTr/ShapeNet55_models/test_fog_easy
+2025-07-23 22:40:56,440 - PoinTr - INFO - args.tfboard_path : ./experiments/PoinTr/ShapeNet55_models/TFBoard/test_fog_easy
+2025-07-23 22:40:56,440 - PoinTr - INFO - args.log_name : PoinTr
+2025-07-23 22:40:56,440 - PoinTr - INFO - args.use_gpu : True
+2025-07-23 22:40:56,440 - PoinTr - INFO - args.distributed : False
+2025-07-23 22:40:56,440 - PoinTr - INFO - config.optimizer = edict()
+2025-07-23 22:40:56,440 - PoinTr - INFO - config.optimizer.type : AdamW
+2025-07-23 22:40:56,440 - PoinTr - INFO - config.optimizer.kwargs = edict()
+2025-07-23 22:40:56,440 - PoinTr - INFO - config.optimizer.kwargs.lr : 0.0005
+2025-07-23 22:40:56,440 - PoinTr - INFO - config.optimizer.kwargs.weight_decay : 0.0005
+2025-07-23 22:40:56,440 - PoinTr - INFO - config.scheduler = edict()
+2025-07-23 22:40:56,440 - PoinTr - INFO - config.scheduler.type : LambdaLR
+2025-07-23 22:40:56,440 - PoinTr - INFO - config.scheduler.kwargs = edict()
+2025-07-23 22:40:56,440 - PoinTr - INFO - config.scheduler.kwargs.decay_step : 21
+2025-07-23 22:40:56,440 - PoinTr - INFO - config.scheduler.kwargs.lr_decay : 0.76
+2025-07-23 22:40:56,440 - PoinTr - INFO - config.scheduler.kwargs.lowest_decay : 0.02
+2025-07-23 22:40:56,440 - PoinTr - INFO - config.bnmscheduler = edict()
+2025-07-23 22:40:56,440 - PoinTr - INFO - config.bnmscheduler.type : Lambda
+2025-07-23 22:40:56,440 - PoinTr - INFO - config.bnmscheduler.kwargs = edict()
+2025-07-23 22:40:56,440 - PoinTr - INFO - config.bnmscheduler.kwargs.decay_step : 21
+2025-07-23 22:40:56,440 - PoinTr - INFO - config.bnmscheduler.kwargs.bn_decay : 0.5
+2025-07-23 22:40:56,440 - PoinTr - INFO - config.bnmscheduler.kwargs.bn_momentum : 0.9
+2025-07-23 22:40:56,440 - PoinTr - INFO - config.bnmscheduler.kwargs.lowest_decay : 0.01
+2025-07-23 22:40:56,440 - PoinTr - INFO - config.dataset = edict()
+2025-07-23 22:40:56,440 - PoinTr - INFO - config.dataset.train = edict()
+2025-07-23 22:40:56,440 - PoinTr - INFO - config.dataset.train._base_ = edict()
+2025-07-23 22:40:56,440 - PoinTr - INFO - config.dataset.train._base_.NAME : ShapeNet
+2025-07-23 22:40:56,441 - PoinTr - INFO - config.dataset.train._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2025-07-23 22:40:56,441 - PoinTr - INFO - config.dataset.train._base_.N_POINTS : 8192
+2025-07-23 22:40:56,441 - PoinTr - INFO - config.dataset.train._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2025-07-23 22:40:56,441 - PoinTr - INFO - config.dataset.train.others = edict()
+2025-07-23 22:40:56,441 - PoinTr - INFO - config.dataset.train.others.subset : train
+2025-07-23 22:40:56,441 - PoinTr - INFO - config.dataset.train.others.bs : 64
+2025-07-23 22:40:56,441 - PoinTr - INFO - config.dataset.val = edict()
+2025-07-23 22:40:56,441 - PoinTr - INFO - config.dataset.val._base_ = edict()
+2025-07-23 22:40:56,441 - PoinTr - INFO - config.dataset.val._base_.NAME : ShapeNet
+2025-07-23 22:40:56,441 - PoinTr - INFO - config.dataset.val._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2025-07-23 22:40:56,441 - PoinTr - INFO - config.dataset.val._base_.N_POINTS : 8192
+2025-07-23 22:40:56,441 - PoinTr - INFO - config.dataset.val._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2025-07-23 22:40:56,441 - PoinTr - INFO - config.dataset.val.others = edict()
+2025-07-23 22:40:56,441 - PoinTr - INFO - config.dataset.val.others.subset : test
+2025-07-23 22:40:56,441 - PoinTr - INFO - config.dataset.test = edict()
+2025-07-23 22:40:56,441 - PoinTr - INFO - config.dataset.test._base_ = edict()
+2025-07-23 22:40:56,441 - PoinTr - INFO - config.dataset.test._base_.NAME : ShapeNet
+2025-07-23 22:40:56,441 - PoinTr - INFO - config.dataset.test._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2025-07-23 22:40:56,441 - PoinTr - INFO - config.dataset.test._base_.N_POINTS : 8192
+2025-07-23 22:40:56,441 - PoinTr - INFO - config.dataset.test._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2025-07-23 22:40:56,441 - PoinTr - INFO - config.dataset.test.others = edict()
+2025-07-23 22:40:56,441 - PoinTr - INFO - config.dataset.test.others.subset : test
+2025-07-23 22:40:56,441 - PoinTr - INFO - config.model = edict()
+2025-07-23 22:40:56,441 - PoinTr - INFO - config.model.NAME : PoinTr
+2025-07-23 22:40:56,441 - PoinTr - INFO - config.model.num_pred : 6144
+2025-07-23 22:40:56,441 - PoinTr - INFO - config.model.num_query : 96
+2025-07-23 22:40:56,441 - PoinTr - INFO - config.model.knn_layer : 1
+2025-07-23 22:40:56,441 - PoinTr - INFO - config.model.trans_dim : 384
+2025-07-23 22:40:56,441 - PoinTr - INFO - config.total_bs : 64
+2025-07-23 22:40:56,441 - PoinTr - INFO - config.step_per_update : 1
+2025-07-23 22:40:56,441 - PoinTr - INFO - config.max_epoch : 200
+2025-07-23 22:40:56,441 - PoinTr - INFO - config.consider_metric : CDL2
+2025-07-23 22:40:56,441 - PoinTr - INFO - Distributed training: False
+2025-07-23 22:40:56,441 - PoinTr - INFO - Set random seed to 0, deterministic: False
+2025-07-23 22:40:56,442 - PoinTr - INFO - Tester start ... 
+2025-07-23 22:40:56,442 - PoinTr - INFO - Processing test dataset...
+2025-07-23 22:40:56,835 - PoinTr - INFO - Loading weights from ./pretrained/fog/PoinTr_fog.pth...
+2025-07-23 22:40:57,026 - PoinTr - INFO - ckpts @ 150 epoch( performance = {'F-Score': 0.2751132234082813, 'CDL1': 54.260987114560116, 'CDL2': 233.76111743283832, 'EMDistance': 0.0})
+2025-07-23 22:42:40,328 - PoinTr - INFO - Test[200/10518] Taxonomy = 04530566 Sample = 3bb6a5deec68ef77fee64ca302793912 Losses = ['160.1214', '728.1229', '20.9528', '31.5679'] Metrics = ['0.3309', '20.9528', '31.5679', '0.0000'] InferenceTime = 0.0059
+2025-07-23 22:44:09,862 - PoinTr - INFO - Test[400/10518] Taxonomy = 03636649 Sample = 90651b3febfc3afe15226aa76eb7c3e Losses = ['245.8697', '1245.7303', '30.6737', '66.6200'] Metrics = ['0.3029', '30.6737', '66.6200', '0.0000'] InferenceTime = 0.0060
+2025-07-23 22:45:26,461 - PoinTr - INFO - Test[600/10518] Taxonomy = 03001627 Sample = fae27953e0f0404ca99df2794ec76201 Losses = ['142.3515', '646.1592', '22.8555', '25.5503'] Metrics = ['0.2702', '22.8555', '25.5503', '0.0000'] InferenceTime = 0.0060
+2025-07-23 22:46:45,969 - PoinTr - INFO - Test[800/10518] Taxonomy = 03593526 Sample = 324c9045843b9470d29670d38a4c9e7e Losses = ['178.9237', '779.8461', '25.8369', '37.0801'] Metrics = ['0.3094', '25.8369', '37.0801', '0.0000'] InferenceTime = 0.0059
+2025-07-23 22:48:07,173 - PoinTr - INFO - Test[1000/10518] Taxonomy = 02958343 Sample = 39e10c5d24fee4a6311f5d9a1681aa3b Losses = ['193.3681', '993.7592', '27.8508', '57.1434'] Metrics = ['0.2590', '27.8508', '57.1434', '0.0000'] InferenceTime = 0.0062
+2025-07-23 22:49:20,107 - PoinTr - INFO - Test[1200/10518] Taxonomy = 03001627 Sample = e50f1b2d0835bb392764cfba57a5de73 Losses = ['170.3146', '768.1403', '29.8696', '41.4194'] Metrics = ['0.2300', '29.8696', '41.4194', '0.0000'] InferenceTime = 0.0059
+2025-07-23 22:50:33,756 - PoinTr - INFO - Test[1400/10518] Taxonomy = 04379243 Sample = 647692d3858790a1f1783a44a88d6274 Losses = ['117.8707', '411.6951', '21.2867', '32.3004'] Metrics = ['0.3408', '21.2867', '32.3004', '0.0000'] InferenceTime = 0.0059
+2025-07-23 22:51:54,366 - PoinTr - INFO - Test[1600/10518] Taxonomy = 02691156 Sample = d8d9de967255b4c562b600da24e0965 Losses = ['143.7419', '912.4790', '23.9400', '87.0700'] Metrics = ['0.4120', '23.9400', '87.0700', '0.0000'] InferenceTime = 0.0060
+2025-07-23 22:53:14,261 - PoinTr - INFO - Test[1800/10518] Taxonomy = 03001627 Sample = 24c0e6a8b10abb77df2b21995cbbbc4f Losses = ['171.7567', '637.6212', '40.7149', '55.4932'] Metrics = ['0.1770', '40.7149', '55.4932', '0.0000'] InferenceTime = 0.0060
+2025-07-23 22:54:37,243 - PoinTr - INFO - Test[2000/10518] Taxonomy = 04379243 Sample = 5d77e8f6ad3741a0c30ab36bf7b0552 Losses = ['162.9528', '659.0405', '24.4501', '33.0303'] Metrics = ['0.2565', '24.4501', '33.0303', '0.0000'] InferenceTime = 0.0059
+2025-07-23 22:55:56,403 - PoinTr - INFO - Test[2200/10518] Taxonomy = 03636649 Sample = b64e98c991d4103170365ad078f710ff Losses = ['175.7561', '710.6460', '39.4351', '49.0492'] Metrics = ['0.2252', '39.4351', '49.0492', '0.0000'] InferenceTime = 0.0072
+2025-07-23 22:57:13,346 - PoinTr - INFO - Test[2400/10518] Taxonomy = 03211117 Sample = b4386438057e85988bfba3df1f776207 Losses = ['161.5940', '629.0477', '28.1070', '38.9843'] Metrics = ['0.2700', '28.1070', '38.9843', '0.0000'] InferenceTime = 0.0059
+2025-07-23 22:58:34,563 - PoinTr - INFO - Test[2600/10518] Taxonomy = 04468005 Sample = 3b8c505fd1127ed88f134472f61cf6bb Losses = ['87.8303', '239.5243', '23.3609', '24.3511'] Metrics = ['0.2435', '23.3609', '24.3511', '0.0000'] InferenceTime = 0.0060
+2025-07-23 22:59:54,176 - PoinTr - INFO - Test[2800/10518] Taxonomy = 03001627 Sample = e3e76d624f1f855bcc8a9c365968620 Losses = ['94.2304', '273.3854', '24.0886', '24.0444'] Metrics = ['0.2394', '24.0886', '24.0444', '0.0000'] InferenceTime = 0.0059
+2025-07-23 23:01:11,838 - PoinTr - INFO - Test[3000/10518] Taxonomy = 03001627 Sample = 40020a5e90c75d94a93412f1b60e6fba Losses = ['84.5576', '290.8923', '28.3543', '38.9713'] Metrics = ['0.3128', '28.3543', '38.9713', '0.0000'] InferenceTime = 0.0059
+2025-07-23 23:02:28,013 - PoinTr - INFO - Test[3200/10518] Taxonomy = 02691156 Sample = a96c1589731b06a1efbd0f357ff7c40a Losses = ['258.8710', '1566.5779', '24.0717', '80.7873'] Metrics = ['0.4851', '24.0717', '80.7873', '0.0000'] InferenceTime = 0.0061
+2025-07-23 23:03:50,157 - PoinTr - INFO - Test[3400/10518] Taxonomy = 03046257 Sample = b2b40e80c9d3f530d5f1db12f95f0fe4 Losses = ['364.9479', '2313.7007', '31.4046', '144.2798'] Metrics = ['0.3345', '31.4046', '144.2798', '0.0000'] InferenceTime = 0.0059
+2025-07-23 23:05:06,882 - PoinTr - INFO - Test[3600/10518] Taxonomy = 02933112 Sample = c18a4772bcfbb98e85bc264270ae0601 Losses = ['102.5757', '234.0704', '32.1223', '30.6906'] Metrics = ['0.1605', '32.1223', '30.6906', '0.0000'] InferenceTime = 0.0060
+2025-07-23 23:06:25,959 - PoinTr - INFO - Test[3800/10518] Taxonomy = 04530566 Sample = 215861c4bebeb328d9a75de54b023ae1 Losses = ['113.1570', '368.3193', '20.4067', '24.9751'] Metrics = ['0.3032', '20.4067', '24.9751', '0.0000'] InferenceTime = 0.0060
+2025-07-23 23:07:49,036 - PoinTr - INFO - Test[4000/10518] Taxonomy = 02828884 Sample = 5f9d3dae06acf0e4e93e1127627b834 Losses = ['171.3182', '809.2464', '23.8362', '54.8986'] Metrics = ['0.3175', '23.8362', '54.8986', '0.0000'] InferenceTime = 0.0059
+2025-07-23 23:09:12,003 - PoinTr - INFO - Test[4200/10518] Taxonomy = 04401088 Sample = a3c1c9fc390b1bbbb099170e6f5a4af9 Losses = ['272.4821', '1165.8069', '21.7243', '52.3086'] Metrics = ['0.3491', '21.7243', '52.3086', '0.0000'] InferenceTime = 0.0059
+2025-07-23 23:10:34,455 - PoinTr - INFO - Test[4400/10518] Taxonomy = 04256520 Sample = 54506969a60017ac8f0a57a8b9390a Losses = ['151.6608', '511.1040', '26.9343', '23.2227'] Metrics = ['0.2409', '26.9343', '23.2227', '0.0000'] InferenceTime = 0.0060
+2025-07-23 23:11:54,328 - PoinTr - INFO - Test[4600/10518] Taxonomy = 04074963 Sample = d9ca2dcaf1d9d850dc605801df3f66ec Losses = ['202.8669', '970.1479', '32.9080', '58.4524'] Metrics = ['0.2427', '32.9080', '58.4524', '0.0000'] InferenceTime = 0.0060
+2025-07-23 23:13:19,603 - PoinTr - INFO - Test[4800/10518] Taxonomy = 04379243 Sample = ead93856b735ec90f0aeabfdcb4e1dd9 Losses = ['148.8229', '544.8779', '20.1064', '27.8623'] Metrics = ['0.3590', '20.1064', '27.8623', '0.0000'] InferenceTime = 0.0059
+2025-07-23 23:14:37,399 - PoinTr - INFO - Test[5000/10518] Taxonomy = 03790512 Sample = 242d8c07fabbdabc78fe949fc1419876 Losses = ['87.9197', '352.3540', '37.3136', '101.3722'] Metrics = ['0.1459', '37.3136', '101.3722', '0.0000'] InferenceTime = 0.0060
+2025-07-23 23:15:51,583 - PoinTr - INFO - Test[5200/10518] Taxonomy = 02691156 Sample = 7b6f528acc10d3fbcf5b9c6e0c7ce895 Losses = ['138.0322', '762.7999', '25.0881', '78.7600'] Metrics = ['0.3989', '25.0881', '78.7600', '0.0000'] InferenceTime = 0.0060
+2025-07-23 23:17:08,518 - PoinTr - INFO - Test[5400/10518] Taxonomy = 04379243 Sample = 6765d83445c2338555f46d55537192b6 Losses = ['140.6454', '796.1642', '27.5846', '73.7271'] Metrics = ['0.3299', '27.5846', '73.7271', '0.0000'] InferenceTime = 0.0060
+2025-07-23 23:18:26,279 - PoinTr - INFO - Test[5600/10518] Taxonomy = 03001627 Sample = 33dc06a8e0933b1efc385a284336f217 Losses = ['116.8362', '365.7930', '28.2848', '28.2041'] Metrics = ['0.1850', '28.2848', '28.2041', '0.0000'] InferenceTime = 0.0060
+2025-07-23 23:19:50,899 - PoinTr - INFO - Test[5800/10518] Taxonomy = 02992529 Sample = 4a81237a7fc743763992b1138bb05b3c Losses = ['299.1575', '1313.8185', '21.1274', '60.4330'] Metrics = ['0.4733', '21.1274', '60.4330', '0.0000'] InferenceTime = 0.0059
+2025-07-23 23:21:12,598 - PoinTr - INFO - Test[6000/10518] Taxonomy = 02958343 Sample = 37249c6f16b203de2e877e82c90c24d Losses = ['210.5454', '896.0055', '30.8727', '46.9997'] Metrics = ['0.2552', '30.8727', '46.9997', '0.0000'] InferenceTime = 0.0060
+2025-07-23 23:22:39,235 - PoinTr - INFO - Test[6200/10518] Taxonomy = 02933112 Sample = 956c437be87a2be5f51f77a6d7299806 Losses = ['156.3597', '556.1170', '22.0177', '19.8195'] Metrics = ['0.3118', '22.0177', '19.8195', '0.0000'] InferenceTime = 0.0061
+2025-07-23 23:24:11,380 - PoinTr - INFO - Test[6400/10518] Taxonomy = 03691459 Sample = 9d62c46fc3fd343d1f9f3ce366e030fb Losses = ['241.4926', '831.4358', '36.5574', '53.8515'] Metrics = ['0.3061', '36.5574', '53.8515', '0.0000'] InferenceTime = 0.0062
+2025-07-23 23:25:49,580 - PoinTr - INFO - Test[6600/10518] Taxonomy = 04379243 Sample = 7a8399fc51d83969a8b1d0fdee586dc9 Losses = ['87.0844', '316.3173', '19.2062', '36.0180'] Metrics = ['0.3688', '19.2062', '36.0180', '0.0000'] InferenceTime = 0.0061
+2025-07-23 23:27:18,021 - PoinTr - INFO - Test[6800/10518] Taxonomy = 03001627 Sample = 78abbfe9ab73729f56d13e757b0dc374 Losses = ['152.6972', '600.3652', '24.4726', '25.1249'] Metrics = ['0.3516', '24.4726', '25.1249', '0.0000'] InferenceTime = 0.0060
+2025-07-23 23:28:31,887 - PoinTr - INFO - Test[7000/10518] Taxonomy = 04379243 Sample = 264a075e293394a843638dabe1eb5336 Losses = ['84.4074', '247.4443', '22.0545', '19.3161'] Metrics = ['0.2654', '22.0545', '19.3161', '0.0000'] InferenceTime = 0.0060
+2025-07-23 23:29:46,144 - PoinTr - INFO - Test[7200/10518] Taxonomy = 03211117 Sample = 96f01698d0446641ea6e0950aa8ac31b Losses = ['192.6744', '779.7741', '31.3198', '46.3912'] Metrics = ['0.2691', '31.3198', '46.3912', '0.0000'] InferenceTime = 0.0071
+2025-07-23 23:31:01,969 - PoinTr - INFO - Test[7400/10518] Taxonomy = 03001627 Sample = b2239339005b14c8d675cc466d0d6fbc Losses = ['112.5790', '430.2516', '25.7674', '37.9291'] Metrics = ['0.2523', '25.7674', '37.9291', '0.0000'] InferenceTime = 0.0060
+2025-07-23 23:32:19,946 - PoinTr - INFO - Test[7600/10518] Taxonomy = 04074963 Sample = 57759e351ec76d86d3c1501c166e6b2a Losses = ['220.0848', '1040.7815', '28.3955', '48.4282'] Metrics = ['0.2788', '28.3955', '48.4282', '0.0000'] InferenceTime = 0.0059
+2025-07-23 23:33:41,785 - PoinTr - INFO - Test[7800/10518] Taxonomy = 04090263 Sample = 41a9912bfe0dc96239169e4b52d9f093 Losses = ['104.3301', '440.6042', '21.2961', '46.0881'] Metrics = ['0.5202', '21.2961', '46.0881', '0.0000'] InferenceTime = 0.0060
+2025-07-23 23:34:58,591 - PoinTr - INFO - Test[8000/10518] Taxonomy = 04379243 Sample = bcbc5e30e12a58f07ea323bc74055b8 Losses = ['99.4369', '409.0639', '19.8116', '47.1194'] Metrics = ['0.3679', '19.8116', '47.1194', '0.0000'] InferenceTime = 0.0060
+2025-07-23 23:36:16,395 - PoinTr - INFO - Test[8200/10518] Taxonomy = 04379243 Sample = aabcb5d610e76ff19ca02c396af0c503 Losses = ['148.7792', '634.1972', '26.8893', '47.7606'] Metrics = ['0.3531', '26.8893', '47.7606', '0.0000'] InferenceTime = 0.0059
+2025-07-23 23:37:34,567 - PoinTr - INFO - Test[8400/10518] Taxonomy = 04379243 Sample = dd2c3ff28a34556a47839bae1bc65257 Losses = ['87.7307', '308.0097', '16.9843', '16.1910'] Metrics = ['0.3534', '16.9843', '16.1910', '0.0000'] InferenceTime = 0.0059
+2025-07-23 23:38:50,072 - PoinTr - INFO - Test[8600/10518] Taxonomy = 03337140 Sample = 149a105979cad722c1467c54b9e09ce5 Losses = ['212.5430', '868.1989', '31.6150', '41.4460'] Metrics = ['0.2327', '31.6150', '41.4460', '0.0000'] InferenceTime = 0.0059
+2025-07-23 23:40:05,199 - PoinTr - INFO - Test[8800/10518] Taxonomy = 02691156 Sample = 4044d5954ef85af8279326882e8430cb Losses = ['279.9152', '1553.8179', '28.7192', '70.6376'] Metrics = ['0.3919', '28.7192', '70.6376', '0.0000'] InferenceTime = 0.0068
+2025-07-23 23:41:20,631 - PoinTr - INFO - Test[9000/10518] Taxonomy = 02828884 Sample = 4e512ab638542762d4d8765e3910f617 Losses = ['90.0380', '308.3278', '20.2440', '27.8825'] Metrics = ['0.3019', '20.2440', '27.8825', '0.0000'] InferenceTime = 0.0060
+2025-07-23 23:42:38,132 - PoinTr - INFO - Test[9200/10518] Taxonomy = 04379243 Sample = 5247e4e978399f1b486040c0d9e85846 Losses = ['103.3173', '324.4502', '18.8631', '17.3860'] Metrics = ['0.3889', '18.8631', '17.3860', '0.0000'] InferenceTime = 0.0059
+2025-07-23 23:43:59,510 - PoinTr - INFO - Test[9400/10518] Taxonomy = 03636649 Sample = 7ec821d5d8bd9f17d4aea4231844b26b Losses = ['64.2953', '169.7560', '14.8902', '9.4744'] Metrics = ['0.5219', '14.8902', '9.4744', '0.0000'] InferenceTime = 0.0060
+2025-07-23 23:45:15,199 - PoinTr - INFO - Test[9600/10518] Taxonomy = 04090263 Sample = 3cb82befc3290e36b58435942a1b4dac Losses = ['85.6338', '300.2186', '12.2201', '14.1370'] Metrics = ['0.6568', '12.2201', '14.1370', '0.0000'] InferenceTime = 0.0059
+2025-07-23 23:46:25,652 - PoinTr - INFO - Test[9800/10518] Taxonomy = 04379243 Sample = 6358336cbeedb9232d9fe390e23fd20f Losses = ['139.4866', '561.0148', '21.5431', '34.3135'] Metrics = ['0.3380', '21.5431', '34.3135', '0.0000'] InferenceTime = 0.0060
+2025-07-23 23:47:48,470 - PoinTr - INFO - Test[10000/10518] Taxonomy = 04401088 Sample = f73493b7c8a78000b594bbf2c494ab81 Losses = ['121.0607', '431.7144', '24.7716', '20.4014'] Metrics = ['0.2621', '24.7716', '20.4014', '0.0000'] InferenceTime = 0.0060
+2025-07-23 23:48:59,157 - PoinTr - INFO - Test[10200/10518] Taxonomy = 03001627 Sample = 3ffd794e5100258483bc207d8a5912e3 Losses = ['124.1261', '434.5545', '20.5808', '25.4290'] Metrics = ['0.3173', '20.5808', '25.4290', '0.0000'] InferenceTime = 0.0065
+2025-07-23 23:50:18,148 - PoinTr - INFO - Test[10400/10518] Taxonomy = 04090263 Sample = 26744766d59c28fb6b2c8bb96250e4a0 Losses = ['113.4151', '502.5511', '13.7521', '22.0786'] Metrics = ['0.6544', '13.7521', '22.0786', '0.0000'] InferenceTime = 0.0060
+2025-07-23 23:51:07,134 - PoinTr - INFO - [TEST] Metrics = ['0.3138', '29.1261', '51.1333', '0.0000']
+2025-07-23 23:51:07,134 - PoinTr - INFO - [TEST] Average Inference Time: 0.0060 seconds
+2025-07-23 23:51:07,134 - PoinTr - INFO - ============================ TEST RESULTS ============================
+2025-07-23 23:51:07,134 - PoinTr - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	EMDistance	#ModelName	
+2025-07-23 23:51:07,134 - PoinTr - INFO - 03759954	112	0.414 	26.018 	39.200 	0.000 	microphone	
+2025-07-23 23:51:07,134 - PoinTr - INFO - 04330267	352	0.265 	30.257 	39.796 	0.000 	stove	
+2025-07-23 23:51:07,135 - PoinTr - INFO - 03261776	120	0.282 	30.039 	56.719 	0.000 	earphone	
+2025-07-23 23:51:07,135 - PoinTr - INFO - 03513137	264	0.225 	43.405 	88.609 	0.000 	helmet	
+2025-07-23 23:51:07,135 - PoinTr - INFO - 04460130	216	0.333 	28.113 	45.384 	0.000 	tower	
+2025-07-23 23:51:07,135 - PoinTr - INFO - 04468005	624	0.284 	26.885 	43.795 	0.000 	train	
+2025-07-23 23:51:07,135 - PoinTr - INFO - 03761084	248	0.273 	30.490 	43.115 	0.000 	microwaves	
+2025-07-23 23:51:07,135 - PoinTr - INFO - 04004475	272	0.253 	34.277 	46.438 	0.000 	printer	
+2025-07-23 23:51:07,135 - PoinTr - INFO - 03938244	160	0.302 	34.037 	63.034 	0.000 	pillow	
+2025-07-23 23:51:07,135 - PoinTr - INFO - 02992529	1336	0.369 	24.287 	52.318 	0.000 	cellphone	
+2025-07-23 23:51:07,135 - PoinTr - INFO - 02808440	1376	0.261 	31.727 	50.148 	0.000 	bathtub	
+2025-07-23 23:51:07,135 - PoinTr - INFO - 04530566	3104	0.327 	25.189 	42.730 	0.000 	watercraft	
+2025-07-23 23:51:07,135 - PoinTr - INFO - 02871439	728	0.224 	31.237 	39.096 	0.000 	bookshelf	
+2025-07-23 23:51:07,135 - PoinTr - INFO - 03593526	960	0.253 	35.914 	71.614 	0.000 	jar	
+2025-07-23 23:51:07,135 - PoinTr - INFO - 04554684	272	0.274 	33.705 	41.021 	0.000 	washer	
+2025-07-23 23:51:07,135 - PoinTr - INFO - 03467517	1280	0.656 	14.976 	27.283 	0.000 	guitar	
+2025-07-23 23:51:07,135 - PoinTr - INFO - 04401088	1744	0.373 	24.420 	55.372 	0.000 	telephone	
+2025-07-23 23:51:07,135 - PoinTr - INFO - 02954340	96	0.289 	33.142 	81.224 	0.000 	cap	
+2025-07-23 23:51:07,135 - PoinTr - INFO - 02933112	2520	0.247 	28.851 	36.786 	0.000 	cabinet	
+2025-07-23 23:51:07,135 - PoinTr - INFO - 03642806	736	0.351 	21.519 	38.924 	0.000 	laptop	
+2025-07-23 23:51:07,136 - PoinTr - INFO - 02924116	1504	0.296 	26.840 	42.464 	0.000 	bus	
+2025-07-23 23:51:07,136 - PoinTr - INFO - 02946921	176	0.296 	33.299 	67.652 	0.000 	can	
+2025-07-23 23:51:07,136 - PoinTr - INFO - 02818832	376	0.225 	32.674 	38.694 	0.000 	bed	
+2025-07-23 23:51:07,136 - PoinTr - INFO - 04256520	5080	0.240 	29.815 	41.065 	0.000 	sofa	
+2025-07-23 23:51:07,136 - PoinTr - INFO - 04379243	13496	0.332 	25.486 	42.139 	0.000 	table	
+2025-07-23 23:51:07,136 - PoinTr - INFO - 02747177	552	0.215 	34.841 	57.547 	0.000 	trash bin	
+2025-07-23 23:51:07,136 - PoinTr - INFO - 03046257	1048	0.289 	33.636 	86.079 	0.000 	clock	
+2025-07-23 23:51:07,136 - PoinTr - INFO - 04225987	248	0.453 	21.868 	51.684 	0.000 	skateboard	
+2025-07-23 23:51:07,136 - PoinTr - INFO - 03797390	344	0.215 	36.374 	63.924 	0.000 	mug	
+2025-07-23 23:51:07,136 - PoinTr - INFO - 03001627	10848	0.276 	28.082 	39.391 	0.000 	chair	
+2025-07-23 23:51:07,136 - PoinTr - INFO - 03691459	2560	0.266 	32.788 	48.042 	0.000 	loudspeaker	
+2025-07-23 23:51:07,136 - PoinTr - INFO - 02942699	184	0.221 	37.289 	53.356 	0.000 	camera	
+2025-07-23 23:51:07,136 - PoinTr - INFO - 03636649	3712	0.367 	28.378 	45.704 	0.000 	lamp	
+2025-07-23 23:51:07,136 - PoinTr - INFO - 02691156	6472	0.406 	25.566 	81.411 	0.000 	airplane	
+2025-07-23 23:51:07,136 - PoinTr - INFO - 02773838	136	0.297 	29.949 	47.491 	0.000 	bag	
+2025-07-23 23:51:07,136 - PoinTr - INFO - 02958343	5624	0.214 	29.652 	49.252 	0.000 	car	
+2025-07-23 23:51:07,136 - PoinTr - INFO - 02880940	304	0.240 	41.203 	128.967 	0.000 	bowl	
+2025-07-23 23:51:07,137 - PoinTr - INFO - 04099429	136	0.495 	19.923 	36.035 	0.000 	rocket	
+2025-07-23 23:51:07,137 - PoinTr - INFO - 02828884	2904	0.329 	24.095 	41.082 	0.000 	bench	
+2025-07-23 23:51:07,137 - PoinTr - INFO - 04090263	3800	0.551 	17.783 	36.511 	0.000 	rifle	
+2025-07-23 23:51:07,137 - PoinTr - INFO - 03211117	1752	0.308 	26.959 	47.009 	0.000 	display	
+2025-07-23 23:51:07,137 - PoinTr - INFO - 02876657	800	0.354 	26.753 	47.308 	0.000 	bottle	
+2025-07-23 23:51:07,137 - PoinTr - INFO - 03710193	152	0.402 	23.671 	31.346 	0.000 	mailbox	
+2025-07-23 23:51:07,137 - PoinTr - INFO - 03790512	544	0.210 	30.295 	54.062 	0.000 	motorbike	
+2025-07-23 23:51:07,137 - PoinTr - INFO - 03325088	1192	0.335 	28.676 	51.419 	0.000 	faucet	
+2025-07-23 23:51:07,137 - PoinTr - INFO - 02801938	184	0.246 	33.997 	65.198 	0.000 	basket	
+2025-07-23 23:51:07,137 - PoinTr - INFO - 03337140	480	0.248 	29.833 	37.021 	0.000 	file cabinet	
+2025-07-23 23:51:07,137 - PoinTr - INFO - 02843684	120	0.224 	36.843 	48.447 	0.000 	birdhouse	
+2025-07-23 23:51:07,137 - PoinTr - INFO - 03624134	680	0.585 	18.767 	38.192 	0.000 	knife	
+2025-07-23 23:51:07,137 - PoinTr - INFO - 03991062	968	0.209 	38.699 	71.834 	0.000 	flowerpot	
+2025-07-23 23:51:07,137 - PoinTr - INFO - 03948459	496	0.366 	22.871 	36.912 	0.000 	pistol	
+2025-07-23 23:51:07,137 - PoinTr - INFO - 03928116	384	0.247 	31.060 	44.281 	0.000 	piano	
+2025-07-23 23:51:07,137 - PoinTr - INFO - 03207941	152	0.281 	29.605 	41.301 	0.000 	dishwasher	
+2025-07-23 23:51:07,137 - PoinTr - INFO - 04074963	112	0.374 	25.645 	54.784 	0.000 	remote	
+2025-07-23 23:51:07,137 - PoinTr - INFO - 03085013	104	0.394 	20.231 	42.123 	0.000 	keyboard	
+2025-07-23 23:51:07,138 - PoinTr - INFO - Overall 		0.314 	29.126 	51.133 	0.000 	
