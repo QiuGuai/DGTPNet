@@ -1,0 +1,184 @@
+2025-10-30 09:50:59,366 - PCN - INFO - Copy the Config file from ./cfgs/ShapeNet55_models/PCN.yaml to ./experiments/PCN/ShapeNet55_models/test_fog_easy/config.yaml
+2025-10-30 09:50:59,366 - PCN - INFO - args.config : ./cfgs/ShapeNet55_models/PCN.yaml
+2025-10-30 09:50:59,366 - PCN - INFO - args.launcher : none
+2025-10-30 09:50:59,366 - PCN - INFO - args.local_rank : 0
+2025-10-30 09:50:59,366 - PCN - INFO - args.num_workers : 4
+2025-10-30 09:50:59,366 - PCN - INFO - args.seed : 0
+2025-10-30 09:50:59,366 - PCN - INFO - args.deterministic : False
+2025-10-30 09:50:59,366 - PCN - INFO - args.sync_bn : False
+2025-10-30 09:50:59,366 - PCN - INFO - args.exp_name : test_fog_easy
+2025-10-30 09:50:59,366 - PCN - INFO - args.start_ckpts : None
+2025-10-30 09:50:59,366 - PCN - INFO - args.ckpts : ./pretrained/fog/PCN1.pth
+2025-10-30 09:50:59,366 - PCN - INFO - args.val_freq : 1
+2025-10-30 09:50:59,366 - PCN - INFO - args.resume : False
+2025-10-30 09:50:59,366 - PCN - INFO - args.test : True
+2025-10-30 09:50:59,366 - PCN - INFO - args.mode : easy
+2025-10-30 09:50:59,366 - PCN - INFO - args.pcd_path : None
+2025-10-30 09:50:59,366 - PCN - INFO - args.output_dir : None
+2025-10-30 09:50:59,366 - PCN - INFO - args.experiment_path : ./experiments/PCN/ShapeNet55_models/test_fog_easy
+2025-10-30 09:50:59,366 - PCN - INFO - args.tfboard_path : ./experiments/PCN/ShapeNet55_models/TFBoard/test_fog_easy
+2025-10-30 09:50:59,366 - PCN - INFO - args.log_name : PCN
+2025-10-30 09:50:59,366 - PCN - INFO - args.use_gpu : True
+2025-10-30 09:50:59,366 - PCN - INFO - args.distributed : False
+2025-10-30 09:50:59,366 - PCN - INFO - config.optimizer = edict()
+2025-10-30 09:50:59,366 - PCN - INFO - config.optimizer.type : Adam
+2025-10-30 09:50:59,366 - PCN - INFO - config.optimizer.kwargs = edict()
+2025-10-30 09:50:59,366 - PCN - INFO - config.optimizer.kwargs.lr : 0.0001
+2025-10-30 09:50:59,366 - PCN - INFO - config.optimizer.kwargs.weight_decay : 0
+2025-10-30 09:50:59,366 - PCN - INFO - config.scheduler = edict()
+2025-10-30 09:50:59,366 - PCN - INFO - config.scheduler.type : StepLR
+2025-10-30 09:50:59,366 - PCN - INFO - config.scheduler.kwargs = edict()
+2025-10-30 09:50:59,366 - PCN - INFO - config.scheduler.kwargs.step_size : 50
+2025-10-30 09:50:59,366 - PCN - INFO - config.scheduler.kwargs.gamma : 0.5
+2025-10-30 09:50:59,366 - PCN - INFO - config.dataset = edict()
+2025-10-30 09:50:59,367 - PCN - INFO - config.dataset.train = edict()
+2025-10-30 09:50:59,367 - PCN - INFO - config.dataset.train._base_ = edict()
+2025-10-30 09:50:59,367 - PCN - INFO - config.dataset.train._base_.NAME : ShapeNet
+2025-10-30 09:50:59,367 - PCN - INFO - config.dataset.train._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2025-10-30 09:50:59,367 - PCN - INFO - config.dataset.train._base_.N_POINTS : 8192
+2025-10-30 09:50:59,367 - PCN - INFO - config.dataset.train._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2025-10-30 09:50:59,367 - PCN - INFO - config.dataset.train.others = edict()
+2025-10-30 09:50:59,367 - PCN - INFO - config.dataset.train.others.subset : train
+2025-10-30 09:50:59,367 - PCN - INFO - config.dataset.train.others.bs : 32
+2025-10-30 09:50:59,367 - PCN - INFO - config.dataset.val = edict()
+2025-10-30 09:50:59,367 - PCN - INFO - config.dataset.val._base_ = edict()
+2025-10-30 09:50:59,367 - PCN - INFO - config.dataset.val._base_.NAME : ShapeNet
+2025-10-30 09:50:59,367 - PCN - INFO - config.dataset.val._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2025-10-30 09:50:59,367 - PCN - INFO - config.dataset.val._base_.N_POINTS : 8192
+2025-10-30 09:50:59,367 - PCN - INFO - config.dataset.val._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2025-10-30 09:50:59,367 - PCN - INFO - config.dataset.val.others = edict()
+2025-10-30 09:50:59,367 - PCN - INFO - config.dataset.val.others.subset : test
+2025-10-30 09:50:59,367 - PCN - INFO - config.dataset.test = edict()
+2025-10-30 09:50:59,367 - PCN - INFO - config.dataset.test._base_ = edict()
+2025-10-30 09:50:59,367 - PCN - INFO - config.dataset.test._base_.NAME : ShapeNet
+2025-10-30 09:50:59,367 - PCN - INFO - config.dataset.test._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2025-10-30 09:50:59,367 - PCN - INFO - config.dataset.test._base_.N_POINTS : 8192
+2025-10-30 09:50:59,367 - PCN - INFO - config.dataset.test._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2025-10-30 09:50:59,367 - PCN - INFO - config.dataset.test.others = edict()
+2025-10-30 09:50:59,367 - PCN - INFO - config.dataset.test.others.subset : test
+2025-10-30 09:50:59,367 - PCN - INFO - config.model = edict()
+2025-10-30 09:50:59,367 - PCN - INFO - config.model.NAME : PCN
+2025-10-30 09:50:59,367 - PCN - INFO - config.model.num_pred : 8192
+2025-10-30 09:50:59,367 - PCN - INFO - config.model.encoder_channel : 1024
+2025-10-30 09:50:59,367 - PCN - INFO - config.total_bs : 32
+2025-10-30 09:50:59,367 - PCN - INFO - config.step_per_update : 1
+2025-10-30 09:50:59,367 - PCN - INFO - config.max_epoch : 150
+2025-10-30 09:50:59,367 - PCN - INFO - config.consider_metric : CDL2
+2025-10-30 09:50:59,367 - PCN - INFO - Distributed training: False
+2025-10-30 09:50:59,367 - PCN - INFO - Set random seed to 0, deterministic: False
+2025-10-30 09:50:59,368 - PCN - INFO - Tester start ... 
+2025-10-30 09:50:59,368 - PCN - INFO - Processing test dataset...
+2025-10-30 09:50:59,504 - PCN - INFO - Loading weights from ./pretrained/fog/PCN1.pth...
+2025-10-30 09:50:59,535 - PCN - INFO - ckpts @ 135 epoch( performance = {'F-Score': 0.13695924576268226, 'CDL1': 28.15714421816532, 'CDL2': 2.840590006867983, 'EMDistance': 0.0})
+2025-10-30 09:52:34,203 - PCN - INFO - Test[200/10518] Taxonomy = 04530566 Sample = 3bb6a5deec68ef77fee64ca302793912 Losses = ['27.5679', '2.0292', '18.7841', '1.0419'] Metrics = ['0.2074', '18.7841', '1.0419', '0.0000'] InferenceTime = 0.0004
+2025-10-30 09:53:58,944 - PCN - INFO - Test[400/10518] Taxonomy = 03636649 Sample = 90651b3febfc3afe15226aa76eb7c3e Losses = ['42.0316', '5.1630', '27.0205', '2.2902'] Metrics = ['0.1100', '27.0205', '2.2902', '0.0000'] InferenceTime = 0.0005
+2025-10-30 09:55:18,137 - PCN - INFO - Test[600/10518] Taxonomy = 03001627 Sample = fae27953e0f0404ca99df2794ec76201 Losses = ['31.1870', '2.5276', '21.2206', '1.2127'] Metrics = ['0.1509', '21.2206', '1.2127', '0.0000'] InferenceTime = 0.0005
+2025-10-30 09:56:51,439 - PCN - INFO - Test[800/10518] Taxonomy = 03593526 Sample = 324c9045843b9470d29670d38a4c9e7e Losses = ['50.6618', '6.3904', '36.3481', '3.6544'] Metrics = ['0.0472', '36.3481', '3.6544', '0.0000'] InferenceTime = 0.0007
+2025-10-30 09:58:57,023 - PCN - INFO - Test[1000/10518] Taxonomy = 02958343 Sample = 39e10c5d24fee4a6311f5d9a1681aa3b Losses = ['33.4116', '3.2214', '22.4765', '1.5336'] Metrics = ['0.1316', '22.4765', '1.5336', '0.0000'] InferenceTime = 0.0005
+2025-10-30 10:00:57,319 - PCN - INFO - Test[1200/10518] Taxonomy = 03001627 Sample = e50f1b2d0835bb392764cfba57a5de73 Losses = ['47.0216', '5.6988', '29.6195', '2.4228'] Metrics = ['0.0596', '29.6195', '2.4228', '0.0000'] InferenceTime = 0.0005
+2025-10-30 10:03:00,070 - PCN - INFO - Test[1400/10518] Taxonomy = 04379243 Sample = 647692d3858790a1f1783a44a88d6274 Losses = ['34.1853', '4.5085', '22.7505', '2.2543'] Metrics = ['0.1392', '22.7505', '2.2543', '0.0000'] InferenceTime = 0.0006
+2025-10-30 10:05:11,567 - PCN - INFO - Test[1600/10518] Taxonomy = 02691156 Sample = d8d9de967255b4c562b600da24e0965 Losses = ['19.2452', '1.1492', '12.9333', '0.4855'] Metrics = ['0.4048', '12.9333', '0.4855', '0.0000'] InferenceTime = 0.0007
+2025-10-30 10:07:21,575 - PCN - INFO - Test[1800/10518] Taxonomy = 03001627 Sample = 24c0e6a8b10abb77df2b21995cbbbc4f Losses = ['62.6300', '9.7687', '44.4816', '4.9352'] Metrics = ['0.0111', '44.4816', '4.9352', '0.0000'] InferenceTime = 0.0007
+2025-10-30 10:09:37,590 - PCN - INFO - Test[2000/10518] Taxonomy = 04379243 Sample = 5d77e8f6ad3741a0c30ab36bf7b0552 Losses = ['35.5126', '3.3496', '22.9745', '1.4785'] Metrics = ['0.1211', '22.9745', '1.4785', '0.0000'] InferenceTime = 0.0005
+2025-10-30 10:11:44,527 - PCN - INFO - Test[2200/10518] Taxonomy = 03636649 Sample = b64e98c991d4103170365ad078f710ff Losses = ['64.9968', '11.5886', '47.9138', '7.9055'] Metrics = ['0.0559', '47.9138', '7.9055', '0.0000'] InferenceTime = 0.0046
+2025-10-30 10:13:48,982 - PCN - INFO - Test[2400/10518] Taxonomy = 03211117 Sample = b4386438057e85988bfba3df1f776207 Losses = ['40.3577', '4.3682', '26.2940', '1.9375'] Metrics = ['0.0887', '26.2940', '1.9375', '0.0000'] InferenceTime = 0.0006
+2025-10-30 10:15:59,825 - PCN - INFO - Test[2600/10518] Taxonomy = 04468005 Sample = 3b8c505fd1127ed88f134472f61cf6bb Losses = ['30.2772', '2.3654', '20.2312', '1.0522'] Metrics = ['0.1483', '20.2312', '1.0522', '0.0000'] InferenceTime = 0.0006
+2025-10-30 10:18:08,855 - PCN - INFO - Test[2800/10518] Taxonomy = 03001627 Sample = e3e76d624f1f855bcc8a9c365968620 Losses = ['34.2590', '3.0943', '24.9443', '1.8090'] Metrics = ['0.1137', '24.9443', '1.8090', '0.0000'] InferenceTime = 0.0006
+2025-10-30 10:20:15,542 - PCN - INFO - Test[3000/10518] Taxonomy = 03001627 Sample = 40020a5e90c75d94a93412f1b60e6fba Losses = ['29.9687', '2.5879', '22.8044', '1.5721'] Metrics = ['0.1798', '22.8044', '1.5721', '0.0000'] InferenceTime = 0.0005
+2025-10-30 10:22:21,882 - PCN - INFO - Test[3200/10518] Taxonomy = 02691156 Sample = a96c1589731b06a1efbd0f357ff7c40a Losses = ['26.6475', '2.1840', '17.6765', '1.0420'] Metrics = ['0.2970', '17.6765', '1.0420', '0.0000'] InferenceTime = 0.0006
+2025-10-30 10:24:33,669 - PCN - INFO - Test[3400/10518] Taxonomy = 03046257 Sample = b2b40e80c9d3f530d5f1db12f95f0fe4 Losses = ['26.4717', '1.8334', '15.9253', '0.5941'] Metrics = ['0.1854', '15.9253', '0.5941', '0.0000'] InferenceTime = 0.0007
+2025-10-30 10:26:39,982 - PCN - INFO - Test[3600/10518] Taxonomy = 02933112 Sample = c18a4772bcfbb98e85bc264270ae0601 Losses = ['40.7296', '4.9216', '25.6121', '1.8268'] Metrics = ['0.0855', '25.6121', '1.8268', '0.0000'] InferenceTime = 0.0006
+2025-10-30 10:28:48,736 - PCN - INFO - Test[3800/10518] Taxonomy = 04530566 Sample = 215861c4bebeb328d9a75de54b023ae1 Losses = ['28.1839', '2.0903', '18.7829', '0.9272'] Metrics = ['0.1774', '18.7829', '0.9272', '0.0000'] InferenceTime = 0.0007
+2025-10-30 10:31:01,378 - PCN - INFO - Test[4000/10518] Taxonomy = 02828884 Sample = 5f9d3dae06acf0e4e93e1127627b834 Losses = ['30.7769', '2.8696', '20.6111', '1.3297'] Metrics = ['0.1776', '20.6111', '1.3297', '0.0000'] InferenceTime = 0.0006
+2025-10-30 10:33:13,470 - PCN - INFO - Test[4200/10518] Taxonomy = 04401088 Sample = a3c1c9fc390b1bbbb099170e6f5a4af9 Losses = ['28.6715', '2.1458', '17.1952', '0.7116'] Metrics = ['0.1701', '17.1952', '0.7116', '0.0000'] InferenceTime = 0.0007
+2025-10-30 10:35:23,301 - PCN - INFO - Test[4400/10518] Taxonomy = 04256520 Sample = 54506969a60017ac8f0a57a8b9390a Losses = ['39.9889', '4.3983', '28.1399', '2.4556'] Metrics = ['0.1099', '28.1399', '2.4556', '0.0000'] InferenceTime = 0.0006
+2025-10-30 10:37:31,635 - PCN - INFO - Test[4600/10518] Taxonomy = 04074963 Sample = d9ca2dcaf1d9d850dc605801df3f66ec Losses = ['42.1446', '4.3971', '31.8534', '2.5515'] Metrics = ['0.0516', '31.8534', '2.5515', '0.0000'] InferenceTime = 0.0005
+2025-10-30 10:39:45,791 - PCN - INFO - Test[4800/10518] Taxonomy = 04379243 Sample = ead93856b735ec90f0aeabfdcb4e1dd9 Losses = ['35.0783', '2.9035', '23.4357', '1.3105'] Metrics = ['0.0700', '23.4357', '1.3105', '0.0000'] InferenceTime = 0.0006
+2025-10-30 10:41:51,644 - PCN - INFO - Test[5000/10518] Taxonomy = 03790512 Sample = 242d8c07fabbdabc78fe949fc1419876 Losses = ['39.2754', '4.7774', '27.0954', '2.5994'] Metrics = ['0.1060', '27.0954', '2.5994', '0.0000'] InferenceTime = 0.0006
+2025-10-30 10:43:52,753 - PCN - INFO - Test[5200/10518] Taxonomy = 02691156 Sample = 7b6f528acc10d3fbcf5b9c6e0c7ce895 Losses = ['27.3586', '2.0485', '17.5986', '0.9297'] Metrics = ['0.2578', '17.5986', '0.9297', '0.0000'] InferenceTime = 0.0005
+2025-10-30 10:45:58,231 - PCN - INFO - Test[5400/10518] Taxonomy = 04379243 Sample = 6765d83445c2338555f46d55537192b6 Losses = ['51.4149', '9.9052', '32.1939', '4.6015'] Metrics = ['0.1225', '32.1939', '4.6015', '0.0000'] InferenceTime = 0.0006
+2025-10-30 10:48:06,145 - PCN - INFO - Test[5600/10518] Taxonomy = 03001627 Sample = 33dc06a8e0933b1efc385a284336f217 Losses = ['38.3911', '3.8632', '26.0017', '1.8647'] Metrics = ['0.0918', '26.0017', '1.8647', '0.0000'] InferenceTime = 0.0006
+2025-10-30 10:50:21,429 - PCN - INFO - Test[5800/10518] Taxonomy = 02992529 Sample = 4a81237a7fc743763992b1138bb05b3c Losses = ['23.3175', '1.4469', '15.0384', '0.5313'] Metrics = ['0.2394', '15.0384', '0.5313', '0.0000'] InferenceTime = 0.0007
+2025-10-30 10:52:34,026 - PCN - INFO - Test[6000/10518] Taxonomy = 02958343 Sample = 37249c6f16b203de2e877e82c90c24d Losses = ['37.2621', '3.9053', '25.9369', '2.1643'] Metrics = ['0.1114', '25.9369', '2.1643', '0.0000'] InferenceTime = 0.0007
+2025-10-30 10:54:40,566 - PCN - INFO - Test[6200/10518] Taxonomy = 02933112 Sample = 956c437be87a2be5f51f77a6d7299806 Losses = ['41.6934', '4.6495', '29.6872', '2.3912'] Metrics = ['0.0518', '29.6872', '2.3912', '0.0000'] InferenceTime = 0.0006
+2025-10-30 10:56:43,297 - PCN - INFO - Test[6400/10518] Taxonomy = 03691459 Sample = 9d62c46fc3fd343d1f9f3ce366e030fb Losses = ['48.8709', '7.4901', '31.3236', '3.2568'] Metrics = ['0.0612', '31.3236', '3.2568', '0.0000'] InferenceTime = 0.0007
+2025-10-30 10:58:54,689 - PCN - INFO - Test[6600/10518] Taxonomy = 04379243 Sample = 7a8399fc51d83969a8b1d0fdee586dc9 Losses = ['38.9557', '4.4191', '29.0590', '2.7253'] Metrics = ['0.0933', '29.0590', '2.7253', '0.0000'] InferenceTime = 0.0006
+2025-10-30 11:00:57,090 - PCN - INFO - Test[6800/10518] Taxonomy = 03001627 Sample = 78abbfe9ab73729f56d13e757b0dc374 Losses = ['50.0705', '7.8120', '36.5278', '4.8044'] Metrics = ['0.0668', '36.5278', '4.8044', '0.0000'] InferenceTime = 0.0006
+2025-10-30 11:03:01,317 - PCN - INFO - Test[7000/10518] Taxonomy = 04379243 Sample = 264a075e293394a843638dabe1eb5336 Losses = ['33.3627', '3.2065', '21.0785', '1.2618'] Metrics = ['0.1437', '21.0785', '1.2618', '0.0000'] InferenceTime = 0.0005
+2025-10-30 11:05:04,097 - PCN - INFO - Test[7200/10518] Taxonomy = 03211117 Sample = 96f01698d0446641ea6e0950aa8ac31b Losses = ['45.0277', '5.8730', '32.5566', '3.1879'] Metrics = ['0.0651', '32.5566', '3.1879', '0.0000'] InferenceTime = 0.0006
+2025-10-30 11:07:10,956 - PCN - INFO - Test[7400/10518] Taxonomy = 03001627 Sample = b2239339005b14c8d675cc466d0d6fbc Losses = ['32.1939', '2.8667', '20.7932', '1.2404'] Metrics = ['0.1457', '20.7932', '1.2404', '0.0000'] InferenceTime = 0.0005
+2025-10-30 11:09:21,778 - PCN - INFO - Test[7600/10518] Taxonomy = 04074963 Sample = 57759e351ec76d86d3c1501c166e6b2a Losses = ['27.2243', '1.9573', '19.1031', '0.9229'] Metrics = ['0.1555', '19.1031', '0.9229', '0.0000'] InferenceTime = 0.0007
+2025-10-30 11:11:37,087 - PCN - INFO - Test[7800/10518] Taxonomy = 04090263 Sample = 41a9912bfe0dc96239169e4b52d9f093 Losses = ['30.5136', '3.8748', '19.5300', '2.0358'] Metrics = ['0.4027', '19.5300', '2.0358', '0.0000'] InferenceTime = 0.0007
+2025-10-30 11:13:43,965 - PCN - INFO - Test[8000/10518] Taxonomy = 04379243 Sample = bcbc5e30e12a58f07ea323bc74055b8 Losses = ['23.4445', '1.4681', '17.0348', '0.7694'] Metrics = ['0.1982', '17.0348', '0.7694', '0.0000'] InferenceTime = 0.0006
+2025-10-30 11:15:53,087 - PCN - INFO - Test[8200/10518] Taxonomy = 04379243 Sample = aabcb5d610e76ff19ca02c396af0c503 Losses = ['47.2687', '8.7314', '27.8860', '3.4424'] Metrics = ['0.2093', '27.8860', '3.4424', '0.0000'] InferenceTime = 0.0006
+2025-10-30 11:17:46,769 - PCN - INFO - Test[8400/10518] Taxonomy = 04379243 Sample = dd2c3ff28a34556a47839bae1bc65257 Losses = ['30.8498', '3.1353', '18.9573', '1.4083'] Metrics = ['0.2471', '18.9573', '1.4083', '0.0000'] InferenceTime = 0.0007
+2025-10-30 11:19:34,327 - PCN - INFO - Test[8600/10518] Taxonomy = 03337140 Sample = 149a105979cad722c1467c54b9e09ce5 Losses = ['56.3642', '8.7406', '36.9597', '4.1944'] Metrics = ['0.0419', '36.9597', '4.1944', '0.0000'] InferenceTime = 0.0007
+2025-10-30 11:21:18,707 - PCN - INFO - Test[8800/10518] Taxonomy = 02691156 Sample = 4044d5954ef85af8279326882e8430cb Losses = ['33.2079', '3.1226', '24.2344', '1.9017'] Metrics = ['0.1743', '24.2344', '1.9017', '0.0000'] InferenceTime = 0.0006
+2025-10-30 11:22:55,225 - PCN - INFO - Test[9000/10518] Taxonomy = 02828884 Sample = 4e512ab638542762d4d8765e3910f617 Losses = ['23.6666', '1.6121', '16.1575', '0.7015'] Metrics = ['0.2394', '16.1575', '0.7015', '0.0000'] InferenceTime = 0.0005
+2025-10-30 11:24:23,013 - PCN - INFO - Test[9200/10518] Taxonomy = 04379243 Sample = 5247e4e978399f1b486040c0d9e85846 Losses = ['44.6416', '7.2100', '26.9074', '3.0236'] Metrics = ['0.1683', '26.9074', '3.0236', '0.0000'] InferenceTime = 0.0005
+2025-10-30 11:25:51,388 - PCN - INFO - Test[9400/10518] Taxonomy = 03636649 Sample = 7ec821d5d8bd9f17d4aea4231844b26b Losses = ['18.5385', '1.1153', '14.5582', '0.8231'] Metrics = ['0.4693', '14.5582', '0.8231', '0.0000'] InferenceTime = 0.0005
+2025-10-30 11:27:09,104 - PCN - INFO - Test[9600/10518] Taxonomy = 04090263 Sample = 3cb82befc3290e36b58435942a1b4dac Losses = ['13.5705', '0.5393', '9.2527', '0.2914'] Metrics = ['0.7022', '9.2527', '0.2914', '0.0000'] InferenceTime = 0.0005
+2025-10-30 11:28:21,384 - PCN - INFO - Test[9800/10518] Taxonomy = 04379243 Sample = 6358336cbeedb9232d9fe390e23fd20f Losses = ['26.4552', '1.9405', '17.6196', '0.8590'] Metrics = ['0.2530', '17.6196', '0.8590', '0.0000'] InferenceTime = 0.0005
+2025-10-30 11:29:45,328 - PCN - INFO - Test[10000/10518] Taxonomy = 04401088 Sample = f73493b7c8a78000b594bbf2c494ab81 Losses = ['42.3178', '5.2452', '29.5240', '2.8534'] Metrics = ['0.0979', '29.5240', '2.8534', '0.0000'] InferenceTime = 0.0004
+2025-10-30 11:30:54,319 - PCN - INFO - Test[10200/10518] Taxonomy = 03001627 Sample = 3ffd794e5100258483bc207d8a5912e3 Losses = ['27.2348', '1.9819', '20.4025', '1.0164'] Metrics = ['0.1315', '20.4025', '1.0164', '0.0000'] InferenceTime = 0.0005
+2025-10-30 11:32:09,831 - PCN - INFO - Test[10400/10518] Taxonomy = 04090263 Sample = 26744766d59c28fb6b2c8bb96250e4a0 Losses = ['14.3368', '0.5881', '9.9713', '0.2876'] Metrics = ['0.6108', '9.9713', '0.2876', '0.0000'] InferenceTime = 0.0004
+2025-10-30 11:32:56,460 - PCN - INFO - [TEST] Metrics = ['0.1438', '26.9906', '2.5943', '0.0000']
+2025-10-30 11:32:56,460 - PCN - INFO - [TEST] Average Inference Time: 0.0007 seconds
+2025-10-30 11:32:56,460 - PCN - INFO - ============================ TEST RESULTS ============================
+2025-10-30 11:32:56,460 - PCN - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	EMDistance	#ModelName	
+2025-10-30 11:32:56,460 - PCN - INFO - 03759954	112	0.201 	29.159 	4.331 	0.000 	microphone	
+2025-10-30 11:32:56,460 - PCN - INFO - 04330267	352	0.081 	30.093 	2.926 	0.000 	stove	
+2025-10-30 11:32:56,460 - PCN - INFO - 03261776	120	0.114 	31.217 	3.432 	0.000 	earphone	
+2025-10-30 11:32:56,460 - PCN - INFO - 03513137	264	0.046 	41.160 	5.944 	0.000 	helmet	
+2025-10-30 11:32:56,461 - PCN - INFO - 04460130	216	0.174 	25.610 	2.304 	0.000 	tower	
+2025-10-30 11:32:56,461 - PCN - INFO - 04468005	624	0.173 	22.256 	1.611 	0.000 	train	
+2025-10-30 11:32:56,461 - PCN - INFO - 03761084	248	0.055 	30.642 	2.891 	0.000 	microwaves	
+2025-10-30 11:32:56,461 - PCN - INFO - 04004475	272	0.055 	36.533 	4.418 	0.000 	printer	
+2025-10-30 11:32:56,461 - PCN - INFO - 03938244	160	0.069 	33.259 	3.421 	0.000 	pillow	
+2025-10-30 11:32:56,461 - PCN - INFO - 02992529	1336	0.168 	19.340 	1.047 	0.000 	cellphone	
+2025-10-30 11:32:56,461 - PCN - INFO - 02808440	1376	0.089 	29.105 	2.753 	0.000 	bathtub	
+2025-10-30 11:32:56,461 - PCN - INFO - 04530566	3104	0.204 	21.528 	1.560 	0.000 	watercraft	
+2025-10-30 11:32:56,461 - PCN - INFO - 02871439	728	0.088 	30.729 	3.216 	0.000 	bookshelf	
+2025-10-30 11:32:56,461 - PCN - INFO - 03593526	960	0.082 	32.817 	3.761 	0.000 	jar	
+2025-10-30 11:32:56,461 - PCN - INFO - 04554684	272	0.062 	31.179 	3.100 	0.000 	washer	
+2025-10-30 11:32:56,461 - PCN - INFO - 03467517	1280	0.502 	12.277 	0.476 	0.000 	guitar	
+2025-10-30 11:32:56,461 - PCN - INFO - 04401088	1744	0.173 	19.171 	1.076 	0.000 	telephone	
+2025-10-30 11:32:56,461 - PCN - INFO - 02954340	96	0.066 	32.148 	3.207 	0.000 	cap	
+2025-10-30 11:32:56,461 - PCN - INFO - 02933112	2520	0.090 	26.059 	2.026 	0.000 	cabinet	
+2025-10-30 11:32:56,461 - PCN - INFO - 03642806	736	0.149 	19.566 	1.046 	0.000 	laptop	
+2025-10-30 11:32:56,462 - PCN - INFO - 02924116	1504	0.160 	21.434 	1.418 	0.000 	bus	
+2025-10-30 11:32:56,462 - PCN - INFO - 02946921	176	0.072 	29.939 	3.172 	0.000 	can	
+2025-10-30 11:32:56,462 - PCN - INFO - 02818832	376	0.069 	34.543 	4.012 	0.000 	bed	
+2025-10-30 11:32:56,462 - PCN - INFO - 04256520	5080	0.076 	28.177 	2.322 	0.000 	sofa	
+2025-10-30 11:32:56,462 - PCN - INFO - 04379243	13496	0.166 	23.873 	2.124 	0.000 	table	
+2025-10-30 11:32:56,463 - PCN - INFO - 02747177	552	0.062 	30.121 	2.846 	0.000 	trash bin	
+2025-10-30 11:32:56,463 - PCN - INFO - 03046257	1048	0.098 	29.070 	2.838 	0.000 	clock	
+2025-10-30 11:32:56,463 - PCN - INFO - 04225987	248	0.264 	18.461 	1.163 	0.000 	skateboard	
+2025-10-30 11:32:56,463 - PCN - INFO - 03797390	344	0.050 	32.126 	3.352 	0.000 	mug	
+2025-10-30 11:32:56,463 - PCN - INFO - 03001627	10848	0.118 	26.897 	2.377 	0.000 	chair	
+2025-10-30 11:32:56,463 - PCN - INFO - 03691459	2560	0.072 	31.774 	3.328 	0.000 	loudspeaker	
+2025-10-30 11:32:56,464 - PCN - INFO - 02942699	184	0.051 	40.836 	5.701 	0.000 	camera	
+2025-10-30 11:32:56,464 - PCN - INFO - 03636649	3712	0.183 	30.142 	3.907 	0.000 	lamp	
+2025-10-30 11:32:56,464 - PCN - INFO - 02691156	6472	0.296 	17.761 	1.092 	0.000 	airplane	
+2025-10-30 11:32:56,464 - PCN - INFO - 02773838	136	0.085 	32.368 	3.600 	0.000 	bag	
+2025-10-30 11:32:56,464 - PCN - INFO - 02958343	5624	0.097 	24.886 	1.774 	0.000 	car	
+2025-10-30 11:32:56,464 - PCN - INFO - 02880940	304	0.059 	31.371 	3.107 	0.000 	bowl	
+2025-10-30 11:32:56,464 - PCN - INFO - 04099429	136	0.359 	17.655 	1.179 	0.000 	rocket	
+2025-10-30 11:32:56,464 - PCN - INFO - 02828884	2904	0.191 	22.324 	1.807 	0.000 	bench	
+2025-10-30 11:32:56,464 - PCN - INFO - 04090263	3800	0.452 	14.151 	0.732 	0.000 	rifle	
+2025-10-30 11:32:56,464 - PCN - INFO - 03211117	1752	0.106 	26.162 	2.174 	0.000 	display	
+2025-10-30 11:32:56,464 - PCN - INFO - 02876657	800	0.173 	22.234 	1.681 	0.000 	bottle	
+2025-10-30 11:32:56,464 - PCN - INFO - 03710193	152	0.164 	25.678 	2.197 	0.000 	mailbox	
+2025-10-30 11:32:56,464 - PCN - INFO - 03790512	544	0.117 	25.571 	2.103 	0.000 	motorbike	
+2025-10-30 11:32:56,464 - PCN - INFO - 03325088	1192	0.144 	30.190 	3.596 	0.000 	faucet	
+2025-10-30 11:32:56,465 - PCN - INFO - 02801938	184	0.061 	31.757 	3.283 	0.000 	basket	
+2025-10-30 11:32:56,465 - PCN - INFO - 03337140	480	0.091 	27.542 	2.418 	0.000 	file cabinet	
+2025-10-30 11:32:56,465 - PCN - INFO - 02843684	120	0.061 	36.727 	4.444 	0.000 	birdhouse	
+2025-10-30 11:32:56,465 - PCN - INFO - 03624134	680	0.505 	12.895 	0.584 	0.000 	knife	
+2025-10-30 11:32:56,465 - PCN - INFO - 03991062	968	0.063 	36.229 	4.463 	0.000 	flowerpot	
+2025-10-30 11:32:56,465 - PCN - INFO - 03948459	496	0.241 	18.817 	1.119 	0.000 	pistol	
+2025-10-30 11:32:56,465 - PCN - INFO - 03928116	384	0.076 	31.953 	3.325 	0.000 	piano	
+2025-10-30 11:32:56,465 - PCN - INFO - 03207941	152	0.075 	27.736 	2.453 	0.000 	dishwasher	
+2025-10-30 11:32:56,465 - PCN - INFO - 04074963	112	0.171 	21.646 	1.416 	0.000 	remote	
+2025-10-30 11:32:56,465 - PCN - INFO - 03085013	104	0.243 	17.591 	1.036 	0.000 	keyboard	
+2025-10-30 11:32:56,465 - PCN - INFO - Overall 		0.144 	26.991 	2.594 	0.000 	

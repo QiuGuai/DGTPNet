@@ -1,0 +1,195 @@
+2025-07-27 21:20:56,741 - SnowFlakeNet - INFO - Copy the Config file from ./cfgs/ShapeNet55_models/SnowFlakeNet.yaml to ./experiments/SnowFlakeNet/ShapeNet55_models/test_fog_easy/config.yaml
+2025-07-27 21:20:56,741 - SnowFlakeNet - INFO - args.config : ./cfgs/ShapeNet55_models/SnowFlakeNet.yaml
+2025-07-27 21:20:56,741 - SnowFlakeNet - INFO - args.launcher : none
+2025-07-27 21:20:56,741 - SnowFlakeNet - INFO - args.local_rank : 0
+2025-07-27 21:20:56,741 - SnowFlakeNet - INFO - args.num_workers : 4
+2025-07-27 21:20:56,741 - SnowFlakeNet - INFO - args.seed : 0
+2025-07-27 21:20:56,741 - SnowFlakeNet - INFO - args.deterministic : False
+2025-07-27 21:20:56,741 - SnowFlakeNet - INFO - args.sync_bn : False
+2025-07-27 21:20:56,741 - SnowFlakeNet - INFO - args.exp_name : test_fog_easy
+2025-07-27 21:20:56,741 - SnowFlakeNet - INFO - args.start_ckpts : None
+2025-07-27 21:20:56,741 - SnowFlakeNet - INFO - args.ckpts : ./pretrained/fog/SnowFlakeNet_fog.pth
+2025-07-27 21:20:56,741 - SnowFlakeNet - INFO - args.val_freq : 1
+2025-07-27 21:20:56,741 - SnowFlakeNet - INFO - args.resume : False
+2025-07-27 21:20:56,741 - SnowFlakeNet - INFO - args.test : True
+2025-07-27 21:20:56,741 - SnowFlakeNet - INFO - args.mode : easy
+2025-07-27 21:20:56,741 - SnowFlakeNet - INFO - args.pcd_path : None
+2025-07-27 21:20:56,741 - SnowFlakeNet - INFO - args.output_dir : None
+2025-07-27 21:20:56,741 - SnowFlakeNet - INFO - args.experiment_path : ./experiments/SnowFlakeNet/ShapeNet55_models/test_fog_easy
+2025-07-27 21:20:56,741 - SnowFlakeNet - INFO - args.tfboard_path : ./experiments/SnowFlakeNet/ShapeNet55_models/TFBoard/test_fog_easy
+2025-07-27 21:20:56,741 - SnowFlakeNet - INFO - args.log_name : SnowFlakeNet
+2025-07-27 21:20:56,741 - SnowFlakeNet - INFO - args.use_gpu : True
+2025-07-27 21:20:56,741 - SnowFlakeNet - INFO - args.distributed : False
+2025-07-27 21:20:56,741 - SnowFlakeNet - INFO - config.optimizer = edict()
+2025-07-27 21:20:56,741 - SnowFlakeNet - INFO - config.optimizer.type : AdamW
+2025-07-27 21:20:56,741 - SnowFlakeNet - INFO - config.optimizer.kwargs = edict()
+2025-07-27 21:20:56,741 - SnowFlakeNet - INFO - config.optimizer.kwargs.lr : 0.001
+2025-07-27 21:20:56,741 - SnowFlakeNet - INFO - config.optimizer.kwargs.weight_decay : 0.0005
+2025-07-27 21:20:56,741 - SnowFlakeNet - INFO - config.scheduler = edict()
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.scheduler.type : LambdaLR
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.scheduler.kwargs = edict()
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.scheduler.kwargs.decay_step : 21
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.scheduler.kwargs.lr_decay : 0.92596
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.scheduler.kwargs.lowest_decay : 0.001
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.bnmscheduler = edict()
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.bnmscheduler.type : Lambda
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.bnmscheduler.kwargs = edict()
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.bnmscheduler.kwargs.decay_step : 21
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.bnmscheduler.kwargs.bn_decay : 0.5
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.bnmscheduler.kwargs.bn_momentum : 0.9
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.bnmscheduler.kwargs.lowest_decay : 0.01
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.dataset = edict()
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.dataset.train = edict()
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.dataset.train._base_ = edict()
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.dataset.train._base_.NAME : ShapeNet
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.dataset.train._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.dataset.train._base_.N_POINTS : 8192
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.dataset.train._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.dataset.train.others = edict()
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.dataset.train.others.subset : train
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.dataset.train.others.bs : 16
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.dataset.val = edict()
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.dataset.val._base_ = edict()
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.dataset.val._base_.NAME : ShapeNet
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.dataset.val._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.dataset.val._base_.N_POINTS : 8192
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.dataset.val._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.dataset.val.others = edict()
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.dataset.val.others.subset : test
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.dataset.test = edict()
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.dataset.test._base_ = edict()
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.dataset.test._base_.NAME : ShapeNet
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.dataset.test._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.dataset.test._base_.N_POINTS : 8192
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.dataset.test._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.dataset.test.others = edict()
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.dataset.test.others.subset : test
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.model = edict()
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.model.NAME : SnowFlakeNet
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.model.dim_feat : 512
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.model.num_pc : 256
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.model.num_p0 : 512
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.model.radius : 1
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.model.up_factors : [4, 8]
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.total_bs : 16
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.step_per_update : 4
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.max_epoch : 200
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - config.consider_metric : CDL2
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - Distributed training: False
+2025-07-27 21:20:56,742 - SnowFlakeNet - INFO - Set random seed to 0, deterministic: False
+2025-07-27 21:20:56,743 - SnowFlakeNet - INFO - Tester start ... 
+2025-07-27 21:20:56,743 - SnowFlakeNet - INFO - Processing test dataset...
+2025-07-27 21:20:56,820 - SnowFlakeNet - INFO - Loading weights from ./pretrained/fog/SnowFlakeNet_fog.pth...
+2025-07-27 21:20:56,941 - SnowFlakeNet - INFO - ckpts @ 175 epoch( performance = {'F-Score': 0.35883162547469005, 'CDL1': 36.296791952413706, 'CDL2': 71.98275082014612, 'EMDistance': 0.0})
+2025-07-27 21:23:44,586 - SnowFlakeNet - INFO - Test[200/10518] Taxonomy = 04530566 Sample = 3bb6a5deec68ef77fee64ca302793912 Losses = ['40.2697', '59.2258', '14.1641', '8.7010'] Metrics = ['0.4161', '14.1641', '8.7010', '0.0000'] InferenceTime = 0.0055
+2025-07-27 21:26:19,262 - SnowFlakeNet - INFO - Test[400/10518] Taxonomy = 03636649 Sample = 90651b3febfc3afe15226aa76eb7c3e Losses = ['63.4888', '139.9474', '19.1863', '12.3419'] Metrics = ['0.3784', '19.1863', '12.3419', '0.0000'] InferenceTime = 0.0056
+2025-07-27 21:28:45,714 - SnowFlakeNet - INFO - Test[600/10518] Taxonomy = 03001627 Sample = fae27953e0f0404ca99df2794ec76201 Losses = ['41.9040', '53.8215', '14.4227', '5.8191'] Metrics = ['0.4030', '14.4227', '5.8191', '0.0000'] InferenceTime = 0.0056
+2025-07-27 21:31:16,563 - SnowFlakeNet - INFO - Test[800/10518] Taxonomy = 03593526 Sample = 324c9045843b9470d29670d38a4c9e7e Losses = ['43.2843', '61.5358', '15.4367', '7.3666'] Metrics = ['0.4464', '15.4367', '7.3666', '0.0000'] InferenceTime = 0.0049
+2025-07-27 21:33:50,739 - SnowFlakeNet - INFO - Test[1000/10518] Taxonomy = 02958343 Sample = 39e10c5d24fee4a6311f5d9a1681aa3b Losses = ['55.6585', '105.1854', '15.9118', '8.3374'] Metrics = ['0.3571', '15.9118', '8.3374', '0.0000'] InferenceTime = 0.0050
+2025-07-27 21:36:16,845 - SnowFlakeNet - INFO - Test[1200/10518] Taxonomy = 03001627 Sample = e50f1b2d0835bb392764cfba57a5de73 Losses = ['58.3217', '91.5543', '21.2173', '8.8431'] Metrics = ['0.2902', '21.2173', '8.8431', '0.0000'] InferenceTime = 0.0049
+2025-07-27 21:38:43,894 - SnowFlakeNet - INFO - Test[1400/10518] Taxonomy = 04379243 Sample = 647692d3858790a1f1783a44a88d6274 Losses = ['35.4843', '27.5580', '13.8406', '5.5174'] Metrics = ['0.4269', '13.8406', '5.5174', '0.0000'] InferenceTime = 0.0049
+2025-07-27 21:41:17,337 - SnowFlakeNet - INFO - Test[1600/10518] Taxonomy = 02691156 Sample = d8d9de967255b4c562b600da24e0965 Losses = ['38.5416', '123.4095', '11.4683', '14.4344'] Metrics = ['0.6612', '11.4683', '14.4344', '0.0000'] InferenceTime = 0.0047
+2025-07-27 21:43:49,625 - SnowFlakeNet - INFO - Test[1800/10518] Taxonomy = 03001627 Sample = 24c0e6a8b10abb77df2b21995cbbbc4f Losses = ['62.2969', '66.7965', '23.5919', '14.4374'] Metrics = ['0.2464', '23.5919', '14.4374', '0.0000'] InferenceTime = 0.0051
+2025-07-27 21:46:26,013 - SnowFlakeNet - INFO - Test[2000/10518] Taxonomy = 04379243 Sample = 5d77e8f6ad3741a0c30ab36bf7b0552 Losses = ['41.0584', '47.1866', '13.6829', '6.7905'] Metrics = ['0.3954', '13.6829', '6.7905', '0.0000'] InferenceTime = 0.0050
+2025-07-27 21:48:56,880 - SnowFlakeNet - INFO - Test[2200/10518] Taxonomy = 03636649 Sample = b64e98c991d4103170365ad078f710ff Losses = ['62.0320', '64.4845', '26.0606', '11.7572'] Metrics = ['0.2822', '26.0606', '11.7572', '0.0000'] InferenceTime = 0.0050
+2025-07-27 21:51:25,650 - SnowFlakeNet - INFO - Test[2400/10518] Taxonomy = 03211117 Sample = b4386438057e85988bfba3df1f776207 Losses = ['45.1424', '65.2622', '16.6402', '8.5143'] Metrics = ['0.3938', '16.6402', '8.5143', '0.0000'] InferenceTime = 0.0049
+2025-07-27 21:53:59,735 - SnowFlakeNet - INFO - Test[2600/10518] Taxonomy = 04468005 Sample = 3b8c505fd1127ed88f134472f61cf6bb Losses = ['30.7578', '17.7024', '14.6630', '3.5354'] Metrics = ['0.3141', '14.6630', '3.5354', '0.0000'] InferenceTime = 0.0056
+2025-07-27 21:56:32,204 - SnowFlakeNet - INFO - Test[2800/10518] Taxonomy = 03001627 Sample = e3e76d624f1f855bcc8a9c365968620 Losses = ['32.5551', '17.5190', '14.1751', '3.8082'] Metrics = ['0.3600', '14.1751', '3.8082', '0.0000'] InferenceTime = 0.0049
+2025-07-27 21:59:02,174 - SnowFlakeNet - INFO - Test[3000/10518] Taxonomy = 03001627 Sample = 40020a5e90c75d94a93412f1b60e6fba Losses = ['31.7077', '25.9592', '15.4347', '3.7766'] Metrics = ['0.4058', '15.4347', '3.7766', '0.0000'] InferenceTime = 0.0053
+2025-07-27 22:01:30,303 - SnowFlakeNet - INFO - Test[3200/10518] Taxonomy = 02691156 Sample = a96c1589731b06a1efbd0f357ff7c40a Losses = ['60.5607', '196.0286', '11.9164', '12.0394'] Metrics = ['0.6143', '11.9164', '12.0394', '0.0000'] InferenceTime = 0.0048
+2025-07-27 22:04:04,997 - SnowFlakeNet - INFO - Test[3400/10518] Taxonomy = 03046257 Sample = b2b40e80c9d3f530d5f1db12f95f0fe4 Losses = ['148.4687', '699.0459', '25.4818', '35.4659'] Metrics = ['0.3905', '25.4818', '35.4659', '0.0000'] InferenceTime = 0.0052
+2025-07-27 22:06:33,079 - SnowFlakeNet - INFO - Test[3600/10518] Taxonomy = 02933112 Sample = c18a4772bcfbb98e85bc264270ae0601 Losses = ['41.1006', '14.5174', '19.7084', '3.9279'] Metrics = ['0.2131', '19.7084', '3.9279', '0.0000'] InferenceTime = 0.0050
+2025-07-27 22:09:04,874 - SnowFlakeNet - INFO - Test[3800/10518] Taxonomy = 04530566 Sample = 215861c4bebeb328d9a75de54b023ae1 Losses = ['30.1431', '22.3434', '14.7094', '3.6069'] Metrics = ['0.3641', '14.7094', '3.6069', '0.0000'] InferenceTime = 0.0049
+2025-07-27 22:11:40,528 - SnowFlakeNet - INFO - Test[4000/10518] Taxonomy = 02828884 Sample = 5f9d3dae06acf0e4e93e1127627b834 Losses = ['43.8898', '78.2372', '14.5289', '11.1785'] Metrics = ['0.3906', '14.5289', '11.1785', '0.0000'] InferenceTime = 0.0052
+2025-07-27 22:14:17,729 - SnowFlakeNet - INFO - Test[4200/10518] Taxonomy = 04401088 Sample = a3c1c9fc390b1bbbb099170e6f5a4af9 Losses = ['74.0648', '176.4439', '14.2119', '9.8836'] Metrics = ['0.3887', '14.2119', '9.8836', '0.0000'] InferenceTime = 0.0057
+2025-07-27 22:16:52,428 - SnowFlakeNet - INFO - Test[4400/10518] Taxonomy = 04256520 Sample = 54506969a60017ac8f0a57a8b9390a Losses = ['39.7163', '29.7793', '14.2383', '6.6425'] Metrics = ['0.4762', '14.2383', '6.6425', '0.0000'] InferenceTime = 0.0051
+2025-07-27 22:19:23,312 - SnowFlakeNet - INFO - Test[4600/10518] Taxonomy = 04074963 Sample = d9ca2dcaf1d9d850dc605801df3f66ec Losses = ['61.7481', '107.5863', '18.0632', '9.9333'] Metrics = ['0.3433', '18.0632', '9.9333', '0.0000'] InferenceTime = 0.0052
+2025-07-27 22:22:02,159 - SnowFlakeNet - INFO - Test[4800/10518] Taxonomy = 04379243 Sample = ead93856b735ec90f0aeabfdcb4e1dd9 Losses = ['35.9156', '35.6974', '11.3533', '6.3365'] Metrics = ['0.5639', '11.3533', '6.3365', '0.0000'] InferenceTime = 0.0051
+2025-07-27 22:24:33,476 - SnowFlakeNet - INFO - Test[5000/10518] Taxonomy = 03790512 Sample = 242d8c07fabbdabc78fe949fc1419876 Losses = ['42.5313', '47.7068', '18.8449', '8.9800'] Metrics = ['0.2078', '18.8449', '8.9800', '0.0000'] InferenceTime = 0.0048
+2025-07-27 22:26:58,860 - SnowFlakeNet - INFO - Test[5200/10518] Taxonomy = 02691156 Sample = 7b6f528acc10d3fbcf5b9c6e0c7ce895 Losses = ['39.3013', '90.0766', '13.7243', '12.4891'] Metrics = ['0.5041', '13.7243', '12.4891', '0.0000'] InferenceTime = 0.0061
+2025-07-27 22:29:30,360 - SnowFlakeNet - INFO - Test[5400/10518] Taxonomy = 04379243 Sample = 6765d83445c2338555f46d55537192b6 Losses = ['47.7000', '102.5414', '17.7042', '11.6605'] Metrics = ['0.3692', '17.7042', '11.6605', '0.0000'] InferenceTime = 0.0052
+2025-07-27 22:32:02,619 - SnowFlakeNet - INFO - Test[5600/10518] Taxonomy = 03001627 Sample = 33dc06a8e0933b1efc385a284336f217 Losses = ['42.8039', '22.0109', '19.1262', '5.3978'] Metrics = ['0.2582', '19.1262', '5.3978', '0.0000'] InferenceTime = 0.0053
+2025-07-27 22:34:42,127 - SnowFlakeNet - INFO - Test[5800/10518] Taxonomy = 02992529 Sample = 4a81237a7fc743763992b1138bb05b3c Losses = ['76.1432', '199.4935', '13.3378', '13.0619'] Metrics = ['0.5413', '13.3378', '13.0619', '0.0000'] InferenceTime = 0.0053
+2025-07-27 22:37:18,290 - SnowFlakeNet - INFO - Test[6000/10518] Taxonomy = 02958343 Sample = 37249c6f16b203de2e877e82c90c24d Losses = ['58.4777', '85.3057', '19.7613', '11.8049'] Metrics = ['0.3112', '19.7613', '11.8049', '0.0000'] InferenceTime = 0.0050
+2025-07-27 22:39:54,301 - SnowFlakeNet - INFO - Test[6200/10518] Taxonomy = 02933112 Sample = 956c437be87a2be5f51f77a6d7299806 Losses = ['43.4604', '44.3706', '14.8312', '7.8311'] Metrics = ['0.4075', '14.8312', '7.8311', '0.0000'] InferenceTime = 0.0055
+2025-07-27 22:42:53,396 - SnowFlakeNet - INFO - Test[6400/10518] Taxonomy = 03691459 Sample = 9d62c46fc3fd343d1f9f3ce366e030fb Losses = ['84.0441', '141.5260', '23.5831', '10.8299'] Metrics = ['0.3030', '23.5831', '10.8299', '0.0000'] InferenceTime = 0.0053
+2025-07-27 22:45:57,535 - SnowFlakeNet - INFO - Test[6600/10518] Taxonomy = 04379243 Sample = 7a8399fc51d83969a8b1d0fdee586dc9 Losses = ['28.9147', '19.5981', '11.2183', '4.0828'] Metrics = ['0.4269', '11.2183', '4.0828', '0.0000'] InferenceTime = 0.0053
+2025-07-27 22:48:54,877 - SnowFlakeNet - INFO - Test[6800/10518] Taxonomy = 03001627 Sample = 78abbfe9ab73729f56d13e757b0dc374 Losses = ['36.0843', '42.1884', '14.6477', '8.1883'] Metrics = ['0.5003', '14.6477', '8.1883', '0.0000'] InferenceTime = 0.0054
+2025-07-27 22:51:54,004 - SnowFlakeNet - INFO - Test[7000/10518] Taxonomy = 04379243 Sample = 264a075e293394a843638dabe1eb5336 Losses = ['31.7118', '19.6590', '13.5712', '3.4484'] Metrics = ['0.3544', '13.5712', '3.4484', '0.0000'] InferenceTime = 0.0053
+2025-07-27 22:54:53,514 - SnowFlakeNet - INFO - Test[7200/10518] Taxonomy = 03211117 Sample = 96f01698d0446641ea6e0950aa8ac31b Losses = ['57.8668', '91.1270', '21.1497', '10.6744'] Metrics = ['0.3900', '21.1497', '10.6744', '0.0000'] InferenceTime = 0.0052
+2025-07-27 22:57:53,719 - SnowFlakeNet - INFO - Test[7400/10518] Taxonomy = 03001627 Sample = b2239339005b14c8d675cc466d0d6fbc Losses = ['39.4971', '44.9268', '15.1715', '6.9495'] Metrics = ['0.3688', '15.1715', '6.9495', '0.0000'] InferenceTime = 0.0052
+2025-07-27 23:00:57,748 - SnowFlakeNet - INFO - Test[7600/10518] Taxonomy = 04074963 Sample = 57759e351ec76d86d3c1501c166e6b2a Losses = ['55.9297', '121.7260', '14.6150', '8.7594'] Metrics = ['0.4349', '14.6150', '8.7594', '0.0000'] InferenceTime = 0.0052
+2025-07-27 23:04:05,192 - SnowFlakeNet - INFO - Test[7800/10518] Taxonomy = 04090263 Sample = 41a9912bfe0dc96239169e4b52d9f093 Losses = ['29.9510', '39.3080', '11.9572', '8.3315'] Metrics = ['0.6394', '11.9572', '8.3315', '0.0000'] InferenceTime = 0.0051
+2025-07-27 23:07:08,550 - SnowFlakeNet - INFO - Test[8000/10518] Taxonomy = 04379243 Sample = bcbc5e30e12a58f07ea323bc74055b8 Losses = ['33.1412', '48.7213', '12.0263', '6.5640'] Metrics = ['0.3821', '12.0263', '6.5640', '0.0000'] InferenceTime = 0.0051
+2025-07-27 23:10:13,581 - SnowFlakeNet - INFO - Test[8200/10518] Taxonomy = 04379243 Sample = aabcb5d610e76ff19ca02c396af0c503 Losses = ['40.7242', '53.1136', '15.1110', '7.1296'] Metrics = ['0.4429', '15.1110', '7.1296', '0.0000'] InferenceTime = 0.0051
+2025-07-27 23:13:17,662 - SnowFlakeNet - INFO - Test[8400/10518] Taxonomy = 04379243 Sample = dd2c3ff28a34556a47839bae1bc65257 Losses = ['27.9261', '20.7777', '11.8089', '4.1035'] Metrics = ['0.4903', '11.8089', '4.1035', '0.0000'] InferenceTime = 0.0052
+2025-07-27 23:16:08,897 - SnowFlakeNet - INFO - Test[8600/10518] Taxonomy = 03337140 Sample = 149a105979cad722c1467c54b9e09ce5 Losses = ['61.6035', '87.9681', '20.0851', '9.6131'] Metrics = ['0.2953', '20.0851', '9.6131', '0.0000'] InferenceTime = 0.0051
+2025-07-27 23:18:35,426 - SnowFlakeNet - INFO - Test[8800/10518] Taxonomy = 02691156 Sample = 4044d5954ef85af8279326882e8430cb Losses = ['62.3879', '169.1320', '15.7092', '13.4545'] Metrics = ['0.5241', '15.7092', '13.4545', '0.0000'] InferenceTime = 0.0054
+2025-07-27 23:20:53,682 - SnowFlakeNet - INFO - Test[9000/10518] Taxonomy = 02828884 Sample = 4e512ab638542762d4d8765e3910f617 Losses = ['28.4256', '24.4349', '11.7160', '4.0831'] Metrics = ['0.4864', '11.7160', '4.0831', '0.0000'] InferenceTime = 0.0050
+2025-07-27 23:23:14,085 - SnowFlakeNet - INFO - Test[9200/10518] Taxonomy = 04379243 Sample = 5247e4e978399f1b486040c0d9e85846 Losses = ['30.7677', '26.2825', '12.0122', '5.5288'] Metrics = ['0.5499', '12.0122', '5.5288', '0.0000'] InferenceTime = 0.0048
+2025-07-27 23:25:38,128 - SnowFlakeNet - INFO - Test[9400/10518] Taxonomy = 03636649 Sample = 7ec821d5d8bd9f17d4aea4231844b26b Losses = ['15.8631', '4.3508', '7.9048', '2.1447'] Metrics = ['0.7244', '7.9048', '2.1447', '0.0000'] InferenceTime = 0.0048
+2025-07-27 23:28:03,607 - SnowFlakeNet - INFO - Test[9600/10518] Taxonomy = 04090263 Sample = 3cb82befc3290e36b58435942a1b4dac Losses = ['17.8429', '14.3516', '7.0434', '3.8044'] Metrics = ['0.8418', '7.0434', '3.8044', '0.0000'] InferenceTime = 0.0045
+2025-07-27 23:30:18,610 - SnowFlakeNet - INFO - Test[9800/10518] Taxonomy = 04379243 Sample = 6358336cbeedb9232d9fe390e23fd20f Losses = ['36.1551', '40.8419', '12.9835', '6.4598'] Metrics = ['0.4381', '12.9835', '6.4598', '0.0000'] InferenceTime = 0.0048
+2025-07-27 23:32:44,832 - SnowFlakeNet - INFO - Test[10000/10518] Taxonomy = 04401088 Sample = f73493b7c8a78000b594bbf2c494ab81 Losses = ['42.2884', '33.0318', '18.6884', '10.3871'] Metrics = ['0.3285', '18.6884', '10.3871', '0.0000'] InferenceTime = 0.0047
+2025-07-27 23:34:58,674 - SnowFlakeNet - INFO - Test[10200/10518] Taxonomy = 03001627 Sample = 3ffd794e5100258483bc207d8a5912e3 Losses = ['32.7544', '27.2028', '10.8300', '4.8264'] Metrics = ['0.4956', '10.8300', '4.8264', '0.0000'] InferenceTime = 0.0047
+2025-07-27 23:37:22,434 - SnowFlakeNet - INFO - Test[10400/10518] Taxonomy = 04090263 Sample = 26744766d59c28fb6b2c8bb96250e4a0 Losses = ['24.0919', '41.7927', '7.8655', '5.9014'] Metrics = ['0.8076', '7.8655', '5.9014', '0.0000'] InferenceTime = 0.0047
+2025-07-27 23:38:49,185 - SnowFlakeNet - INFO - [TEST] Metrics = ['0.4028', '18.1311', '9.3705', '0.0000']
+2025-07-27 23:38:49,185 - SnowFlakeNet - INFO - [TEST] Average Inference Time: 0.0052 seconds
+2025-07-27 23:38:49,185 - SnowFlakeNet - INFO - ============================ TEST RESULTS ============================
+2025-07-27 23:38:49,185 - SnowFlakeNet - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	EMDistance	#ModelName	
+2025-07-27 23:38:49,185 - SnowFlakeNet - INFO - 03759954	112	0.577 	15.532 	8.577 	0.000 	microphone	
+2025-07-27 23:38:49,185 - SnowFlakeNet - INFO - 04330267	352	0.336 	19.902 	8.142 	0.000 	stove	
+2025-07-27 23:38:49,185 - SnowFlakeNet - INFO - 03261776	120	0.358 	19.927 	10.588 	0.000 	earphone	
+2025-07-27 23:38:49,185 - SnowFlakeNet - INFO - 03513137	264	0.256 	28.091 	15.720 	0.000 	helmet	
+2025-07-27 23:38:49,185 - SnowFlakeNet - INFO - 04460130	216	0.445 	17.009 	8.056 	0.000 	tower	
+2025-07-27 23:38:49,186 - SnowFlakeNet - INFO - 04468005	624	0.385 	15.865 	6.444 	0.000 	train	
+2025-07-27 23:38:49,186 - SnowFlakeNet - INFO - 03761084	248	0.310 	20.685 	9.427 	0.000 	microwaves	
+2025-07-27 23:38:49,186 - SnowFlakeNet - INFO - 04004475	272	0.314 	22.214 	9.493 	0.000 	printer	
+2025-07-27 23:38:49,186 - SnowFlakeNet - INFO - 03938244	160	0.349 	21.324 	12.730 	0.000 	pillow	
+2025-07-27 23:38:49,186 - SnowFlakeNet - INFO - 02992529	1336	0.473 	14.372 	9.482 	0.000 	cellphone	
+2025-07-27 23:38:49,186 - SnowFlakeNet - INFO - 02808440	1376	0.336 	20.314 	9.579 	0.000 	bathtub	
+2025-07-27 23:38:49,186 - SnowFlakeNet - INFO - 04530566	3104	0.471 	14.412 	6.759 	0.000 	watercraft	
+2025-07-27 23:38:49,186 - SnowFlakeNet - INFO - 02871439	728	0.318 	18.838 	7.090 	0.000 	bookshelf	
+2025-07-27 23:38:49,186 - SnowFlakeNet - INFO - 03593526	960	0.307 	22.871 	12.705 	0.000 	jar	
+2025-07-27 23:38:49,186 - SnowFlakeNet - INFO - 04554684	272	0.308 	22.891 	9.771 	0.000 	washer	
+2025-07-27 23:38:49,186 - SnowFlakeNet - INFO - 03467517	1280	0.845 	7.669 	5.658 	0.000 	guitar	
+2025-07-27 23:38:49,186 - SnowFlakeNet - INFO - 04401088	1744	0.476 	14.360 	9.996 	0.000 	telephone	
+2025-07-27 23:38:49,186 - SnowFlakeNet - INFO - 02954340	96	0.358 	20.498 	14.859 	0.000 	cap	
+2025-07-27 23:38:49,186 - SnowFlakeNet - INFO - 02933112	2520	0.313 	18.598 	7.381 	0.000 	cabinet	
+2025-07-27 23:38:49,186 - SnowFlakeNet - INFO - 03642806	736	0.411 	14.554 	8.087 	0.000 	laptop	
+2025-07-27 23:38:49,186 - SnowFlakeNet - INFO - 02924116	1504	0.407 	16.258 	7.399 	0.000 	bus	
+2025-07-27 23:38:49,186 - SnowFlakeNet - INFO - 02946921	176	0.302 	21.420 	12.511 	0.000 	can	
+2025-07-27 23:38:49,187 - SnowFlakeNet - INFO - 02818832	376	0.299 	20.813 	7.349 	0.000 	bed	
+2025-07-27 23:38:49,187 - SnowFlakeNet - INFO - 04256520	5080	0.322 	18.898 	8.036 	0.000 	sofa	
+2025-07-27 23:38:49,187 - SnowFlakeNet - INFO - 04379243	13496	0.406 	16.629 	8.478 	0.000 	table	
+2025-07-27 23:38:49,187 - SnowFlakeNet - INFO - 02747177	552	0.250 	22.641 	9.538 	0.000 	trash bin	
+2025-07-27 23:38:49,187 - SnowFlakeNet - INFO - 03046257	1048	0.355 	22.324 	17.773 	0.000 	clock	
+2025-07-27 23:38:49,187 - SnowFlakeNet - INFO - 04225987	248	0.543 	12.904 	8.820 	0.000 	skateboard	
+2025-07-27 23:38:49,187 - SnowFlakeNet - INFO - 03797390	344	0.246 	23.658 	10.606 	0.000 	mug	
+2025-07-27 23:38:49,187 - SnowFlakeNet - INFO - 03001627	10848	0.376 	17.227 	7.509 	0.000 	chair	
+2025-07-27 23:38:49,187 - SnowFlakeNet - INFO - 03691459	2560	0.322 	21.522 	9.761 	0.000 	loudspeaker	
+2025-07-27 23:38:49,187 - SnowFlakeNet - INFO - 02942699	184	0.287 	23.907 	9.854 	0.000 	camera	
+2025-07-27 23:38:49,187 - SnowFlakeNet - INFO - 03636649	3712	0.529 	16.291 	8.473 	0.000 	lamp	
+2025-07-27 23:38:49,187 - SnowFlakeNet - INFO - 02691156	6472	0.556 	13.326 	10.990 	0.000 	airplane	
+2025-07-27 23:38:49,187 - SnowFlakeNet - INFO - 02773838	136	0.397 	18.753 	9.489 	0.000 	bag	
+2025-07-27 23:38:49,187 - SnowFlakeNet - INFO - 02958343	5624	0.277 	18.703 	7.280 	0.000 	car	
+2025-07-27 23:38:49,187 - SnowFlakeNet - INFO - 02880940	304	0.258 	27.853 	23.139 	0.000 	bowl	
+2025-07-27 23:38:49,187 - SnowFlakeNet - INFO - 04099429	136	0.674 	10.837 	6.166 	0.000 	rocket	
+2025-07-27 23:38:49,188 - SnowFlakeNet - INFO - 02828884	2904	0.437 	14.686 	7.060 	0.000 	bench	
+2025-07-27 23:38:49,188 - SnowFlakeNet - INFO - 04090263	3800	0.715 	9.327 	5.777 	0.000 	rifle	
+2025-07-27 23:38:49,188 - SnowFlakeNet - INFO - 03211117	1752	0.390 	17.481 	9.148 	0.000 	display	
+2025-07-27 23:38:49,188 - SnowFlakeNet - INFO - 02876657	800	0.480 	15.387 	9.129 	0.000 	bottle	
+2025-07-27 23:38:49,188 - SnowFlakeNet - INFO - 03710193	152	0.566 	14.103 	7.234 	0.000 	mailbox	
+2025-07-27 23:38:49,188 - SnowFlakeNet - INFO - 03790512	544	0.281 	17.144 	6.621 	0.000 	motorbike	
+2025-07-27 23:38:49,188 - SnowFlakeNet - INFO - 03325088	1192	0.475 	16.359 	8.796 	0.000 	faucet	
+2025-07-27 23:38:49,188 - SnowFlakeNet - INFO - 02801938	184	0.283 	22.173 	11.798 	0.000 	basket	
+2025-07-27 23:38:49,188 - SnowFlakeNet - INFO - 03337140	480	0.308 	19.138 	7.347 	0.000 	file cabinet	
+2025-07-27 23:38:49,188 - SnowFlakeNet - INFO - 02843684	120	0.282 	24.393 	9.218 	0.000 	birdhouse	
+2025-07-27 23:38:49,188 - SnowFlakeNet - INFO - 03624134	680	0.807 	8.588 	7.711 	0.000 	knife	
+2025-07-27 23:38:49,188 - SnowFlakeNet - INFO - 03991062	968	0.255 	25.076 	11.759 	0.000 	flowerpot	
+2025-07-27 23:38:49,188 - SnowFlakeNet - INFO - 03948459	496	0.512 	12.672 	6.185 	0.000 	pistol	
+2025-07-27 23:38:49,188 - SnowFlakeNet - INFO - 03928116	384	0.322 	19.978 	8.231 	0.000 	piano	
+2025-07-27 23:38:49,188 - SnowFlakeNet - INFO - 03207941	152	0.317 	19.342 	8.908 	0.000 	dishwasher	
+2025-07-27 23:38:49,188 - SnowFlakeNet - INFO - 04074963	112	0.512 	14.030 	9.671 	0.000 	remote	
+2025-07-27 23:38:49,188 - SnowFlakeNet - INFO - 03085013	104	0.462 	13.441 	7.073 	0.000 	keyboard	
+2025-07-27 23:38:49,188 - SnowFlakeNet - INFO - Overall 		0.403 	18.131 	9.371 	0.000 	

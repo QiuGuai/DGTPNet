@@ -1,0 +1,184 @@
+2025-11-11 15:54:18,903 - GRNet - INFO - Copy the Config file from ./cfgs/ShapeNet55_models/GRNet.yaml to ./experiments/GRNet/ShapeNet55_models/test_fog_easy/config.yaml
+2025-11-11 15:54:18,903 - GRNet - INFO - args.config : ./cfgs/ShapeNet55_models/GRNet.yaml
+2025-11-11 15:54:18,903 - GRNet - INFO - args.launcher : none
+2025-11-11 15:54:18,903 - GRNet - INFO - args.local_rank : 0
+2025-11-11 15:54:18,903 - GRNet - INFO - args.num_workers : 4
+2025-11-11 15:54:18,903 - GRNet - INFO - args.seed : 0
+2025-11-11 15:54:18,903 - GRNet - INFO - args.deterministic : False
+2025-11-11 15:54:18,903 - GRNet - INFO - args.sync_bn : False
+2025-11-11 15:54:18,903 - GRNet - INFO - args.exp_name : test_fog_easy
+2025-11-11 15:54:18,903 - GRNet - INFO - args.start_ckpts : None
+2025-11-11 15:54:18,903 - GRNet - INFO - args.ckpts : ./pretrained/fog/GRNet1.pth
+2025-11-11 15:54:18,903 - GRNet - INFO - args.val_freq : 1
+2025-11-11 15:54:18,903 - GRNet - INFO - args.resume : False
+2025-11-11 15:54:18,903 - GRNet - INFO - args.test : True
+2025-11-11 15:54:18,903 - GRNet - INFO - args.mode : easy
+2025-11-11 15:54:18,903 - GRNet - INFO - args.pcd_path : None
+2025-11-11 15:54:18,903 - GRNet - INFO - args.output_dir : None
+2025-11-11 15:54:18,903 - GRNet - INFO - args.experiment_path : ./experiments/GRNet/ShapeNet55_models/test_fog_easy
+2025-11-11 15:54:18,903 - GRNet - INFO - args.tfboard_path : ./experiments/GRNet/ShapeNet55_models/TFBoard/test_fog_easy
+2025-11-11 15:54:18,903 - GRNet - INFO - args.log_name : GRNet
+2025-11-11 15:54:18,903 - GRNet - INFO - args.use_gpu : True
+2025-11-11 15:54:18,903 - GRNet - INFO - args.distributed : False
+2025-11-11 15:54:18,903 - GRNet - INFO - config.optimizer = edict()
+2025-11-11 15:54:18,903 - GRNet - INFO - config.optimizer.type : Adam
+2025-11-11 15:54:18,903 - GRNet - INFO - config.optimizer.kwargs = edict()
+2025-11-11 15:54:18,903 - GRNet - INFO - config.optimizer.kwargs.lr : 0.0001
+2025-11-11 15:54:18,903 - GRNet - INFO - config.optimizer.kwargs.weight_decay : 0
+2025-11-11 15:54:18,903 - GRNet - INFO - config.scheduler = edict()
+2025-11-11 15:54:18,903 - GRNet - INFO - config.scheduler.type : StepLR
+2025-11-11 15:54:18,903 - GRNet - INFO - config.scheduler.kwargs = edict()
+2025-11-11 15:54:18,903 - GRNet - INFO - config.scheduler.kwargs.step_size : 50
+2025-11-11 15:54:18,903 - GRNet - INFO - config.scheduler.kwargs.gamma : 0.5
+2025-11-11 15:54:18,903 - GRNet - INFO - config.dataset = edict()
+2025-11-11 15:54:18,903 - GRNet - INFO - config.dataset.train = edict()
+2025-11-11 15:54:18,903 - GRNet - INFO - config.dataset.train._base_ = edict()
+2025-11-11 15:54:18,903 - GRNet - INFO - config.dataset.train._base_.NAME : ShapeNet
+2025-11-11 15:54:18,903 - GRNet - INFO - config.dataset.train._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2025-11-11 15:54:18,903 - GRNet - INFO - config.dataset.train._base_.N_POINTS : 8192
+2025-11-11 15:54:18,903 - GRNet - INFO - config.dataset.train._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2025-11-11 15:54:18,903 - GRNet - INFO - config.dataset.train.others = edict()
+2025-11-11 15:54:18,903 - GRNet - INFO - config.dataset.train.others.subset : train
+2025-11-11 15:54:18,903 - GRNet - INFO - config.dataset.train.others.bs : 2
+2025-11-11 15:54:18,903 - GRNet - INFO - config.dataset.val = edict()
+2025-11-11 15:54:18,903 - GRNet - INFO - config.dataset.val._base_ = edict()
+2025-11-11 15:54:18,903 - GRNet - INFO - config.dataset.val._base_.NAME : ShapeNet
+2025-11-11 15:54:18,903 - GRNet - INFO - config.dataset.val._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2025-11-11 15:54:18,903 - GRNet - INFO - config.dataset.val._base_.N_POINTS : 8192
+2025-11-11 15:54:18,903 - GRNet - INFO - config.dataset.val._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2025-11-11 15:54:18,903 - GRNet - INFO - config.dataset.val.others = edict()
+2025-11-11 15:54:18,903 - GRNet - INFO - config.dataset.val.others.subset : test
+2025-11-11 15:54:18,903 - GRNet - INFO - config.dataset.test = edict()
+2025-11-11 15:54:18,903 - GRNet - INFO - config.dataset.test._base_ = edict()
+2025-11-11 15:54:18,903 - GRNet - INFO - config.dataset.test._base_.NAME : ShapeNet
+2025-11-11 15:54:18,903 - GRNet - INFO - config.dataset.test._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2025-11-11 15:54:18,903 - GRNet - INFO - config.dataset.test._base_.N_POINTS : 8192
+2025-11-11 15:54:18,903 - GRNet - INFO - config.dataset.test._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2025-11-11 15:54:18,904 - GRNet - INFO - config.dataset.test.others = edict()
+2025-11-11 15:54:18,904 - GRNet - INFO - config.dataset.test.others.subset : test
+2025-11-11 15:54:18,904 - GRNet - INFO - config.model = edict()
+2025-11-11 15:54:18,904 - GRNet - INFO - config.model.NAME : GRNet
+2025-11-11 15:54:18,904 - GRNet - INFO - config.model.num_pred : 8192
+2025-11-11 15:54:18,904 - GRNet - INFO - config.model.gridding_loss_scales : 128
+2025-11-11 15:54:18,904 - GRNet - INFO - config.model.gridding_loss_alphas : 0.1
+2025-11-11 15:54:18,904 - GRNet - INFO - config.total_bs : 2
+2025-11-11 15:54:18,904 - GRNet - INFO - config.step_per_update : 16
+2025-11-11 15:54:18,904 - GRNet - INFO - config.max_epoch : 150
+2025-11-11 15:54:18,904 - GRNet - INFO - config.consider_metric : CDL2
+2025-11-11 15:54:18,904 - GRNet - INFO - Distributed training: False
+2025-11-11 15:54:18,904 - GRNet - INFO - Set random seed to 0, deterministic: False
+2025-11-11 15:54:18,904 - GRNet - INFO - Tester start ... 
+2025-11-11 15:54:18,904 - GRNet - INFO - Processing test dataset...
+2025-11-11 15:54:19,174 - GRNet - INFO - Loading weights from ./pretrained/fog/GRNet1.pth...
+2025-11-11 15:54:19,522 - GRNet - INFO - ckpts @ 149 epoch( performance = {'F-Score': 0.12187124324768939, 'CDL1': 31.91719336058306, 'CDL2': 3.848640763905222, 'EMDistance': 0.0})
+2025-11-11 15:55:53,861 - GRNet - INFO - Test[200/10518] Taxonomy = 04530566 Sample = 3bb6a5deec68ef77fee64ca302793912 Losses = ['275.1495', '590.9719', '22.2225', '1.4720'] Metrics = ['0.1571', '22.2225', '1.4720', '0.0000'] InferenceTime = 0.0000
+2025-11-11 15:57:19,209 - GRNet - INFO - Test[400/10518] Taxonomy = 03636649 Sample = 90651b3febfc3afe15226aa76eb7c3e Losses = ['198.0194', '321.0647', '29.9482', '2.8454'] Metrics = ['0.0961', '29.9482', '2.8454', '0.0000'] InferenceTime = 0.0000
+2025-11-11 15:58:33,073 - GRNet - INFO - Test[600/10518] Taxonomy = 03001627 Sample = fae27953e0f0404ca99df2794ec76201 Losses = ['317.5212', '636.4987', '23.5953', '1.5168'] Metrics = ['0.1173', '23.5953', '1.5168', '0.0000'] InferenceTime = 0.0000
+2025-11-11 15:59:49,257 - GRNet - INFO - Test[800/10518] Taxonomy = 03593526 Sample = 324c9045843b9470d29670d38a4c9e7e Losses = ['209.9462', '381.9811', '34.1142', '3.5666'] Metrics = ['0.0805', '34.1142', '3.5666', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:01:07,250 - GRNet - INFO - Test[1000/10518] Taxonomy = 02958343 Sample = 39e10c5d24fee4a6311f5d9a1681aa3b Losses = ['215.0221', '412.3421', '23.7828', '1.7014'] Metrics = ['0.1151', '23.7828', '1.7014', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:02:16,973 - GRNet - INFO - Test[1200/10518] Taxonomy = 03001627 Sample = e50f1b2d0835bb392764cfba57a5de73 Losses = ['255.3639', '503.8067', '37.5193', '4.0729'] Metrics = ['0.0488', '37.5193', '4.0729', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:03:27,012 - GRNet - INFO - Test[1400/10518] Taxonomy = 04379243 Sample = 647692d3858790a1f1783a44a88d6274 Losses = ['207.9991', '392.0532', '26.1688', '2.5976'] Metrics = ['0.1164', '26.1688', '2.5976', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:04:44,146 - GRNet - INFO - Test[1600/10518] Taxonomy = 02691156 Sample = d8d9de967255b4c562b600da24e0965 Losses = ['216.7731', '415.6123', '17.9619', '1.1348'] Metrics = ['0.2529', '17.9619', '1.1348', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:06:00,237 - GRNet - INFO - Test[1800/10518] Taxonomy = 03001627 Sample = 24c0e6a8b10abb77df2b21995cbbbc4f Losses = ['180.5421', '251.4525', '42.6202', '5.3243'] Metrics = ['0.0349', '42.6202', '5.3243', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:07:20,379 - GRNet - INFO - Test[2000/10518] Taxonomy = 04379243 Sample = 5d77e8f6ad3741a0c30ab36bf7b0552 Losses = ['264.4448', '454.7959', '26.5652', '1.9321'] Metrics = ['0.0987', '26.5652', '1.9321', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:08:35,143 - GRNet - INFO - Test[2200/10518] Taxonomy = 03636649 Sample = b64e98c991d4103170365ad078f710ff Losses = ['153.1522', '218.3171', '44.6475', '6.2729'] Metrics = ['0.0693', '44.6475', '6.2729', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:09:48,226 - GRNet - INFO - Test[2400/10518] Taxonomy = 03211117 Sample = b4386438057e85988bfba3df1f776207 Losses = ['149.9833', '214.5795', '26.8373', '2.0637'] Metrics = ['0.0919', '26.8373', '2.0637', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:11:06,225 - GRNet - INFO - Test[2600/10518] Taxonomy = 04468005 Sample = 3b8c505fd1127ed88f134472f61cf6bb Losses = ['264.1751', '548.3014', '20.1652', '1.0588'] Metrics = ['0.1522', '20.1652', '1.0588', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:12:21,975 - GRNet - INFO - Test[2800/10518] Taxonomy = 03001627 Sample = e3e76d624f1f855bcc8a9c365968620 Losses = ['265.9412', '496.5777', '26.3463', '1.9544'] Metrics = ['0.1014', '26.3463', '1.9544', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:13:36,045 - GRNet - INFO - Test[3000/10518] Taxonomy = 03001627 Sample = 40020a5e90c75d94a93412f1b60e6fba Losses = ['226.0388', '388.1250', '31.4562', '3.1867'] Metrics = ['0.1013', '31.4562', '3.1867', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:14:48,622 - GRNet - INFO - Test[3200/10518] Taxonomy = 02691156 Sample = a96c1589731b06a1efbd0f357ff7c40a Losses = ['238.8067', '488.1667', '19.1802', '1.2371'] Metrics = ['0.2445', '19.1802', '1.2371', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:16:07,081 - GRNet - INFO - Test[3400/10518] Taxonomy = 03046257 Sample = b2b40e80c9d3f530d5f1db12f95f0fe4 Losses = ['121.7863', '184.7052', '23.9057', '1.5292'] Metrics = ['0.0839', '23.9057', '1.5292', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:17:20,273 - GRNet - INFO - Test[3600/10518] Taxonomy = 02933112 Sample = c18a4772bcfbb98e85bc264270ae0601 Losses = ['280.5687', '501.2272', '29.2385', '2.3706'] Metrics = ['0.0617', '29.2385', '2.3706', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:18:36,487 - GRNet - INFO - Test[3800/10518] Taxonomy = 04530566 Sample = 215861c4bebeb328d9a75de54b023ae1 Losses = ['262.6640', '557.5580', '20.2938', '1.0958'] Metrics = ['0.1541', '20.2938', '1.0958', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:19:56,035 - GRNet - INFO - Test[4000/10518] Taxonomy = 02828884 Sample = 5f9d3dae06acf0e4e93e1127627b834 Losses = ['287.3739', '530.8629', '25.0843', '1.8942'] Metrics = ['0.1169', '25.0843', '1.8942', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:21:15,419 - GRNet - INFO - Test[4200/10518] Taxonomy = 04401088 Sample = a3c1c9fc390b1bbbb099170e6f5a4af9 Losses = ['227.2624', '406.3808', '19.4425', '0.9215'] Metrics = ['0.1461', '19.4425', '0.9215', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:22:34,558 - GRNet - INFO - Test[4400/10518] Taxonomy = 04256520 Sample = 54506969a60017ac8f0a57a8b9390a Losses = ['277.0177', '544.6299', '33.4935', '3.2261'] Metrics = ['0.0872', '33.4935', '3.2261', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:23:51,479 - GRNet - INFO - Test[4600/10518] Taxonomy = 04074963 Sample = d9ca2dcaf1d9d850dc605801df3f66ec Losses = ['250.9236', '473.9236', '31.4882', '2.5375'] Metrics = ['0.0637', '31.4881', '2.5375', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:25:13,169 - GRNet - INFO - Test[4800/10518] Taxonomy = 04379243 Sample = ead93856b735ec90f0aeabfdcb4e1dd9 Losses = ['278.8529', '512.7245', '25.8328', '1.7608'] Metrics = ['0.0646', '25.8328', '1.7608', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:26:27,666 - GRNet - INFO - Test[5000/10518] Taxonomy = 03790512 Sample = 242d8c07fabbdabc78fe949fc1419876 Losses = ['123.4242', '209.1520', '27.8888', '2.2418'] Metrics = ['0.0785', '27.8888', '2.2418', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:27:38,463 - GRNet - INFO - Test[5200/10518] Taxonomy = 02691156 Sample = 7b6f528acc10d3fbcf5b9c6e0c7ce895 Losses = ['221.0299', '443.6525', '20.0948', '1.2819'] Metrics = ['0.2097', '20.0948', '1.2819', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:28:52,092 - GRNet - INFO - Test[5400/10518] Taxonomy = 04379243 Sample = 6765d83445c2338555f46d55537192b6 Losses = ['196.8342', '272.0621', '37.0883', '6.5013'] Metrics = ['0.1169', '37.0883', '6.5013', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:30:06,950 - GRNet - INFO - Test[5600/10518] Taxonomy = 03001627 Sample = 33dc06a8e0933b1efc385a284336f217 Losses = ['268.6798', '467.4482', '36.7654', '3.6462'] Metrics = ['0.0496', '36.7654', '3.6462', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:31:28,962 - GRNet - INFO - Test[5800/10518] Taxonomy = 02992529 Sample = 4a81237a7fc743763992b1138bb05b3c Losses = ['282.7025', '559.5999', '17.1143', '0.6967'] Metrics = ['0.1634', '17.1143', '0.6967', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:32:47,563 - GRNet - INFO - Test[6000/10518] Taxonomy = 02958343 Sample = 37249c6f16b203de2e877e82c90c24d Losses = ['223.0985', '429.2220', '25.0497', '1.8994'] Metrics = ['0.1071', '25.0497', '1.8994', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:34:00,874 - GRNet - INFO - Test[6200/10518] Taxonomy = 02933112 Sample = 956c437be87a2be5f51f77a6d7299806 Losses = ['270.8642', '467.9416', '29.0987', '2.5036'] Metrics = ['0.0810', '29.0987', '2.5036', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:35:12,124 - GRNet - INFO - Test[6400/10518] Taxonomy = 03691459 Sample = 9d62c46fc3fd343d1f9f3ce366e030fb Losses = ['257.2392', '398.4074', '34.3132', '4.6090'] Metrics = ['0.0605', '34.3132', '4.6090', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:36:29,606 - GRNet - INFO - Test[6600/10518] Taxonomy = 04379243 Sample = 7a8399fc51d83969a8b1d0fdee586dc9 Losses = ['226.9836', '362.0023', '26.9609', '3.1031'] Metrics = ['0.1436', '26.9609', '3.1031', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:37:39,833 - GRNet - INFO - Test[6800/10518] Taxonomy = 03001627 Sample = 78abbfe9ab73729f56d13e757b0dc374 Losses = ['234.0041', '437.3282', '40.5970', '6.0366'] Metrics = ['0.0582', '40.5970', '6.0366', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:38:50,649 - GRNet - INFO - Test[7000/10518] Taxonomy = 04379243 Sample = 264a075e293394a843638dabe1eb5336 Losses = ['242.5456', '402.8789', '22.5382', '1.5582'] Metrics = ['0.1342', '22.5382', '1.5582', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:39:55,526 - GRNet - INFO - Test[7200/10518] Taxonomy = 03211117 Sample = 96f01698d0446641ea6e0950aa8ac31b Losses = ['222.2862', '333.8286', '41.0396', '4.2896'] Metrics = ['0.0313', '41.0396', '4.2896', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:41:02,724 - GRNet - INFO - Test[7400/10518] Taxonomy = 03001627 Sample = b2239339005b14c8d675cc466d0d6fbc Losses = ['318.2659', '633.6954', '25.3876', '1.8384'] Metrics = ['0.1091', '25.3876', '1.8384', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:42:12,881 - GRNet - INFO - Test[7600/10518] Taxonomy = 04074963 Sample = 57759e351ec76d86d3c1501c166e6b2a Losses = ['253.3435', '511.4302', '21.2889', '1.1485'] Metrics = ['0.1195', '21.2889', '1.1485', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:43:26,345 - GRNet - INFO - Test[7800/10518] Taxonomy = 04090263 Sample = 41a9912bfe0dc96239169e4b52d9f093 Losses = ['181.6230', '325.9952', '24.0728', '2.9252'] Metrics = ['0.2894', '24.0728', '2.9252', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:44:34,728 - GRNet - INFO - Test[8000/10518] Taxonomy = 04379243 Sample = bcbc5e30e12a58f07ea323bc74055b8 Losses = ['222.5737', '364.7882', '20.8262', '1.2949'] Metrics = ['0.1640', '20.8262', '1.2949', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:45:45,041 - GRNet - INFO - Test[8200/10518] Taxonomy = 04379243 Sample = aabcb5d610e76ff19ca02c396af0c503 Losses = ['208.8293', '313.5521', '34.8806', '5.5655'] Metrics = ['0.1175', '34.8806', '5.5655', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:46:54,855 - GRNet - INFO - Test[8400/10518] Taxonomy = 04379243 Sample = dd2c3ff28a34556a47839bae1bc65257 Losses = ['261.6999', '502.9014', '20.7839', '1.6401'] Metrics = ['0.2048', '20.7839', '1.6401', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:48:02,561 - GRNet - INFO - Test[8600/10518] Taxonomy = 03337140 Sample = 149a105979cad722c1467c54b9e09ce5 Losses = ['225.6600', '331.3442', '38.6469', '5.3024'] Metrics = ['0.0540', '38.6469', '5.3024', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:49:06,426 - GRNet - INFO - Test[8800/10518] Taxonomy = 02691156 Sample = 4044d5954ef85af8279326882e8430cb Losses = ['201.1549', '372.6490', '33.0123', '3.4802'] Metrics = ['0.0914', '33.0123', '3.4802', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:50:08,573 - GRNet - INFO - Test[9000/10518] Taxonomy = 02828884 Sample = 4e512ab638542762d4d8765e3910f617 Losses = ['303.2425', '600.4198', '19.2711', '1.0975'] Metrics = ['0.1987', '19.2711', '1.0975', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:51:13,775 - GRNet - INFO - Test[9200/10518] Taxonomy = 04379243 Sample = 5247e4e978399f1b486040c0d9e85846 Losses = ['201.3321', '342.7696', '50.6160', '13.2042'] Metrics = ['0.0982', '50.6160', '13.2042', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:52:22,002 - GRNet - INFO - Test[9400/10518] Taxonomy = 03636649 Sample = 7ec821d5d8bd9f17d4aea4231844b26b Losses = ['346.0781', '879.3406', '17.4637', '1.0992'] Metrics = ['0.3419', '17.4637', '1.0992', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:53:24,781 - GRNet - INFO - Test[9600/10518] Taxonomy = 04090263 Sample = 3cb82befc3290e36b58435942a1b4dac Losses = ['248.9675', '602.7502', '10.1702', '0.3276'] Metrics = ['0.6211', '10.1702', '0.3276', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:54:23,627 - GRNet - INFO - Test[9800/10518] Taxonomy = 04379243 Sample = 6358336cbeedb9232d9fe390e23fd20f Losses = ['296.4463', '551.6413', '21.5908', '1.3236'] Metrics = ['0.1621', '21.5908', '1.3236', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:55:33,300 - GRNet - INFO - Test[10000/10518] Taxonomy = 04401088 Sample = f73493b7c8a78000b594bbf2c494ab81 Losses = ['162.4896', '269.2099', '35.0305', '4.4112'] Metrics = ['0.0736', '35.0305', '4.4112', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:56:31,352 - GRNet - INFO - Test[10200/10518] Taxonomy = 03001627 Sample = 3ffd794e5100258483bc207d8a5912e3 Losses = ['311.8700', '613.7322', '22.1709', '1.2842'] Metrics = ['0.1181', '22.1709', '1.2842', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:57:37,754 - GRNet - INFO - Test[10400/10518] Taxonomy = 04090263 Sample = 26744766d59c28fb6b2c8bb96250e4a0 Losses = ['238.4648', '544.1549', '11.5866', '0.4181'] Metrics = ['0.4899', '11.5866', '0.4181', '0.0000'] InferenceTime = 0.0000
+2025-11-11 16:58:19,514 - GRNet - INFO - [TEST] Metrics = ['0.1287', '30.5736', '3.4800', '0.0000']
+2025-11-11 16:58:19,515 - GRNet - INFO - ============================ TEST RESULTS ============================
+2025-11-11 16:58:19,515 - GRNet - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	EMDistance	#ModelName	
+2025-11-11 16:58:19,515 - GRNet - INFO - 03759954	112	0.186 	35.163 	6.097 	0.000 	microphone	
+2025-11-11 16:58:19,515 - GRNet - INFO - 04330267	352	0.082 	34.328 	4.033 	0.000 	stove	
+2025-11-11 16:58:19,515 - GRNet - INFO - 03261776	120	0.111 	34.555 	4.750 	0.000 	earphone	
+2025-11-11 16:58:19,515 - GRNet - INFO - 03513137	264	0.048 	46.489 	7.818 	0.000 	helmet	
+2025-11-11 16:58:19,515 - GRNet - INFO - 04460130	216	0.134 	31.922 	3.775 	0.000 	tower	
+2025-11-11 16:58:19,515 - GRNet - INFO - 04468005	624	0.152 	24.779 	2.094 	0.000 	train	
+2025-11-11 16:58:19,515 - GRNet - INFO - 03761084	248	0.062 	33.787 	3.543 	0.000 	microwaves	
+2025-11-11 16:58:19,515 - GRNet - INFO - 04004475	272	0.064 	40.412 	5.792 	0.000 	printer	
+2025-11-11 16:58:19,515 - GRNet - INFO - 03938244	160	0.066 	36.963 	4.240 	0.000 	pillow	
+2025-11-11 16:58:19,515 - GRNet - INFO - 02992529	1336	0.160 	21.225 	1.313 	0.000 	cellphone	
+2025-11-11 16:58:19,515 - GRNet - INFO - 02808440	1376	0.082 	33.096 	3.715 	0.000 	bathtub	
+2025-11-11 16:58:19,515 - GRNet - INFO - 04530566	3104	0.165 	25.217 	2.223 	0.000 	watercraft	
+2025-11-11 16:58:19,515 - GRNet - INFO - 02871439	728	0.088 	32.534 	3.577 	0.000 	bookshelf	
+2025-11-11 16:58:19,515 - GRNet - INFO - 03593526	960	0.066 	38.531 	5.119 	0.000 	jar	
+2025-11-11 16:58:19,516 - GRNet - INFO - 04554684	272	0.065 	34.460 	3.929 	0.000 	washer	
+2025-11-11 16:58:19,516 - GRNet - INFO - 03467517	1280	0.463 	13.508 	0.631 	0.000 	guitar	
+2025-11-11 16:58:19,516 - GRNet - INFO - 04401088	1744	0.162 	21.045 	1.342 	0.000 	telephone	
+2025-11-11 16:58:19,516 - GRNet - INFO - 02954340	96	0.078 	31.600 	3.297 	0.000 	cap	
+2025-11-11 16:58:19,516 - GRNet - INFO - 02933112	2520	0.085 	28.977 	2.530 	0.000 	cabinet	
+2025-11-11 16:58:19,516 - GRNet - INFO - 03642806	736	0.138 	22.152 	1.477 	0.000 	laptop	
+2025-11-11 16:58:19,516 - GRNet - INFO - 02924116	1504	0.138 	24.073 	1.782 	0.000 	bus	
+2025-11-11 16:58:19,516 - GRNet - INFO - 02946921	176	0.059 	35.624 	4.284 	0.000 	can	
+2025-11-11 16:58:19,516 - GRNet - INFO - 02818832	376	0.073 	37.768 	4.975 	0.000 	bed	
+2025-11-11 16:58:19,516 - GRNet - INFO - 04256520	5080	0.080 	30.679 	2.826 	0.000 	sofa	
+2025-11-11 16:58:19,516 - GRNet - INFO - 04379243	13496	0.148 	27.556 	3.130 	0.000 	table	
+2025-11-11 16:58:19,516 - GRNet - INFO - 02747177	552	0.053 	34.458 	3.717 	0.000 	trash bin	
+2025-11-11 16:58:19,516 - GRNet - INFO - 03046257	1048	0.093 	32.978 	4.037 	0.000 	clock	
+2025-11-11 16:58:19,516 - GRNet - INFO - 04225987	248	0.227 	20.677 	1.478 	0.000 	skateboard	
+2025-11-11 16:58:19,516 - GRNet - INFO - 03797390	344	0.050 	36.470 	4.420 	0.000 	mug	
+2025-11-11 16:58:19,516 - GRNet - INFO - 03001627	10848	0.115 	30.548 	3.266 	0.000 	chair	
+2025-11-11 16:58:19,516 - GRNet - INFO - 03691459	2560	0.072 	35.735 	4.350 	0.000 	loudspeaker	
+2025-11-11 16:58:19,516 - GRNet - INFO - 02942699	184	0.058 	46.013 	8.093 	0.000 	camera	
+2025-11-11 16:58:19,517 - GRNet - INFO - 03636649	3712	0.151 	36.846 	6.052 	0.000 	lamp	
+2025-11-11 16:58:19,517 - GRNet - INFO - 02691156	6472	0.231 	20.026 	1.388 	0.000 	airplane	
+2025-11-11 16:58:19,517 - GRNet - INFO - 02773838	136	0.088 	36.236 	4.634 	0.000 	bag	
+2025-11-11 16:58:19,517 - GRNet - INFO - 02958343	5624	0.088 	26.676 	2.023 	0.000 	car	
+2025-11-11 16:58:19,517 - GRNet - INFO - 02880940	304	0.054 	37.389 	4.613 	0.000 	bowl	
+2025-11-11 16:58:19,517 - GRNet - INFO - 04099429	136	0.300 	20.385 	1.594 	0.000 	rocket	
+2025-11-11 16:58:19,517 - GRNet - INFO - 02828884	2904	0.165 	25.235 	2.425 	0.000 	bench	
+2025-11-11 16:58:19,517 - GRNet - INFO - 04090263	3800	0.377 	16.216 	1.039 	0.000 	rifle	
+2025-11-11 16:58:19,517 - GRNet - INFO - 03211117	1752	0.103 	29.609 	3.019 	0.000 	display	
+2025-11-11 16:58:19,517 - GRNet - INFO - 02876657	800	0.127 	26.683 	2.331 	0.000 	bottle	
+2025-11-11 16:58:19,517 - GRNet - INFO - 03710193	152	0.164 	29.351 	3.225 	0.000 	mailbox	
+2025-11-11 16:58:19,517 - GRNet - INFO - 03790512	544	0.103 	27.830 	2.546 	0.000 	motorbike	
+2025-11-11 16:58:19,517 - GRNet - INFO - 03325088	1192	0.138 	33.543 	4.780 	0.000 	faucet	
+2025-11-11 16:58:19,517 - GRNet - INFO - 02801938	184	0.059 	36.590 	4.528 	0.000 	basket	
+2025-11-11 16:58:19,517 - GRNet - INFO - 03337140	480	0.083 	30.624 	3.044 	0.000 	file cabinet	
+2025-11-11 16:58:19,517 - GRNet - INFO - 02843684	120	0.059 	45.475 	7.375 	0.000 	birdhouse	
+2025-11-11 16:58:19,517 - GRNet - INFO - 03624134	680	0.419 	16.149 	1.088 	0.000 	knife	
+2025-11-11 16:58:19,517 - GRNet - INFO - 03991062	968	0.055 	41.534 	6.109 	0.000 	flowerpot	
+2025-11-11 16:58:19,517 - GRNet - INFO - 03948459	496	0.203 	21.404 	1.590 	0.000 	pistol	
+2025-11-11 16:58:19,518 - GRNet - INFO - 03928116	384	0.083 	34.832 	4.129 	0.000 	piano	
+2025-11-11 16:58:19,518 - GRNet - INFO - 03207941	152	0.071 	30.605 	2.833 	0.000 	dishwasher	
+2025-11-11 16:58:19,518 - GRNet - INFO - 04074963	112	0.150 	24.177 	1.783 	0.000 	remote	
+2025-11-11 16:58:19,518 - GRNet - INFO - 03085013	104	0.190 	20.813 	1.602 	0.000 	keyboard	
+2025-11-11 16:58:19,518 - GRNet - INFO - Overall 		0.129 	30.574 	3.480 	0.000 	

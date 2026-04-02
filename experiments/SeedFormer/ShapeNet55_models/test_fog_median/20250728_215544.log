@@ -1,0 +1,194 @@
+2025-07-28 21:55:44,542 - SeedFormer - INFO - Copy the Config file from ./cfgs/ShapeNet55_models/SeedFormer.yaml to ./experiments/SeedFormer/ShapeNet55_models/test_fog_median/config.yaml
+2025-07-28 21:55:44,542 - SeedFormer - INFO - args.config : ./cfgs/ShapeNet55_models/SeedFormer.yaml
+2025-07-28 21:55:44,542 - SeedFormer - INFO - args.launcher : none
+2025-07-28 21:55:44,542 - SeedFormer - INFO - args.local_rank : 0
+2025-07-28 21:55:44,542 - SeedFormer - INFO - args.num_workers : 4
+2025-07-28 21:55:44,542 - SeedFormer - INFO - args.seed : 0
+2025-07-28 21:55:44,542 - SeedFormer - INFO - args.deterministic : False
+2025-07-28 21:55:44,542 - SeedFormer - INFO - args.sync_bn : False
+2025-07-28 21:55:44,542 - SeedFormer - INFO - args.exp_name : test_fog_median
+2025-07-28 21:55:44,542 - SeedFormer - INFO - args.start_ckpts : None
+2025-07-28 21:55:44,542 - SeedFormer - INFO - args.ckpts : ./pretrained/fog/SeedFormer_fog.pth
+2025-07-28 21:55:44,542 - SeedFormer - INFO - args.val_freq : 1
+2025-07-28 21:55:44,542 - SeedFormer - INFO - args.resume : False
+2025-07-28 21:55:44,542 - SeedFormer - INFO - args.test : True
+2025-07-28 21:55:44,542 - SeedFormer - INFO - args.mode : median
+2025-07-28 21:55:44,542 - SeedFormer - INFO - args.pcd_path : None
+2025-07-28 21:55:44,542 - SeedFormer - INFO - args.output_dir : None
+2025-07-28 21:55:44,542 - SeedFormer - INFO - args.experiment_path : ./experiments/SeedFormer/ShapeNet55_models/test_fog_median
+2025-07-28 21:55:44,542 - SeedFormer - INFO - args.tfboard_path : ./experiments/SeedFormer/ShapeNet55_models/TFBoard/test_fog_median
+2025-07-28 21:55:44,542 - SeedFormer - INFO - args.log_name : SeedFormer
+2025-07-28 21:55:44,543 - SeedFormer - INFO - args.use_gpu : True
+2025-07-28 21:55:44,543 - SeedFormer - INFO - args.distributed : False
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.optimizer = edict()
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.optimizer.type : AdamW
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.optimizer.kwargs = edict()
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.optimizer.kwargs.lr : 0.001
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.optimizer.kwargs.weight_decay : 0.0005
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.scheduler = edict()
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.scheduler.type : LambdaLR
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.scheduler.kwargs = edict()
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.scheduler.kwargs.decay_step : 25
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.scheduler.kwargs.lr_decay : 0.771
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.scheduler.kwargs.lowest_decay : 0.001
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.bnmscheduler = edict()
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.bnmscheduler.type : Lambda
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.bnmscheduler.kwargs = edict()
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.bnmscheduler.kwargs.decay_step : 21
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.bnmscheduler.kwargs.bn_decay : 0.5
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.bnmscheduler.kwargs.bn_momentum : 0.9
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.bnmscheduler.kwargs.lowest_decay : 0.01
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.dataset = edict()
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.dataset.train = edict()
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.dataset.train._base_ = edict()
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.dataset.train._base_.NAME : ShapeNet
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.dataset.train._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.dataset.train._base_.N_POINTS : 8192
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.dataset.train._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.dataset.train.others = edict()
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.dataset.train.others.subset : train
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.dataset.train.others.bs : 8
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.dataset.val = edict()
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.dataset.val._base_ = edict()
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.dataset.val._base_.NAME : ShapeNet
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.dataset.val._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.dataset.val._base_.N_POINTS : 8192
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.dataset.val._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.dataset.val.others = edict()
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.dataset.val.others.subset : test
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.dataset.test = edict()
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.dataset.test._base_ = edict()
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.dataset.test._base_.NAME : ShapeNet
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.dataset.test._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.dataset.test._base_.N_POINTS : 8192
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.dataset.test._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.dataset.test.others = edict()
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.dataset.test.others.subset : test
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.model = edict()
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.model.NAME : SeedFormer
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.model.feat_dim : 512
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.model.embed_dim : 128
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.model.n_knn : 20
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.model.l2_loss : 1
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.consider_metric : CDL2
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.total_bs : 8
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.step_per_update : 6
+2025-07-28 21:55:44,543 - SeedFormer - INFO - config.max_epoch : 200
+2025-07-28 21:55:44,543 - SeedFormer - INFO - Distributed training: False
+2025-07-28 21:55:44,543 - SeedFormer - INFO - Set random seed to 0, deterministic: False
+2025-07-28 21:55:44,544 - SeedFormer - INFO - Tester start ... 
+2025-07-28 21:55:44,544 - SeedFormer - INFO - Processing test dataset...
+2025-07-28 21:55:44,568 - SeedFormer - INFO - Loading weights from ./pretrained/fog/SeedFormer_fog.pth...
+2025-07-28 21:55:44,643 - SeedFormer - INFO - ckpts @ 200 epoch( performance = {'F-Score': 0.2906990611863516, 'CDL1': 34.24095902121041, 'CDL2': 50.19481541776767, 'EMDistance': 0.0})
+2025-07-28 21:59:14,274 - SeedFormer - INFO - Test[200/10518] Taxonomy = 04530566 Sample = 3bb6a5deec68ef77fee64ca302793912 Losses = ['31.9440', '2.8893', '13.0625', '0.5416'] Metrics = ['0.3592', '13.0625', '0.5416', '0.0000'] InferenceTime = 0.0501
+2025-07-28 22:02:56,204 - SeedFormer - INFO - Test[400/10518] Taxonomy = 03636649 Sample = 90651b3febfc3afe15226aa76eb7c3e Losses = ['46.1726', '6.5651', '16.8411', '0.9774'] Metrics = ['0.3047', '16.8411', '0.9774', '0.0000'] InferenceTime = 0.0500
+2025-07-28 22:06:30,017 - SeedFormer - INFO - Test[600/10518] Taxonomy = 03001627 Sample = fae27953e0f0404ca99df2794ec76201 Losses = ['39.3559', '4.1467', '14.6396', '0.6614'] Metrics = ['0.3326', '14.6396', '0.6614', '0.0000'] InferenceTime = 0.0209
+2025-07-28 22:10:07,140 - SeedFormer - INFO - Test[800/10518] Taxonomy = 03593526 Sample = 324c9045843b9470d29670d38a4c9e7e Losses = ['42.4121', '5.4332', '15.6354', '0.9616'] Metrics = ['0.3689', '15.6354', '0.9616', '0.0000'] InferenceTime = 0.0367
+2025-07-28 22:13:46,214 - SeedFormer - INFO - Test[1000/10518] Taxonomy = 02958343 Sample = 39e10c5d24fee4a6311f5d9a1681aa3b Losses = ['43.3045', '5.6564', '16.6051', '0.8372'] Metrics = ['0.2285', '16.6051', '0.8372', '0.0000'] InferenceTime = 0.0290
+2025-07-28 22:17:17,864 - SeedFormer - INFO - Test[1200/10518] Taxonomy = 03001627 Sample = e50f1b2d0835bb392764cfba57a5de73 Losses = ['53.5977', '7.9121', '23.1446', '1.9404'] Metrics = ['0.2020', '23.1446', '1.9404', '0.0000'] InferenceTime = 0.0332
+2025-07-28 22:20:41,568 - SeedFormer - INFO - Test[1400/10518] Taxonomy = 04379243 Sample = 647692d3858790a1f1783a44a88d6274 Losses = ['36.9746', '4.8358', '14.4143', '0.7125'] Metrics = ['0.3439', '14.4143', '0.7125', '0.0000'] InferenceTime = 0.0185
+2025-07-28 22:24:11,020 - SeedFormer - INFO - Test[1600/10518] Taxonomy = 02691156 Sample = d8d9de967255b4c562b600da24e0965 Losses = ['25.4792', '1.9918', '15.0444', '4.4569'] Metrics = ['0.5090', '15.0444', '4.4569', '0.0000'] InferenceTime = 0.0347
+2025-07-28 22:27:36,545 - SeedFormer - INFO - Test[1800/10518] Taxonomy = 03001627 Sample = 24c0e6a8b10abb77df2b21995cbbbc4f Losses = ['68.1875', '14.4673', '27.4234', '2.9013'] Metrics = ['0.1291', '27.4234', '2.9013', '0.0000'] InferenceTime = 0.0316
+2025-07-28 22:31:12,016 - SeedFormer - INFO - Test[2000/10518] Taxonomy = 04379243 Sample = 5d77e8f6ad3741a0c30ab36bf7b0552 Losses = ['43.0262', '5.5394', '14.7421', '0.6527'] Metrics = ['0.2917', '14.7421', '0.6527', '0.0000'] InferenceTime = 0.0255
+2025-07-28 22:34:48,035 - SeedFormer - INFO - Test[2200/10518] Taxonomy = 03636649 Sample = b64e98c991d4103170365ad078f710ff Losses = ['78.8532', '17.7393', '26.3471', '3.2354'] Metrics = ['0.2082', '26.3471', '3.2354', '0.0000'] InferenceTime = 0.0208
+2025-07-28 22:38:26,602 - SeedFormer - INFO - Test[2400/10518] Taxonomy = 03211117 Sample = b4386438057e85988bfba3df1f776207 Losses = ['45.7820', '5.9663', '17.2864', '0.9358'] Metrics = ['0.2708', '17.2864', '0.9358', '0.0000'] InferenceTime = 0.0336
+2025-07-28 22:42:04,920 - SeedFormer - INFO - Test[2600/10518] Taxonomy = 04468005 Sample = 3b8c505fd1127ed88f134472f61cf6bb Losses = ['35.4119', '3.4064', '15.6024', '0.7295'] Metrics = ['0.2323', '15.6024', '0.7295', '0.0000'] InferenceTime = 0.0127
+2025-07-28 22:45:40,624 - SeedFormer - INFO - Test[2800/10518] Taxonomy = 03001627 Sample = e3e76d624f1f855bcc8a9c365968620 Losses = ['38.3275', '4.3703', '15.8514', '0.7834'] Metrics = ['0.2633', '15.8514', '0.7834', '0.0000'] InferenceTime = 0.0435
+2025-07-28 22:49:19,515 - SeedFormer - INFO - Test[3000/10518] Taxonomy = 03001627 Sample = 40020a5e90c75d94a93412f1b60e6fba Losses = ['34.7090', '3.8698', '15.0675', '0.9503'] Metrics = ['0.3389', '15.0675', '0.9503', '0.0000'] InferenceTime = 0.0274
+2025-07-28 22:52:56,488 - SeedFormer - INFO - Test[3200/10518] Taxonomy = 02691156 Sample = a96c1589731b06a1efbd0f357ff7c40a Losses = ['27.1002', '2.5859', '11.2043', '0.5759'] Metrics = ['0.5450', '11.2043', '0.5759', '0.0000'] InferenceTime = 0.0198
+2025-07-28 22:56:35,780 - SeedFormer - INFO - Test[3400/10518] Taxonomy = 03046257 Sample = b2b40e80c9d3f530d5f1db12f95f0fe4 Losses = ['36.3532', '4.3294', '30.1287', '21.9037'] Metrics = ['0.2429', '30.1287', '21.9037', '0.0000'] InferenceTime = 0.0236
+2025-07-28 23:00:09,473 - SeedFormer - INFO - Test[3600/10518] Taxonomy = 02933112 Sample = c18a4772bcfbb98e85bc264270ae0601 Losses = ['49.6158', '7.8540', '21.6467', '1.5156'] Metrics = ['0.1446', '21.6467', '1.5156', '0.0000'] InferenceTime = 0.0198
+2025-07-28 23:03:19,206 - SeedFormer - INFO - Test[3800/10518] Taxonomy = 04530566 Sample = 215861c4bebeb328d9a75de54b023ae1 Losses = ['31.9960', '2.9207', '14.1162', '0.6321'] Metrics = ['0.3089', '14.1162', '0.6321', '0.0000'] InferenceTime = 0.0192
+2025-07-28 23:06:35,507 - SeedFormer - INFO - Test[4000/10518] Taxonomy = 02828884 Sample = 5f9d3dae06acf0e4e93e1127627b834 Losses = ['35.3698', '3.7128', '15.5110', '0.8489'] Metrics = ['0.2859', '15.5110', '0.8489', '0.0000'] InferenceTime = 0.0148
+2025-07-28 23:09:50,853 - SeedFormer - INFO - Test[4200/10518] Taxonomy = 04401088 Sample = a3c1c9fc390b1bbbb099170e6f5a4af9 Losses = ['40.7720', '4.5908', '14.4598', '0.5298'] Metrics = ['0.2672', '14.4598', '0.5298', '0.0000'] InferenceTime = 0.0151
+2025-07-28 23:13:11,540 - SeedFormer - INFO - Test[4400/10518] Taxonomy = 04256520 Sample = 54506969a60017ac8f0a57a8b9390a Losses = ['47.7952', '6.4946', '15.3913', '0.8752'] Metrics = ['0.3630', '15.3913', '0.8752', '0.0000'] InferenceTime = 0.0549
+2025-07-28 23:16:49,910 - SeedFormer - INFO - Test[4600/10518] Taxonomy = 04074963 Sample = d9ca2dcaf1d9d850dc605801df3f66ec Losses = ['46.4074', '6.3904', '21.5225', '1.4482'] Metrics = ['0.2150', '21.5225', '1.4482', '0.0000'] InferenceTime = 0.0182
+2025-07-28 23:20:31,793 - SeedFormer - INFO - Test[4800/10518] Taxonomy = 04379243 Sample = ead93856b735ec90f0aeabfdcb4e1dd9 Losses = ['35.3741', '3.6221', '10.6975', '0.3133'] Metrics = ['0.4827', '10.6975', '0.3133', '0.0000'] InferenceTime = 0.0493
+2025-07-28 23:24:07,831 - SeedFormer - INFO - Test[5000/10518] Taxonomy = 03790512 Sample = 242d8c07fabbdabc78fe949fc1419876 Losses = ['45.7186', '6.4934', '20.9620', '1.3744'] Metrics = ['0.1364', '20.9620', '1.3744', '0.0000'] InferenceTime = 0.0412
+2025-07-28 23:27:42,875 - SeedFormer - INFO - Test[5200/10518] Taxonomy = 02691156 Sample = 7b6f528acc10d3fbcf5b9c6e0c7ce895 Losses = ['32.9453', '3.1168', '13.2561', '0.9070'] Metrics = ['0.4260', '13.2561', '0.9070', '0.0000'] InferenceTime = 0.0364
+2025-07-28 23:31:20,614 - SeedFormer - INFO - Test[5400/10518] Taxonomy = 04379243 Sample = 6765d83445c2338555f46d55537192b6 Losses = ['43.8396', '6.0910', '19.3480', '2.6951'] Metrics = ['0.2591', '19.3480', '2.6951', '0.0000'] InferenceTime = 0.0523
+2025-07-28 23:34:59,429 - SeedFormer - INFO - Test[5600/10518] Taxonomy = 03001627 Sample = 33dc06a8e0933b1efc385a284336f217 Losses = ['43.9515', '5.4495', '19.3951', '1.1807'] Metrics = ['0.1878', '19.3951', '1.1807', '0.0000'] InferenceTime = 0.0306
+2025-07-28 23:38:40,431 - SeedFormer - INFO - Test[5800/10518] Taxonomy = 02992529 Sample = 4a81237a7fc743763992b1138bb05b3c Losses = ['31.1646', '3.1743', '12.9167', '0.4349'] Metrics = ['0.3660', '12.9167', '0.4349', '0.0000'] InferenceTime = 0.0356
+2025-07-28 23:42:20,765 - SeedFormer - INFO - Test[6000/10518] Taxonomy = 02958343 Sample = 37249c6f16b203de2e877e82c90c24d Losses = ['49.8020', '7.0908', '19.6603', '1.3522'] Metrics = ['0.1963', '19.6603', '1.3522', '0.0000'] InferenceTime = 0.0339
+2025-07-28 23:45:56,709 - SeedFormer - INFO - Test[6200/10518] Taxonomy = 02933112 Sample = 956c437be87a2be5f51f77a6d7299806 Losses = ['42.7597', '5.9502', '13.9262', '0.5512'] Metrics = ['0.3088', '13.9262', '0.5512', '0.0000'] InferenceTime = 0.0457
+2025-07-28 23:49:32,087 - SeedFormer - INFO - Test[6400/10518] Taxonomy = 03691459 Sample = 9d62c46fc3fd343d1f9f3ce366e030fb Losses = ['62.7504', '15.3049', '24.3808', '3.4961'] Metrics = ['0.1841', '24.3808', '3.4961', '0.0000'] InferenceTime = 0.0379
+2025-07-28 23:53:16,612 - SeedFormer - INFO - Test[6600/10518] Taxonomy = 04379243 Sample = 7a8399fc51d83969a8b1d0fdee586dc9 Losses = ['29.0717', '2.7205', '10.2974', '0.2759'] Metrics = ['0.4485', '10.2974', '0.2759', '0.0000'] InferenceTime = 0.0506
+2025-07-28 23:56:50,472 - SeedFormer - INFO - Test[6800/10518] Taxonomy = 03001627 Sample = 78abbfe9ab73729f56d13e757b0dc374 Losses = ['44.4260', '5.7065', '13.8266', '0.7144'] Metrics = ['0.4282', '13.8266', '0.7144', '0.0000'] InferenceTime = 0.0427
+2025-07-29 00:00:26,403 - SeedFormer - INFO - Test[7000/10518] Taxonomy = 04379243 Sample = 264a075e293394a843638dabe1eb5336 Losses = ['37.6143', '4.4050', '14.7633', '0.6192'] Metrics = ['0.2585', '14.7633', '0.6192', '0.0000'] InferenceTime = 0.0200
+2025-07-29 00:04:01,214 - SeedFormer - INFO - Test[7200/10518] Taxonomy = 03211117 Sample = 96f01698d0446641ea6e0950aa8ac31b Losses = ['50.4782', '7.1206', '20.7990', '1.5452'] Metrics = ['0.2656', '20.7990', '1.5452', '0.0000'] InferenceTime = 0.0429
+2025-07-29 00:07:25,922 - SeedFormer - INFO - Test[7400/10518] Taxonomy = 03001627 Sample = b2239339005b14c8d675cc466d0d6fbc Losses = ['37.4806', '3.8522', '14.7352', '0.7309'] Metrics = ['0.2914', '14.7352', '0.7309', '0.0000'] InferenceTime = 0.0198
+2025-07-29 00:10:50,930 - SeedFormer - INFO - Test[7600/10518] Taxonomy = 04074963 Sample = 57759e351ec76d86d3c1501c166e6b2a Losses = ['34.9449', '3.5853', '15.3221', '0.6517'] Metrics = ['0.3034', '15.3221', '0.6517', '0.0000'] InferenceTime = 0.0444
+2025-07-29 00:14:16,387 - SeedFormer - INFO - Test[7800/10518] Taxonomy = 04090263 Sample = 41a9912bfe0dc96239169e4b52d9f093 Losses = ['27.8564', '2.4469', '9.5786', '0.3453'] Metrics = ['0.5889', '9.5786', '0.3453', '0.0000'] InferenceTime = 0.0274
+2025-07-29 00:17:47,660 - SeedFormer - INFO - Test[8000/10518] Taxonomy = 04379243 Sample = bcbc5e30e12a58f07ea323bc74055b8 Losses = ['31.2457', '3.1991', '12.0467', '0.3856'] Metrics = ['0.3801', '12.0467', '0.3856', '0.0000'] InferenceTime = 0.0356
+2025-07-29 00:21:27,575 - SeedFormer - INFO - Test[8200/10518] Taxonomy = 04379243 Sample = aabcb5d610e76ff19ca02c396af0c503 Losses = ['47.8017', '8.9026', '14.9996', '0.8311'] Metrics = ['0.3209', '14.9996', '0.8311', '0.0000'] InferenceTime = 0.0356
+2025-07-29 00:25:04,949 - SeedFormer - INFO - Test[8400/10518] Taxonomy = 04379243 Sample = dd2c3ff28a34556a47839bae1bc65257 Losses = ['32.5003', '3.3546', '10.8846', '0.3769'] Metrics = ['0.4755', '10.8846', '0.3769', '0.0000'] InferenceTime = 0.0292
+2025-07-29 00:28:42,396 - SeedFormer - INFO - Test[8600/10518] Taxonomy = 03337140 Sample = 149a105979cad722c1467c54b9e09ce5 Losses = ['63.6701', '11.4853', '21.7097', '1.7146'] Metrics = ['0.1855', '21.7097', '1.7146', '0.0000'] InferenceTime = 0.0415
+2025-07-29 00:32:14,840 - SeedFormer - INFO - Test[8800/10518] Taxonomy = 02691156 Sample = 4044d5954ef85af8279326882e8430cb Losses = ['45.3205', '5.4658', '16.8158', '1.5125'] Metrics = ['0.4436', '16.8158', '1.5125', '0.0000'] InferenceTime = 0.0225
+2025-07-29 00:35:48,729 - SeedFormer - INFO - Test[9000/10518] Taxonomy = 02828884 Sample = 4e512ab638542762d4d8765e3910f617 Losses = ['29.7720', '2.7987', '11.7732', '0.4005'] Metrics = ['0.3798', '11.7732', '0.4005', '0.0000'] InferenceTime = 0.0315
+2025-07-29 00:39:30,843 - SeedFormer - INFO - Test[9200/10518] Taxonomy = 04379243 Sample = 5247e4e978399f1b486040c0d9e85846 Losses = ['34.6137', '3.9476', '11.5885', '0.4764'] Metrics = ['0.4402', '11.5885', '0.4764', '0.0000'] InferenceTime = 0.0395
+2025-07-29 00:43:11,678 - SeedFormer - INFO - Test[9400/10518] Taxonomy = 03636649 Sample = 7ec821d5d8bd9f17d4aea4231844b26b Losses = ['20.0879', '1.2543', '9.0501', '0.2511'] Metrics = ['0.5783', '9.0501', '0.2511', '0.0000'] InferenceTime = 0.0226
+2025-07-29 00:46:46,538 - SeedFormer - INFO - Test[9600/10518] Taxonomy = 04090263 Sample = 3cb82befc3290e36b58435942a1b4dac Losses = ['14.6604', '0.6218', '6.1404', '0.1043'] Metrics = ['0.8648', '6.1404', '0.1043', '0.0000'] InferenceTime = 0.0251
+2025-07-29 00:50:10,756 - SeedFormer - INFO - Test[9800/10518] Taxonomy = 04379243 Sample = 6358336cbeedb9232d9fe390e23fd20f Losses = ['31.9565', '3.1374', '11.6433', '0.3797'] Metrics = ['0.4313', '11.6433', '0.3797', '0.0000'] InferenceTime = 0.0226
+2025-07-29 00:53:06,578 - SeedFormer - INFO - Test[10000/10518] Taxonomy = 04401088 Sample = f73493b7c8a78000b594bbf2c494ab81 Losses = ['56.0935', '9.9109', '19.1459', '1.6075'] Metrics = ['0.2521', '19.1459', '1.6075', '0.0000'] InferenceTime = 0.0196
+2025-07-29 00:55:54,858 - SeedFormer - INFO - Test[10200/10518] Taxonomy = 03001627 Sample = 3ffd794e5100258483bc207d8a5912e3 Losses = ['37.0431', '3.8140', '11.2385', '0.3444'] Metrics = ['0.4316', '11.2385', '0.3444', '0.0000'] InferenceTime = 0.0186
+2025-07-29 00:58:50,504 - SeedFormer - INFO - Test[10400/10518] Taxonomy = 04090263 Sample = 26744766d59c28fb6b2c8bb96250e4a0 Losses = ['18.3833', '1.0050', '7.1481', '0.1493'] Metrics = ['0.7958', '7.1481', '0.1493', '0.0000'] InferenceTime = 0.0357
+2025-07-29 01:00:36,524 - SeedFormer - INFO - [TEST] Metrics = ['0.3037', '18.6132', '1.9624', '0.0000']
+2025-07-29 01:00:36,524 - SeedFormer - INFO - [TEST] Average Inference Time: 0.0316 seconds
+2025-07-29 01:00:36,525 - SeedFormer - INFO - ============================ TEST RESULTS ============================
+2025-07-29 01:00:36,525 - SeedFormer - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	EMDistance	#ModelName	
+2025-07-29 01:00:36,527 - SeedFormer - INFO - 03759954	112	0.513 	14.151 	1.220 	0.000 	microphone	
+2025-07-29 01:00:36,533 - SeedFormer - INFO - 04330267	352	0.232 	20.510 	1.792 	0.000 	stove	
+2025-07-29 01:00:36,535 - SeedFormer - INFO - 03261776	120	0.256 	19.961 	1.803 	0.000 	earphone	
+2025-07-29 01:00:36,539 - SeedFormer - INFO - 03513137	264	0.153 	29.478 	5.382 	0.000 	helmet	
+2025-07-29 01:00:36,542 - SeedFormer - INFO - 04460130	216	0.358 	17.612 	1.505 	0.000 	tower	
+2025-07-29 01:00:36,547 - SeedFormer - INFO - 04468005	624	0.309 	15.866 	0.909 	0.000 	train	
+2025-07-29 01:00:36,551 - SeedFormer - INFO - 03761084	248	0.193 	21.012 	1.659 	0.000 	microwaves	
+2025-07-29 01:00:36,554 - SeedFormer - INFO - 04004475	272	0.207 	22.738 	2.162 	0.000 	printer	
+2025-07-29 01:00:36,559 - SeedFormer - INFO - 03938244	160	0.233 	21.632 	2.536 	0.000 	pillow	
+2025-07-29 01:00:36,561 - SeedFormer - INFO - 02992529	1336	0.335 	14.356 	0.636 	0.000 	cellphone	
+2025-07-29 01:00:36,566 - SeedFormer - INFO - 02808440	1376	0.232 	20.682 	2.032 	0.000 	bathtub	
+2025-07-29 01:00:36,568 - SeedFormer - INFO - 04530566	3104	0.393 	14.396 	0.853 	0.000 	watercraft	
+2025-07-29 01:00:36,572 - SeedFormer - INFO - 02871439	728	0.221 	19.148 	1.540 	0.000 	bookshelf	
+2025-07-29 01:00:36,573 - SeedFormer - INFO - 03593526	960	0.209 	24.235 	4.516 	0.000 	jar	
+2025-07-29 01:00:36,575 - SeedFormer - INFO - 04554684	272	0.194 	23.493 	2.499 	0.000 	washer	
+2025-07-29 01:00:36,575 - SeedFormer - INFO - 03467517	1280	0.788 	7.341 	0.169 	0.000 	guitar	
+2025-07-29 01:00:36,577 - SeedFormer - INFO - 04401088	1744	0.335 	14.226 	0.644 	0.000 	telephone	
+2025-07-29 01:00:36,577 - SeedFormer - INFO - 02954340	96	0.238 	21.553 	2.284 	0.000 	cap	
+2025-07-29 01:00:36,580 - SeedFormer - INFO - 02933112	2520	0.204 	19.281 	1.294 	0.000 	cabinet	
+2025-07-29 01:00:36,581 - SeedFormer - INFO - 03642806	736	0.297 	14.360 	0.598 	0.000 	laptop	
+2025-07-29 01:00:36,583 - SeedFormer - INFO - 02924116	1504	0.313 	15.913 	0.890 	0.000 	bus	
+2025-07-29 01:00:36,586 - SeedFormer - INFO - 02946921	176	0.185 	22.186 	2.180 	0.000 	can	
+2025-07-29 01:00:36,588 - SeedFormer - INFO - 02818832	376	0.203 	21.243 	1.759 	0.000 	bed	
+2025-07-29 01:00:36,590 - SeedFormer - INFO - 04256520	5080	0.217 	19.489 	1.298 	0.000 	sofa	
+2025-07-29 01:00:36,592 - SeedFormer - INFO - 04379243	13496	0.308 	17.025 	1.788 	0.000 	table	
+2025-07-29 01:00:36,595 - SeedFormer - INFO - 02747177	552	0.154 	23.361 	2.044 	0.000 	trash bin	
+2025-07-29 01:00:36,597 - SeedFormer - INFO - 03046257	1048	0.232 	25.321 	8.014 	0.000 	clock	
+2025-07-29 01:00:36,599 - SeedFormer - INFO - 04225987	248	0.435 	12.682 	0.566 	0.000 	skateboard	
+2025-07-29 01:00:36,601 - SeedFormer - INFO - 03797390	344	0.141 	24.612 	2.397 	0.000 	mug	
+2025-07-29 01:00:36,604 - SeedFormer - INFO - 03001627	10848	0.281 	17.628 	1.225 	0.000 	chair	
+2025-07-29 01:00:36,606 - SeedFormer - INFO - 03691459	2560	0.212 	22.297 	2.493 	0.000 	loudspeaker	
+2025-07-29 01:00:36,608 - SeedFormer - INFO - 02942699	184	0.182 	24.917 	2.664 	0.000 	camera	
+2025-07-29 01:00:36,611 - SeedFormer - INFO - 03636649	3712	0.461 	16.134 	2.304 	0.000 	lamp	
+2025-07-29 01:00:36,613 - SeedFormer - INFO - 02691156	6472	0.461 	15.984 	4.907 	0.000 	airplane	
+2025-07-29 01:00:36,615 - SeedFormer - INFO - 02773838	136	0.275 	19.511 	1.614 	0.000 	bag	
+2025-07-29 01:00:36,617 - SeedFormer - INFO - 02958343	5624	0.180 	19.795 	1.285 	0.000 	car	
+2025-07-29 01:00:36,620 - SeedFormer - INFO - 02880940	304	0.147 	30.788 	10.324 	0.000 	bowl	
+2025-07-29 01:00:36,622 - SeedFormer - INFO - 04099429	136	0.609 	10.435 	0.443 	0.000 	rocket	
+2025-07-29 01:00:36,624 - SeedFormer - INFO - 02828884	2904	0.341 	14.946 	0.974 	0.000 	bench	
+2025-07-29 01:00:36,626 - SeedFormer - INFO - 04090263	3800	0.679 	8.705 	0.270 	0.000 	rifle	
+2025-07-29 01:00:36,629 - SeedFormer - INFO - 03211117	1752	0.269 	17.688 	1.134 	0.000 	display	
+2025-07-29 01:00:36,631 - SeedFormer - INFO - 02876657	800	0.370 	15.213 	1.214 	0.000 	bottle	
+2025-07-29 01:00:36,633 - SeedFormer - INFO - 03710193	152	0.471 	13.902 	0.911 	0.000 	mailbox	
+2025-07-29 01:00:36,635 - SeedFormer - INFO - 03790512	544	0.190 	18.510 	1.203 	0.000 	motorbike	
+2025-07-29 01:00:36,637 - SeedFormer - INFO - 03325088	1192	0.391 	16.705 	1.850 	0.000 	faucet	
+2025-07-29 01:00:36,637 - SeedFormer - INFO - 02801938	184	0.170 	22.961 	2.577 	0.000 	basket	
+2025-07-29 01:00:36,638 - SeedFormer - INFO - 03337140	480	0.204 	19.803 	1.414 	0.000 	file cabinet	
+2025-07-29 01:00:36,638 - SeedFormer - INFO - 02843684	120	0.190 	24.989 	2.520 	0.000 	birdhouse	
+2025-07-29 01:00:36,638 - SeedFormer - INFO - 03624134	680	0.751 	7.916 	0.225 	0.000 	knife	
+2025-07-29 01:00:36,638 - SeedFormer - INFO - 03991062	968	0.170 	26.971 	4.595 	0.000 	flowerpot	
+2025-07-29 01:00:36,638 - SeedFormer - INFO - 03948459	496	0.444 	12.457 	0.533 	0.000 	pistol	
+2025-07-29 01:00:36,638 - SeedFormer - INFO - 03928116	384	0.218 	21.151 	1.784 	0.000 	piano	
+2025-07-29 01:00:36,638 - SeedFormer - INFO - 03207941	152	0.201 	19.408 	1.310 	0.000 	dishwasher	
+2025-07-29 01:00:36,638 - SeedFormer - INFO - 04074963	112	0.375 	14.038 	0.632 	0.000 	remote	
+2025-07-29 01:00:36,638 - SeedFormer - INFO - 03085013	104	0.376 	13.008 	0.556 	0.000 	keyboard	
+2025-07-29 01:00:36,638 - SeedFormer - INFO - Overall 		0.304 	18.613 	1.962 	0.000 	
